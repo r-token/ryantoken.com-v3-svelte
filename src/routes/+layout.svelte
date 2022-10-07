@@ -1,4 +1,5 @@
 <script>
+	import '../app.css'
 	import Header from '$lib/components/Header.svelte'
 	import { fade } from 'svelte/transition'
 	
@@ -12,5 +13,3 @@
 		<slot />
 	</main>
 {/key}
-
-<footer>Hello, I'm the footer.</footer>
