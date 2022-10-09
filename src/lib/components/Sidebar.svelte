@@ -1,6 +1,6 @@
 <script>
   import LargeHeader from '$lib/components/LargeHeader.svelte'
-  import { fly } from 'svelte/transition'
+
   import Drawer from 'svelte-drawer-component'
   import {
     SidebarIcon,
@@ -48,15 +48,11 @@
     open = !open
   }
 
-  const isCurrentPage = (page) => {
+  $: isCurrentPage = (page) => {
     const slashPage = '/' + page
     const pageLowercased = slashPage.toLowerCase()
 
-    console.log('pageLowercased:', pageLowercased)
-    console.log('currentPage:', currentPage)
-
     if (pageLowercased === currentPage) {
-      console.log('found a match! returning true')
       return true
     } else {
       return false
@@ -67,39 +63,44 @@
     if (page === '/') {
       currentPage = page
     } else {
-      const slashPage = '/' + page
-      const pageLowercased = slashPage.toLowerCase()
-      console.log('updating selected page to:', pageLowercased)
-      currentPage = pageLowercased
+      const pageLowercased = page.toLowerCase()
+      const slashPage = '/' + pageLowercased
+      console.log('updating selected page to:', slashPage)
+      currentPage = slashPage
     }
+  }
+  
+  const updateSelectedPageAndToggleSidebar = (page) => {
+    updateSelectedPage(page)
+    toggleSidebar()
   }
 </script>
 
-<div class="h-screen sticky top-0">
+<div class="h-screen sticky top-0 {open ? 'z-50' : ''}">
   <!-- MOBILE SIDEBAR -->
-  <Drawer { open } size='224px' on:clickAway={() => open=false} class='h-full'>
+  <Drawer { open } size='224px' duration=0.3 on:clickAway={() => open=false}>
     <div class="flex pb-6 flex-col overflow-y-auto lg:hidden relative h-full w-56 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-100 dark:border-slate-700">
       <button 
         on:click={toggleSidebar}
-        class="top-3 left-3 flex items-center justify-center w-10 h-10 text-gray-600 dark:text-gray-300 rounded-full focus:outline-none"
+        class="flex relative top-2 left-3 items-center justify-center w-10 h-10 text-gray-600 dark:text-gray-300 rounded-full focus:outline-none"
         type="button"
         value="Close Sidebar"
       >
         <SidebarIcon />
       </button>
-      <div class="text-2xl font-bold flex items-center px-6 py-2.5 pb-2">
-        <a href="/" on:click={updateSelectedPage('/')}>
-          <LargeHeader class="mb-2 mt-2" text="Ryan Token" />
+      <div class="text-2xl font-bold flex items-center px-6 py-5 pb-0.5">
+        <a href="/" on:click={() => updateSelectedPageAndToggleSidebar('/')}>
+          <LargeHeader text="Ryan Token" />
         </a>
       </div>
       
-      <div class="text-sm text-gray-400 mx-6 mt-2 mb-2">
+      <div class="text-sm text-gray-400 mx-6 mb-2">
         Me
       </div>
-
+  
       {#each mainNavigation as navItem, index (index)}
         <div class="mb-0">
-          <a href={navItem.href} on:click={updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+          <a href={navItem.href} on:click={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
             <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
               <div class="flex">
                 <div class="mr-3 mt-0.5">
@@ -114,7 +115,7 @@
                   {:else if navItem.label === 'Experimentation'}
                     <AlertTriangleIcon size="20" class="text-green-500 dark:text-green-400" />
                   {/if}
-                </div>  
+                </div>
               
                 <div>
                   {navItem.label}
@@ -124,14 +125,14 @@
           </a>
         </div>
       {/each}
-
+  
       <div class="text-sm text-gray-400 mx-6 mt-6 mb-2">
         My Stuff
       </div>
-
+  
       {#each myProjects as navItem (navItem.label)}
         <div class="mb-0">
-          <a href={navItem.href} target="_blank" on:click={updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+          <a href={navItem.href} target="_blank" on:click={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
             <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
               <div class="mr-3 mt-0.5">
                 {#if navItem.label === 'Outrank'}
@@ -149,7 +150,7 @@
               
               <div class="w-full">
                 <ArrowUpRightIcon size="20" class="float-right text-gray-400"/> 
-              </div>              
+              </div>
             </div>
           </a>
         </div>
@@ -161,7 +162,7 @@
       
       {#each externalNavigationLinks as navItem (navItem.label)}
         <div class="mb-0">
-          <a href={navItem.href} target="_blank" on:click={updateSelectedPage} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+          <a href={navItem.href} target="_blank" on:click={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
             <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
               <div class="mr-3 mt-0.5">
                 {#if navItem.label === 'Twitter'}
@@ -191,19 +192,19 @@
 
   <!-- DESKTOP SIDEBAR -->
   <div class="hidden transition-all delay-150 lg:block flex-col overflow-y-auto h-full w-56 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-200 dark:border-slate-600">
-    <div class="text-2xl font-bold flex items-center px-6 py-2.5 pb-2">
-      <a href="/" on:click={updateSelectedPage('/')}>
-        <LargeHeader class="mb-2 mt-2" text="Ryan Token" />
+    <div class="text-2xl font-bold flex items-center px-6 py-5 pb-0.5">
+      <a href="/" on:click={() => updateSelectedPage('/')}>
+        <LargeHeader text="Ryan Token" />
       </a>
     </div>
     
-    <div class="text-sm text-gray-400 mx-6 mt-2 mb-2">
+    <div class="text-sm text-gray-400 mx-6 mb-2">
       Me
     </div>
 
     {#each mainNavigation as navItem, index (index)}
       <div class="mb-0">
-        <a href={navItem.href} on:click={updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+        <a href={navItem.href} on:click={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
           <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
             <div class="flex">
               <div class="mr-3 mt-0.5">
@@ -235,7 +236,7 @@
 
     {#each myProjects as navItem (navItem.label)}
       <div class="mb-0">
-        <a href={navItem.href} target="_blank" on:click={updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+        <a href={navItem.href} target="_blank" on:click={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
           <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
             <div class="mr-3 mt-0.5">
               {#if navItem.label === 'Outrank'}
@@ -265,7 +266,7 @@
     
     {#each externalNavigationLinks as navItem (navItem.label)}
       <div class="mb-0">
-        <a href={navItem.href} target="_blank" on:click={updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+        <a href={navItem.href} target="_blank" on:click={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
           <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
             <div class="mr-3 mt-0.5">
               {#if navItem.label === 'Twitter'}
