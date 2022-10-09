@@ -4,6 +4,8 @@
 
 <h1>Blog</h1>
 	
+<a href="/blog/1">hi</a>
+
 <ul>
 	{#each data.posts as post}
 		<li>

@@ -1,7 +1,6 @@
 <script>
   import LargeHeader from '$lib/components/LargeHeader.svelte'
-
-  import Drawer from 'svelte-drawer-component'
+  import Drawer from '$lib/components/Drawer.svelte'
   import {
     SidebarIcon,
     EditIcon,
@@ -78,7 +77,7 @@
 
 <div class="h-screen sticky top-0 {open ? 'z-50' : ''}">
   <!-- MOBILE SIDEBAR -->
-  <Drawer { open } size='224px' duration=0.3 on:clickAway={() => open=false}>
+  <Drawer isOpen={open} on:clickAway={() => open=false}>
     <div class="flex pb-6 flex-col overflow-y-auto lg:hidden relative h-full w-56 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-100 dark:border-slate-700">
       <button 
         on:click={toggleSidebar}

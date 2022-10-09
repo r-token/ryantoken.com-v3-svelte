@@ -16,7 +16,7 @@
 	<div class="flex-1 min-w-0">
 		<Topbar bind:open={sidebarOpened} bind:currentPage={currentPage}/>
 		{#key data.currentRoute}
-			<main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 100 }} class="p-6 dark:text-gray-300">
+			<main in:fade={{ duration: 150, delay: 50 }} out:fade={{ duration: 50 }} class="p-6 dark:text-gray-300">
 				<slot />
 			</main>
 		{/key}
