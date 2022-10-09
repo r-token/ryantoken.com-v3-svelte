@@ -1,0 +1,11 @@
+<script>
+  export let src
+  export let altText
+  export let url
+</script>
+
+<template>
+  <a href={url} class="w-1/3 max-w-xs" target="_self">
+    <img src={src} alt={altText} class="p-2 rounded-3xl" />
+  </a>
+</template>
