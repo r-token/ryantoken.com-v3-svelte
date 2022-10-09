@@ -10,13 +10,13 @@
 	let sidebarOpened = false
 	let currentPage = $page.url.pathname
 
-	console.log('current page:', currentPage)
+	console.log('current page from layout:', currentPage)
 </script>
 
 <div class="flex min-h-screen dark:bg-slate-800">
-	<Sidebar bind:opened={sidebarOpened} currentPage={currentPage}/>
+	<Sidebar bind:open={sidebarOpened} bind:currentPage={currentPage}/>
 	<div class="flex-1 min-w-0">
-		<Topbar bind:opened={sidebarOpened} bind:selectedPage={currentPage}/>
+		<Topbar bind:open={sidebarOpened} bind:currentPage={currentPage}/>
 		{#key data.currentRoute}
 			<main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }} class="p-6 dark:text-gray-300">
 				<slot />
