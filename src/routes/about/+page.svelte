@@ -34,7 +34,7 @@
   </p>
 
   <p class="mb-4">
-    My favorite languages are <a href="https://www.javascript.com" target="_blank">JavaScript</a> and <a href="https://developer.apple.com/swift/" target="_blank">Swift</a>, I tend to run my web projects on <a href="https://aws.amazon.com" target="_blank">AWS</a> or <a href="https://www.netlify.com" target="_blank">Netlify</a>, and I'm always looking to learn something new.
+    My favorite programming languages are <a href="https://www.javascript.com" target="_blank">JavaScript</a> and <a href="https://developer.apple.com/swift/" target="_blank">Swift</a>, I tend to run my web projects on <a href="https://aws.amazon.com" target="_blank">AWS</a> and <a href="https://www.netlify.com" target="_blank">Netlify</a>, and I'm always looking to learn something new.
   </p>
 
   <p  class="mb-4">

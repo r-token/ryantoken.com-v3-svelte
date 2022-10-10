@@ -15,8 +15,7 @@
     ArrowUpRightIcon
   } from 'svelte-feather-icons'
 
-  export let open
-  export let currentPage
+  export let open, currentPage
 
   const mainNavigation = [
     { href: '/blog', label: 'Blog' },
