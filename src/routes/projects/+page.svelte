@@ -16,7 +16,7 @@
 	</p>
 
 	<div class="flex items-stretch mb-8">
-		<ResizableImage class="w-2/3 xl:w-1/3 lg:w-1/3" src="/site-images/bmc-button.png" altText="Buy Me a Coffee button" url="https://www.buymeacoffee.com/ryantoken"/>
+		<ResizableImage src="/site-images/bmc-button.png" altText="Buy Me a Coffee button" url="https://www.buymeacoffee.com/ryantoken"/>
 	</div>
 
 	<hr class="mb-8" />
@@ -32,10 +32,10 @@
 	<p class="mb-4">Available on iOS, iPadOS, and macOS (on Apple Silicon Macs), it tracks forty-seven different stats for all 131 Division One FBS teams and lets you dissect and compare them however you'd like. You can even compare two teams side-by-side to preview an intriguing matchup.</p>
 
 	<div class="flex items-stretch mb-4 max-w-5xl">
-		<ResizableImage class="w-1/4" src="/site-images/outrank/outrank-rankings.png" altText="Outrank's rankings screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
-		<ResizableImage class="w-1/4" src="/site-images/outrank/outrank-detail.png" altText="Outrank's details screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
-		<ResizableImage class="w-1/4" src="/site-images/outrank/outrank-compare.png" altText="Outrank's comparison screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
-		<ResizableImage class="w-1/4" src="/site-images/outrank/outrank-settings.png" altText="Outrank's settings screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+		<ResizableImage src="/site-images/outrank/outrank-rankings.png" altText="Outrank's rankings screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+		<ResizableImage src="/site-images/outrank/outrank-detail.png" altText="Outrank's details screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+		<ResizableImage src="/site-images/outrank/outrank-compare.png" altText="Outrank's comparison screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+		<ResizableImage src="/site-images/outrank/outrank-settings.png" altText="Outrank's settings screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
 	</div>
 
 	<p class="mb-4">Outrank is built with 100% <a href="https://developer.apple.com/xcode/swiftui/" target="_blank">SwiftUI</a>.</p>
@@ -48,7 +48,7 @@
 
 	<hr class="mb-8" />
 
-	<Header class="text-2xl" text="The Golden Hurricast" />
+	<Header text="The Golden Hurricast" />
 
 	<p class="mb-4"><a href="https://www.thegoldenhurricast.com" target="_blank">The Golden Hurricast</a> is the leading independent podcast and blog covering Golden Hurricane athletics at The University of Tulsa.</p>
 
@@ -62,7 +62,7 @@
 
 	<hr class="mb-8" />
 
-	<Header class="text-2xl" text="Eagle Crest STL"/>
+	<Header text="Eagle Crest STL"/>
 
 	<p class="mb-4"><a href="https://eaglecreststl.org" target="_blank">Eagle Crest STL</a> is a fully serverless web app tailor-made for the Eagle Crest HOA in St. Louis, MO.</p>
 
@@ -78,7 +78,7 @@
 
 	<hr class="mb-8" />
 
-	<Header class="text-2xl" text="Dashing Through the 'Ville"/>
+	<Header text="Dashing Through the 'Ville"/>
 
 	<p class="mb-4"><a href="https://dashingthroughtheville.com" target="_blank">Dashing Through the 'Ville</a> is a city-wide scavenger hunt held throughout Bartlesville, Oklahoma.</p>
 
@@ -96,7 +96,7 @@
 
 	<hr class="mb-8"/>
 
-	<Header class="text-2xl" text="CatchUp - Keep in Touch"/>
+	<Header text="CatchUp - Keep in Touch"/>
 
 	<div class="flex items-stretch mb-4">
 		<ResizableImage src="/site-images/catchup/catchup-icon.png" altText="CatchUp's app icon" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>

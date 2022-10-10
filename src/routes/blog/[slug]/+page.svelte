@@ -1,4 +1,5 @@
 <script>
+	import '../../../prism-dracula.css'
 	import LargeHeader from "$lib/components/LargeHeader.svelte"
 	import Subheader from "$lib/components/Subheader.svelte"
 	export let data
@@ -17,8 +18,11 @@
 
 <div>
 	<LargeHeader text={ data.title } />
+	<Subheader text={ data.description } />
 	<Subheader text={ 'Published ' + formattedDate() } />
 </div>
+
+<hr class="mb-6" />
 
 <aricle class="prose dark:prose-invert prose-a:text-indigo-500 dark:prose-a:text-slate-200">
 	<svelte:component this={data.content} />

@@ -14,7 +14,7 @@
 
 	<hr class="mb-6" />
 
-	<p class="mb-4">This is a <a href="https://jamstack.org" target="_blank">Jamstack</a> website created with <a href="https://svelte.dev/" target="_blank">Svelte</a>, <a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a>, and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>. It's all hosted on <a href="https://netlify.com" target="_blank">Netlify</a>.</p>
+	<p class="mb-4">This is a <a href="https://jamstack.org" target="_blank">Jamstack</a> website created with <a href="https://svelte.dev/" target="_blank">Svelte</a>, <a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a>, and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>. It's all hosted on <a href="https://vercel.com/" target="_blank">Vercel</a>.</p>
 
 	<p class="mb-4">The blog is generated with <a href="https://mdsvex.com/" target="_blank">mdsvex</a> and <a href="https://daringfireball.net/projects/markdown/syntax#overview" target="_blank">Markdown</a>.</p>
 	

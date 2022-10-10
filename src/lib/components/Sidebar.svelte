@@ -63,7 +63,6 @@
     } else {
       const pageLowercased = page.toLowerCase()
       const slashPage = '/' + pageLowercased
-      console.log('updating selected page to:', slashPage)
       currentPage = slashPage
     }
   }

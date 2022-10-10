@@ -18,7 +18,7 @@ tags:
 
 The summer of 2015 was the summer between my sophomore and junior years at the University of Tulsa. I had taken a few programming classes by that point, and was drawn to web development. To prove to myself that I knew my way around the basics, I wanted to build a personal website – I didn't have a plan for it, but I knew that I wanted it.
 
-Most recently, I had learned about a tool called <b> <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> </b>Everyone and their mother was raving about Bootstrap. In 2015, it sounded like the end-all be-all for responsive web design. Spoiler: it wasn't. But I, a young and impressionable college student, Bootstrapped the ever-loving heck out of version one of my website.
+Most recently, I had learned about a tool called <b><a href="https://getbootstrap.com" target="_blank">Bootstrap</a></b>. Everyone and their mother was raving about Bootstrap. In 2015, it sounded like the end-all be-all for responsive web design. Spoiler: it wasn't. But I, a young and impressionable college student, Bootstrapped the ever-loving heck out of version one of my website.
 
 See for yourself: (most text blurred out for my own privacy)
 
