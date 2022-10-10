@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <a href={url} class="w-1/3 max-w-xs" target="_self">
+  <a href={url} class="w-1/3 max-w-xs" target="_blank">
     <img src={src} alt={altText} class="p-2 rounded-3xl" />
   </a>
 </template>

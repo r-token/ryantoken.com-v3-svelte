@@ -1,7 +1,7 @@
-<script setup>
+<script>
   import LargeHeader from "$lib/components/LargeHeader.svelte"
   import Subheader from "$lib/components/Subheader.svelte"
-  import ResizableImage from "$lib/components/ResizableImage.svelte";
+  import ResizableImage from "$lib/components/ResizableImage.svelte"
 </script>
 
 <svelte:head>
@@ -16,11 +16,11 @@
   <img src="/site-images/profile.jpg" alt="Ryan Token" class="w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 max-w-[320px] rounded-xl mb-4"/>
 
   <p class="mb-4">
-    Hi, I'm Ryan. You can find me writing <a href="https://github.com/r-token" target="_self">code</a>, running my <a href="https://thegoldenhurricast.com" target="_self">podcast</a>, or watching my <a href="https://tulsahurricane.com" target="_self">team</a>.
+    Hi, I'm Ryan. You can find me writing <a href="https://github.com/r-token" target="_blank">code</a>, running my <a href="https://thegoldenhurricast.com" target="_blank">podcast</a>, or watching my <a href="https://tulsahurricane.com" target="_blank">team</a>.
   </p>
 
   <p class="mb-4">
-    My latest projects include <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_self">Outrank for iOS and iPadOS</a>, <a href="https://thegoldenhurricast.com" target="_blank">The Golden Hurricast</a>, and <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_self">CatchUp for iOS</a>.
+    My latest projects include <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank">Outrank for iOS and iPadOS</a>, <a href="https://thegoldenhurricast.com" target="_blank">The Golden Hurricast</a>, and <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank">CatchUp for iOS</a>.
   </p>
 
   <div class="flex items-stretch mb-4">
@@ -34,11 +34,11 @@
   </p>
 
   <p class="mb-4">
-    My favorite languages are <a href="https://www.javascript.com" target="_self">JavaScript</a> and <a href="https://developer.apple.com/swift/" target="_self">Swift</a>, I tend to run my web projects on <a href="https://aws.amazon.com" target="_self">AWS</a> or <a href="https://www.netlify.com" target="_self">Netlify</a>, and I'm always looking to learn something new.
+    My favorite languages are <a href="https://www.javascript.com" target="_blank">JavaScript</a> and <a href="https://developer.apple.com/swift/" target="_blank">Swift</a>, I tend to run my web projects on <a href="https://aws.amazon.com" target="_blank">AWS</a> or <a href="https://www.netlify.com" target="_blank">Netlify</a>, and I'm always looking to learn something new.
   </p>
 
   <p  class="mb-4">
-    I'm also a die-hard fan of the <a href="https://tulsahurricane.com" target="_self">Tulsa Golden Hurricane</a> and college sports in general.
+    I'm also a die-hard fan of the <a href="https://tulsahurricane.com" target="_blank">Tulsa Golden Hurricane</a> and college sports in general.
   </p>
 
   <p class="mb-4">
@@ -46,9 +46,9 @@
   </p>
 
   <ul class="list-disc ml-6 mb-2">
-    <li><a href="https://twitter.com/_ryantoken" target="_self">Twitter</a></li>
-    <li><a href="https://github.com/r-token" target="_self">GitHub</a></li>
-    <li><a href="https://linkedin.com/in/ryantoken" target="_self">LinkedIn</a></li>
-    <li><a href="mailto:ryantoken13@gmail.com" target="_self">Email</a></li>
+    <li><a href="https://twitter.com/_ryantoken" target="_blank">Twitter</a></li>
+    <li><a href="https://github.com/r-token" target="_blank">GitHub</a></li>
+    <li><a href="https://linkedin.com/in/ryantoken" target="_blank">LinkedIn</a></li>
+    <li><a href="mailto:ryantoken13@gmail.com" target="_blank">Email</a></li>
   </ul>
 </div>

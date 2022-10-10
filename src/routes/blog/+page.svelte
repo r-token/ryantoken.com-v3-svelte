@@ -2,6 +2,10 @@
 	export let data
 </script>
 
+<svelte:head>
+	<title>Ryan Token - Blog Posts</title>
+</svelte:head>
+
 <h1>Blog</h1>
 	
 <a href="/blog/1">hi</a>
