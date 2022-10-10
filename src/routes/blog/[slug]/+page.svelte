@@ -1,29 +1,25 @@
 <script>
+	import LargeHeader from "$lib/components/LargeHeader.svelte"
+	import Subheader from "$lib/components/Subheader.svelte"
 	export let data
+	
+	const formattedDate = () => {
+		const dateString = new Date(data.date.replace(/-/g, '\/').replace(/T.+/, ''))
+		const conciseDate = dateString.toLocaleDateString()
+		return conciseDate
+	}
 </script>
 
 <svelte:head>
-	<title>My blog - {data.title}</title>
+	<title>Ryan Token - {data.title}</title>
 	<meta property="og:title" content={data.title} />
 </svelte:head>
 
-<article>
-	<h1>{ data.title }</h1>
-	<p>Published: {data.date}</p>
-	<svelte:component this={data.content} />
-</article>
+<div>
+	<LargeHeader text={ data.title } />
+	<Subheader text={ 'Published ' + formattedDate() } />
+</div>
 
-{#if data.tags.length}
-	<aside>
-		<h2>Posted in:</h2>
-		<ul>
-			{#each data.tags as tag}
-				<li>
-					<a href="/blog/tag/{tag}">
-						{tag}
-					</a>
-				</li>
-			{/each}
-		</ul>
-	</aside>
-{/if}
+<aricle class="prose dark:prose-invert prose-a:text-indigo-500 dark:prose-a:text-slate-200">
+	<svelte:component this={data.content} />
+</aricle>
