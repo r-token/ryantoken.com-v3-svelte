@@ -2,6 +2,11 @@
   import LargeHeader from '$lib/components/LargeHeader.svelte'
   import Subheader from '$lib/components/Subheader.svelte'
   import ResizableImage from '$lib/components/ResizableImage.svelte'
+  
+  import profileImage from '$lib/assets/site-images/profile.jpg'
+  import outrankIcon from '$lib/assets/site-images/outrank/outrank-icon.png'
+  import hurricastIcon from '$lib/assets/site-images/hurricast/hurricast-icon.jpg'
+  import catchupIcon from '$lib/assets/site-images/catchup/catchup-icon.png'
 </script>
 
 <svelte:head>
@@ -13,7 +18,7 @@
 
   <Subheader text="A bit about me."/>
 
-  <img src="/site-images/profile.jpg" alt="Ryan Token" class="w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 max-w-[320px] rounded-xl mb-4"/>
+  <img src={profileImage} alt="Ryan Token" class="w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 max-w-[320px] rounded-xl mb-4"/>
 
   <p class="mb-4">
     Hi, I'm Ryan. You can find me writing <a href="https://github.com/r-token" target="_blank">code</a>, running my <a href="https://thegoldenhurricast.com" target="_blank">podcast</a>, or watching my <a href="https://tulsahurricane.com" target="_blank">team</a>.
@@ -24,9 +29,9 @@
   </p>
 
   <div class="flex items-stretch mb-4">
-    <ResizableImage src="/site-images/outrank/outrank-icon.png" altText="Outrank's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
-    <ResizableImage src="/site-images/hurricast/hurricast-icon.jpg" altText="The Golden Hurricast's logo" url="https://thegoldenhurricast.com"/>
-    <ResizableImage src="/site-images/catchup/catchup-icon.png" altText="CatchUp's app icon" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
+    <ResizableImage src={outrankIcon} altText="Outrank's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+    <ResizableImage src={hurricastIcon} altText="The Golden Hurricast's logo" url="https://thegoldenhurricast.com"/>
+    <ResizableImage src={catchupIcon} altText="CatchUp's app icon" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
   </div>
 
   <p class="mb-4">

@@ -11,6 +11,11 @@
     MailIcon,
     ArrowUpRightIcon
   } from 'svelte-feather-icons'
+  
+  import outrankIcon from '$lib/assets/site-images/outrank/outrank-64.png'
+  import catchupIcon from '$lib/assets/site-images/catchup/catchup-64.png'
+  import hurricastIcon from '$lib/assets/site-images/hurricast/hurricast-icon.jpg'
+  
   import FaTwitterSquare from 'svelte-icons/fa/FaTwitterSquare.svelte'
   import FaGithubSquare from 'svelte-icons/fa/FaGithubSquare.svelte'
   import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte'
@@ -133,11 +138,11 @@
             <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
               <div class="mr-3 mt-0.5">
                 {#if navItem.label === 'Outrank'}
-                  <img src="/site-images/outrank/outrank-64.png" alt="Outrank app icon" class="rounded w-11" />
+                  <img src={outrankIcon} alt="Outrank app icon" class="rounded w-11" />
                 {:else if navItem.label === 'CatchUp'}
-                  <img src="/site-images/catchup/catchup-64.png" alt="CatchUp app icon" class="rounded w-11" />
+                  <img src={catchupIcon} alt="CatchUp app icon" class="rounded w-11" />
                 {:else if navItem.label === 'Hurricast'}
-                  <img src="/site-images/hurricast/hurricast-icon.jpg" alt="The Golden Hurricast icon" class="rounded w-11" />
+                  <img src={hurricastIcon} alt="The Golden Hurricast icon" class="rounded w-11" />
                 {/if}
               </div>  
               
@@ -243,11 +248,11 @@
           <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
             <div class="mr-3 mt-0.5">
               {#if navItem.label === 'Outrank'}
-                <img src="/site-images/outrank/outrank-64.png" alt="Outrank app icon" class="rounded w-11" />
+                <img src={outrankIcon} alt="Outrank app icon" class="rounded w-11" />
               {:else if navItem.label === 'CatchUp'}
-                <img src="/site-images/catchup/catchup-64.png" alt="CatchUp app icon" class="rounded w-11" />
+                <img src={catchupIcon} alt="CatchUp app icon" class="rounded w-11" />
               {:else if navItem.label === 'Hurricast'}
-                <img src="/site-images/hurricast/hurricast-icon.jpg" alt="The Golden Hurricast icon" class="rounded w-11" />
+                <img src={hurricastIcon} alt="The Golden Hurricast icon" class="rounded w-11" />
               {/if}
             </div>  
             

@@ -2,6 +2,7 @@
 	import LargeHeader from '$lib/components/LargeHeader.svelte'
 	import Subheader from '$lib/components/Subheader.svelte'
 	import BlogPreview from '$lib/components/BlogPreview.svelte'
+	
 	export let data
 </script>
 

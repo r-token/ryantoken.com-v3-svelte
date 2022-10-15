@@ -2,7 +2,7 @@
 title: Introducing Outrank
 description: Discussing the new app and my experience building it.
 date: 2021-10-26
-imagePath: /site-images/outrank/outrank-icon.png
+imagePath: /blog-images/introducing-outrank/outrank-icon.png
 imageAlt: Outrank's app icon
 tags:
 - iOS
@@ -13,13 +13,19 @@ tags:
 <script>
 	import ResizableImage from '$lib/components/ResizableImage.svelte'
 	import ResizableIcon from '$lib/components/ResizableIcon.svelte'
+	
+	import outrankIcon from '$lib/assets/site-images/outrank/outrank-icon.png'
+	import outrankRankings from '$lib/assets/site-images/outrank/outrank-rankings.png'
+	import outrankDetail from '$lib/assets/site-images/outrank/outrank-detail.png'
+	import outrankCompare from '$lib/assets/site-images/outrank/outrank-compare.png'
+	import outrankSettings from '$lib/assets/site-images/outrank/outrank-settings.png'
 </script>
 
 Today I'm excited to debut my first new iOS app in three years:
 
 ## Outrank
 
-<ResizableIcon src="/site-images/outrank/outrank-icon.png" altText="Outrank's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785" />
+<ResizableIcon src={outrankIcon} altText="Outrank's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785" />
 
 *icon courtesy of my amazing wife, Emma*
 
@@ -27,13 +33,13 @@ If you're a fan of American college football, this app is for you. Available for
 
 <div class="flex items-stretch mb-4 max-w-5xl">
 
-	<ResizableImage src="/site-images/outrank/outrank-rankings.png" altText="Outrank's rankings screen" url="https://apps.apple.com/us/app/outrank/id1588983785" />
+	<ResizableImage src={outrankRankings} altText="Outrank's rankings screen" url="https://apps.apple.com/us/app/outrank/id1588983785" />
 
-	<ResizableImage src="/site-images/outrank/outrank-detail.png" altText="Outrank's details screen" url="https://apps.apple.com/us/app/outrank/id1588983785" />
+	<ResizableImage src={outrankDetail} altText="Outrank's details screen" url="https://apps.apple.com/us/app/outrank/id1588983785" />
 
-	<ResizableImage src="/site-images/outrank/outrank-compare.png" altText="Outrank's comparison screen" url="https://apps.apple.com/us/app/outrank/id1588983785" />
+	<ResizableImage src={outrankCompare} altText="Outrank's comparison screen" url="https://apps.apple.com/us/app/outrank/id1588983785" />
 
-	<ResizableImage src="/site-images/outrank/outrank-settings.png" altText="Outrank's settings screen" url="https://apps.apple.com/us/app/outrank/id1588983785" />
+	<ResizableImage src={outrankSettings} altText="Outrank's settings screen" url="https://apps.apple.com/us/app/outrank/id1588983785" />
 </div>
 
 *screenshots courtesy of Federico Viticci and his wonderful <a href="https://www.macstories.net/ios/apple-frames-2-0-faster-lighter-and-featuring-support-for-iphone-13-ipad-mini-ipad-10-2-imac-24-macbook-air-and-multiple-languages/" target="_blank">Apple Frames</a> shortcut*
