@@ -76,9 +76,20 @@
     updateSelectedPage(page)
     toggleSidebar()
   }
+  
+  let innerHeight = 0
+  $: isSmallPhone = () => {
+    if (innerHeight <= 750) {
+      return true
+    } else {
+      return false
+    }
+  }
 </script>
 
-<div class="h-screen sticky top-0 {open ? 'z-50' : ''}">
+<svelte:window bind:innerHeight />
+
+<div class="h-screen sticky top-0 z-50">
   <!-- MOBILE SIDEBAR -->
   <Drawer isOpen={open} on:clickAway={() => open=false}>
     <div class="flex pb-6 flex-col overflow-y-auto lg:hidden relative h-full w-56 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-100 dark:border-slate-700">
@@ -88,7 +99,11 @@
         type="button"
         value="Close Sidebar"
       >
-        <SidebarIcon />
+        {#if isSmallPhone()}
+          <SidebarIcon class="mt-2" />
+        {:else}
+          <SidebarIcon />
+        {/if}
       </button>
       <div class="text-2xl font-bold flex items-center px-6 py-5 pb-0.5">
         <a href="/" on:click={() => updateSelectedPageAndToggleSidebar('/')}>
