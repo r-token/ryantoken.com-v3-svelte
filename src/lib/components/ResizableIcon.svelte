@@ -3,5 +3,5 @@
 </script>
 
 <a href={url} target="_blank">
-	<img src={src} alt={altText} class="p-2 rounded-3xl w-72" />
+	<img src={src} alt={altText} loading="lazy" decoding="async" class="p-2 rounded-3xl w-72" />
 </a>

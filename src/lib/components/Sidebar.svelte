@@ -153,11 +153,11 @@
             <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
               <div class="mr-3 mt-0.5">
                 {#if navItem.label === 'Outrank'}
-                  <img src={outrankIcon} alt="Outrank app icon" class="rounded w-11" />
+                  <img src={outrankIcon} alt="Outrank app icon" loading="lazy" decoding="async" class="rounded w-11" />
                 {:else if navItem.label === 'CatchUp'}
-                  <img src={catchupIcon} alt="CatchUp app icon" class="rounded w-11" />
+                  <img src={catchupIcon} alt="CatchUp app icon" loading="lazy" decoding="async" class="rounded w-11" />
                 {:else if navItem.label === 'Hurricast'}
-                  <img src={hurricastIcon} alt="The Golden Hurricast icon" class="rounded w-11" />
+                  <img src={hurricastIcon} alt="The Golden Hurricast icon" loading="lazy" decoding="async" class="rounded w-11" />
                 {/if}
               </div>  
               
@@ -263,9 +263,9 @@
           <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
             <div class="mr-3 mt-0.5">
               {#if navItem.label === 'Outrank'}
-                <img src={outrankIcon} alt="Outrank app icon" class="rounded w-11" />
+                <img src={outrankIcon} alt="Outrank app icon" loading="lazy" decoding="async" class="rounded w-11" />
               {:else if navItem.label === 'CatchUp'}
-                <img src={catchupIcon} alt="CatchUp app icon" class="rounded w-11" />
+                <img src={catchupIcon} alt="CatchUp app icon" loading="lazy" decoding="async" class="rounded w-11" />
               {:else if navItem.label === 'Hurricast'}
                 <img src={hurricastIcon} alt="The Golden Hurricast icon" class="rounded w-11" />
               {/if}

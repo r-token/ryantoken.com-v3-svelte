@@ -28,7 +28,7 @@
 
 	<div class="flex items-stretch mb-8">
 		<a href="https://www.buymeacoffee.com/ryantoken" class="w-2/3 xl:w-1/3 lg:w-1/3 max-w-xs" target="_blank">
-			<img src={bmcLogo} alt="Buy Me a Coffee button" class="rounded-3xl" />
+			<img src={bmcLogo} alt="Buy Me a Coffee button" loading="lazy" decoding="async" class="rounded-3xl" />
 		</a>
 	</div>
 

@@ -18,7 +18,7 @@
 
   <Subheader text="A bit about me."/>
 
-  <img src={profileImage} alt="Ryan Token" class="w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 max-w-[320px] rounded-xl mb-4"/>
+  <img src={profileImage} alt="Ryan Token" loading="lazy" decoding="async" class="w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 max-w-[320px] rounded-xl mb-4"/>
 
   <p class="mb-4">
     Hi, I'm Ryan. You can find me writing <a href="https://github.com/r-token" target="_blank">code</a>, running my <a href="https://thegoldenhurricast.com" target="_blank">podcast</a>, or watching my <a href="https://tulsahurricane.com" target="_blank">team</a>.
