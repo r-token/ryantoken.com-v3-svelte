@@ -1,6 +1,6 @@
 <script>
-	import LargeHeader from "$lib/components/LargeHeader.svelte"
-	import BlogPreview from "$lib/components/BlogPreview.svelte"
+	import LargeHeader from '$lib/components/LargeHeader.svelte'
+	import BlogPreview from '$lib/components/BlogPreview.svelte'
 	export let data
 </script>
 

@@ -11,7 +11,7 @@ tags:
 ---
 
 <script>
-	import ResizableImage from "$lib/components/ResizableImage.svelte"
+	import ResizableImage from '$lib/components/ResizableImage.svelte'
 </script>
 
 <ResizableImage src="/blog-images/joining-storyboard/storyboard.jpeg" altText="Storyboard logo" />

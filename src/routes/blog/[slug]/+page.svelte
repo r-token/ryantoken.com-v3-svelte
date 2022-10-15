@@ -1,7 +1,7 @@
 <script>
 	import '../../../prism-dracula.css'
-	import LargeHeader from "$lib/components/LargeHeader.svelte"
-	import Subheader from "$lib/components/Subheader.svelte"
+	import LargeHeader from '$lib/components/LargeHeader.svelte'
+	import Subheader from '$lib/components/Subheader.svelte'
 	export let data
 	
 	const formattedDate = () => {

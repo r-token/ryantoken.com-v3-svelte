@@ -11,7 +11,7 @@ tags:
 ---
 
 <script>
-	import ResizableImage from "$lib/components/ResizableImage.svelte"
+	import ResizableImage from '$lib/components/ResizableImage.svelte'
 </script>
 
 <ResizableImage src="/blog-images/dynamic-ephemeral-storage/dynamic-ephemeral-storage.png" altText="Dynamic Ephemeral Storage with AWS Lambda" url="https://medium.com/storyboard-podcasts/storyboard-dev-blog-serverless-compute-with-dynamic-ephemeral-storage-8fd38c0df93d" />

@@ -1,7 +1,7 @@
 <script>
-  import LargeHeader from "$lib/components/LargeHeader.svelte"
-  import Subheader from "$lib/components/Subheader.svelte"
-  import ResizableImage from "$lib/components/ResizableImage.svelte"
+  import LargeHeader from '$lib/components/LargeHeader.svelte'
+  import Subheader from '$lib/components/Subheader.svelte'
+  import ResizableImage from '$lib/components/ResizableImage.svelte'
 </script>
 
 <svelte:head>

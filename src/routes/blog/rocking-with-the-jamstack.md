@@ -11,7 +11,7 @@ tags:
 ---
 
 <script>
-	import ResizableImage from "$lib/components/ResizableImage.svelte"
+	import ResizableImage from '$lib/components/ResizableImage.svelte'
 </script>
 
 <ResizableImage src="/blog-images/rocking-with-the-jamstack/rwj-jamstack-logo.png" altText="Jamstack logo" />

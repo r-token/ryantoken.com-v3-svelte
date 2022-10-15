@@ -11,8 +11,8 @@ tags:
 ---
 
 <script>
-	import ResizableImage from "$lib/components/ResizableImage.svelte"
-	import ResizableIcon from "$lib/components/ResizableIcon.svelte"
+	import ResizableImage from '$lib/components/ResizableImage.svelte'
+	import ResizableIcon from '$lib/components/ResizableIcon.svelte'
 </script>
 
 Today I'm excited to debut my first new iOS app in three years:

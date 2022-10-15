@@ -24,7 +24,7 @@
 				<div class="absolute bottom-1">
 					{#each tags as tag (tag)}
 						<div class="inline-block mr-4 uppercase tracking-wide text-sm text-indigo-500 dark:text-sky-300 font-semibold">
-							<a href="/blog/tag/{tag}">
+							<a href="/blog/tags/{tag}">
 								{ tag }
 							</a>
 						</div>

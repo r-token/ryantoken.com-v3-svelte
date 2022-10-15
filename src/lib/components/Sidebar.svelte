@@ -8,12 +8,12 @@
     CoffeeIcon,
     LayersIcon,
     AlertTriangleIcon,
-    TwitterIcon,
-    GithubIcon,
-    LinkedinIcon,
     MailIcon,
     ArrowUpRightIcon
   } from 'svelte-feather-icons'
+  import FaTwitterSquare from 'svelte-icons/fa/FaTwitterSquare.svelte'
+  import FaGithubSquare from 'svelte-icons/fa/FaGithubSquare.svelte'
+  import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte'
 
   export let open, currentPage
 
@@ -163,13 +163,19 @@
             <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
               <div class="mr-3 mt-0.5">
                 {#if navItem.label === 'Twitter'}
-                  <TwitterIcon size="20" class="text-sky-400"/>
+                  <div class="text-sky-400 w-5">
+                    <FaTwitterSquare />
+                  </div>
                 {:else if navItem.label === 'GitHub'}
-                  <GithubIcon size="20" class="text-black"/> 
+                  <div class="text-black dark:text-white w-5">
+                    <FaGithubSquare />
+                  </div>
                 {:else if navItem.label === 'LinkedIn'}
-                  <LinkedinIcon size="20" class="text-sky-700"/>
+                  <div class="text-sky-700 dark:text-sky-600 w-5">
+                    <FaLinkedin />
+                  </div>
                 {:else if navItem.label === 'Email'}
-                  <MailIcon size="20" class="text-gray-600"/> 
+                  <MailIcon size="20" class="text-gray-600 dark:text-gray-200"/> 
                 {/if}
               </div>  
               
@@ -267,13 +273,19 @@
           <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
             <div class="mr-3 mt-0.5">
               {#if navItem.label === 'Twitter'}
-                <TwitterIcon size="20" class="text-sky-400"/>
+                <div class="text-sky-400 w-5">
+                  <FaTwitterSquare />
+                </div>
               {:else if navItem.label === 'GitHub'}
-                <GithubIcon size="20" class="text-black"/> 
+                <div class="text-black dark:text-white w-5">
+                  <FaGithubSquare />
+                </div>
               {:else if navItem.label === 'LinkedIn'}
-                <LinkedinIcon size="20" class="text-sky-700"/>
+                <div class="text-sky-700 dark:text-sky-600 w-5">
+                  <FaLinkedin />
+                </div>
               {:else if navItem.label === 'Email'}
-                <MailIcon size="20" class="text-gray-600"/> 
+                <MailIcon size="20" class="text-gray-600 dark:text-gray-200"/> 
               {/if}
             </div>  
             

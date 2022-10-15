@@ -10,7 +10,7 @@ tags:
 ---
 
 <script>
-	import ResizableImage from "$lib/components/ResizableImage.svelte"
+	import ResizableImage from '$lib/components/ResizableImage.svelte'
 </script>
 
 <ResizableImage src="/blog-images/one-year-at-storyboard/sb.jpeg" altText="Storyboard's logo" />

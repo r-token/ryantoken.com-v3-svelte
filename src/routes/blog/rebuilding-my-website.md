@@ -11,7 +11,7 @@ tags:
 ---
 
 <script>
-	import ResizableImage from "$lib/components/ResizableImage.svelte"
+	import ResizableImage from '$lib/components/ResizableImage.svelte'
 </script>
 
 ## Website V1: Bootstrap All the Things

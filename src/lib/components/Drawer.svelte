@@ -1,8 +1,8 @@
 <!-- from https://github.com/martykuentzel/svelte-tailwind-drawer -->
 
 <script>
-  import { createEventDispatcher } from "svelte"
-  import { onMount } from "svelte"
+  import { createEventDispatcher } from 'svelte'
+  import { onMount } from 'svelte'
 
   const dispatch = createEventDispatcher()
   export let isOpen = false

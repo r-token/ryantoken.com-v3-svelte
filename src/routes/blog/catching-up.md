@@ -12,7 +12,7 @@ tags:
 ---
 
 <script>
-	import ResizableImage from "$lib/components/ResizableImage.svelte"
+	import ResizableImage from '$lib/components/ResizableImage.svelte'
 </script>
 
 CatchUp - Keep in Touch was first released on May 6, 2018. It was the first iOS app I'd ever published to the App Store. Almost exactly two years later, I'm publishing this blog post and releasing an all-new, completely rewritten version of CatchUp.
