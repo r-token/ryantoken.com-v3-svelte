@@ -1,6 +1,6 @@
 import { fetchMarkdownPosts } from '$lib/utils'
 
-const siteURL = 'https://your-domain.tld'
+const siteURL = 'https://ryantoken.com'
 const siteTitle = 'Ryan Token'
 const siteDescription = "Ryan's personal website and blog"
 
@@ -35,10 +35,10 @@ const render = (posts) =>
 ${posts
 	.map(
 		(post) => `<item>
-<guid isPermaLink="true">${siteURL}/blog/${post.path}</guid>
+<guid isPermaLink="true">${siteURL}${post.path}</guid>
 <title>${post.meta.title}</title>
 <link>${siteURL}/blog/${post.path}</link>
-<description>${post.meta.title}</description>
+<description>${post.meta.description}</description>
 <pubDate>${new Date(post.meta.date).toUTCString()}</pubDate>
 </item>`
 	)
