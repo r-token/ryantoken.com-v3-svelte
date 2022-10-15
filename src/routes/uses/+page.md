@@ -1,27 +1,15 @@
-# Uses
-
-**Here's some stuff I use**
-
-- SvelteKit
-- Nova
-- Emojis 😎
-
-<!-- to color the code block, use a theme from here: https://github.com/PrismJS/prism-themes -->
-Here's a code block:
-```js
-const variable = 'check this out'
-
-if (variable) {
-	console.log('the variable is:', variable)
-}
-```
-
-<!-- you can even use Svelte components inside markdown files! -->
-Here's another Header component inside a markdown file!
 <script>
-	import Header from '$lib/components/Header.svelte'
+	import LargeHeader from '$lib/components/LargeHeader.svelte'
+	import Subheader from '$lib/components/Subheader.svelte'
 </script>
 
-<Header />
+<LargeHeader text="Uses"/>
 
-More markdown _here_!
+<Subheader text="Stuff I use" />
+
+<ul class="list-disc ml-6 mb-2">
+	<li><a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a></li>
+	<li><a href="https://nova.app/" target="_blank">Nova</a></li>
+	<li><a href="https://tailwindcss.com/" target="_blank">Tailwind</a></li>
+	<li>Emojis 😎</li>
+</ul>

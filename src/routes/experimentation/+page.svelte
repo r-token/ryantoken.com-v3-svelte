@@ -4,7 +4,7 @@
 	import Subheader from '$lib/components/Subheader.svelte'
 	import Header from '$lib/components/Header.svelte'
 	
-	let sentence
+	let sentence = ''
 	
 	const refreshSentence = async () => {
 		const response = await fetch(`${import.meta.env.VITE_PUBLIC_CUSTOM_BASE_PATH}/sentence-generator`)
@@ -32,7 +32,7 @@
 		A Work in Progress...
 	</p>
 	
-	<Header text="Netlify Function:"/>
+	<Header text="Serverless Function:"/>
 		
 	<button class="mb-6 rounded-full p-3 bg-indigo-500 dark:bg-sky-500 dark:from-fuchsia-500 dark:to-red-500 text-white" on:click={refreshSentence}>Generate a new random sentence</button>
 	
