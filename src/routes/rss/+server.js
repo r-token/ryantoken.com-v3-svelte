@@ -8,7 +8,7 @@ export const prerender = true
 	
 export const GET = async () => {
 	const allPosts = await fetchMarkdownPosts()
-	const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date))
+	const sortedPosts = allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
 
 	const body = render(sortedPosts)
 	const options = {
