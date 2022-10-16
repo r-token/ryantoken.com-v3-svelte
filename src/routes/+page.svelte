@@ -6,6 +6,9 @@
 
 <svelte:head>
 	<title>Ryan Token</title>
+	<meta name="og:description" content="Ryan's personal website and blog">
+	<meta name="keywords" content="Ryan Token, Serverless, Jamstack, iOS, Web, Javascript">
+	<meta name="author" content="Ryan Token">
 </svelte:head>
 
 <LargeHeader text="Hi, I'm Ryan" />

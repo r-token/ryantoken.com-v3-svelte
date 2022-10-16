@@ -14,6 +14,11 @@
 <svelte:head>
 	<title>Ryan Token - {data.title}</title>
 	<meta property="og:title" content={data.title} />
+	<meta property="og:description" content={data.description} />
+	<meta property="og:image" content={"ryantoken.com" + data.imagePath} />
+	<meta property=“og:type” content="blog post"/>
+	<meta name="keywords" content="Ryan Token, Serverless, Jamstack, iOS, Web, Javascript">
+	<meta name="author" content="Ryan Token">
 </svelte:head>
 
 <div>
