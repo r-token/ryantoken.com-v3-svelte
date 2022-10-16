@@ -37,7 +37,7 @@ ${posts
 		(post) => `<item>
 <guid isPermaLink="true">${siteURL}${post.path}</guid>
 <title>${post.meta.title}</title>
-<link>${siteURL}/blog/${post.path}</link>
+<link>${siteURL}${post.path}</link>
 <description>${post.meta.description}</description>
 <pubDate>${new Date(post.meta.date).toUTCString()}</pubDate>
 </item>`
