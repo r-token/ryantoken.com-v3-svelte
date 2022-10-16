@@ -8,7 +8,8 @@
 
 <svelte:head>
 	<title>Ryan Token - Blog Posts</title>
-	<meta name="og:description" content="Ryan Token's Blog Posts">
+	<meta name="description" content="Ryan Token's Blog Posts">
+	<meta property="og:description" content="Ryan Token's Blog Posts">
 	<meta name="keywords" content="Ryan Token, Blog, Serverless, Jamstack, iOS, Web, Javascript, AWS, Cloud">
 	<meta name="author" content="Ryan Token">
 </svelte:head>

@@ -7,7 +7,8 @@
 
 <svelte:head>
 	<title>Ryan Token - Meta</title>
-	<meta name="og:description" content="How ryantoken.com is built">
+	<meta name="description" content="How ryantoken.com is built">
+	<meta property="og:description" content="How ryantoken.com is built">
 	<meta name="keywords" content="Ryan Token, Serverless, Jamstack, iOS, Web, Javascript, AWS, Cloud">
 	<meta name="author" content="Ryan Token">
 </svelte:head>

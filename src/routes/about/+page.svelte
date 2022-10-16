@@ -11,7 +11,8 @@
 
 <svelte:head>
 	<title>Ryan Token - About</title>
-  <meta name="og:description" content="About Ryan Token">
+  <meta name="description" content="About Ryan Token">
+  <meta property="og:description" content="About Ryan Token">
   <meta name="keywords" content="Ryan Token, About Ryan, Serverless, Jamstack, iOS, Web, Javascript">
   <meta name="author" content="Ryan Token">
 </svelte:head>

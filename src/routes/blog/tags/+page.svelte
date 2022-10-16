@@ -5,7 +5,8 @@
 
 <svelte:head>
 	<title>Ryan Token - Tags</title>
-	<meta name="og:description" content="All tags on Ryan's blog posts">
+	<meta name="description" content="All tags on Ryan's blog posts">
+	<meta property="og:description" content="All tags on Ryan's blog posts">
 	<meta name="keywords" content="Ryan Token, Blog, Serverless, Jamstack, iOS, Web, Javascript, AWS, Cloud">
 </svelte:head>
 

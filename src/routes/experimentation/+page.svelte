@@ -19,7 +19,8 @@
 
 <svelte:head>
 	<title>Ryan Token - Experimentation</title>
-	<meta name="og:description" content="Ryan's Experimentation Page">
+	<meta name="description" content="Ryan's Experimentation Page">
+	<meta property="og:description" content="Ryan's Experimentation Page">
 	<meta name="keywords" content="Ryan Token, Serverless, Jamstack, iOS, Web, Javascript, AWS, Cloud">
 	<meta name="author" content="Ryan Token">
 </svelte:head>

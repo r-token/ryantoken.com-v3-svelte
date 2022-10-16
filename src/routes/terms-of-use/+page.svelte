@@ -6,7 +6,8 @@
 
 <svelte:head>
 	<title>Ryan Token - Terms of Use</title>
-	<meta name="og:description" content="Ryan Token's Terms of Use">
+	<meta name="description" content="Ryan Token's Terms of Use">
+	<meta property="og:description" content="Ryan Token's Terms of Use">
 	<meta name="keywords" content="Ryan Token, Terms, Terms of Use">
 	<meta name="author" content="Ryan Token">
 </svelte:head>

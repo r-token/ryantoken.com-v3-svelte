@@ -6,7 +6,8 @@
 
 <svelte:head>
 	<title>Ryan Token - Privacy Policy</title>
-	<meta name="og:description" content="Ryan Token's Privacy Policy">
+	<meta name="description" content="Ryan Token's Privacy Policy">
+	<meta property="og:description" content="Ryan Token's Privacy Policy">
 	<meta name="keywords" content="Ryan Token, Privacy, Privacy Policy">
 	<meta name="author" content="Ryan Token">
 </svelte:head>
