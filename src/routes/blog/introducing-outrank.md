@@ -79,7 +79,7 @@ Hello! If you're still reading this, thank you! I had a blast building Outrank. 
 
 First, a comment on SwiftUI. 100% of Outrank is written with it - there is no bridging into UIKit for anything, and there's no Objective-C code either. It's all Swift and SwiftUI, just as the good lord intended.
 
-When I rewrote my first app <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank">CatchUp</a> with SwiftUI last year, there were *a lot* of issues. I detailed some of them in <a href="/blog/catching-up/">this post</a>. Long story short, nearly all of the big SwiftUI bugs I ran into with CatchUp have been resolved! This is **not** to say that SwiftUI is now flawless. It absolutely has problems, and debugging those problems can sometimes be baffling, but the entire SwiftUI development experience has improved so much since last year. I was astounded.
+When I rewrote my first app <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank">CatchUp</a> with SwiftUI last year, there were *a lot* of issues. I detailed some of them in <a href="/blog/catching-up/" target="_blank">this post</a>. Long story short, nearly all of the big SwiftUI bugs I ran into with CatchUp have been resolved! This is **not** to say that SwiftUI is now flawless. It absolutely has problems, and debugging those problems can sometimes be baffling, but the entire SwiftUI development experience has improved so much since last year. I was astounded.
 
 ## Development Efficiency
 
@@ -107,11 +107,11 @@ Syncing favorite teams between Apple devices happens exclusively with <a href="h
 
 The back-end infrastructure is all AWS-based. I have a `node.js` server that handles a lot of the rankings data collection. That server throws its data into a couple of different `DynamoDB` tables, and the app calls various `API Gateway` endpoints that trigger `Lambda` functions to query those DB tables. The results of those API calls return JSON that I decode into Swift structs which finally winds up inside a SwiftUI `List` in the UI. All of the AWS infrastructure is generated via <a href="https://en.wikipedia.org/wiki/Infrastructure_as_code" target="_blank">IAC</a> with the <a href="https://www.serverless.com/framework" target="_blank">Serverless Framework</a> and <a href="https://www.terraform.io" target="_blank">Terraform</a>.
 
-There is no web front-end for this yet, but that is one of my goals for the app. I'm <a href="/blog/rocking-with-the-jamstack/">big into Jamstack</a> web development and have recently been experimenting with the <a href="https://v3.nuxtjs.org/" target="_Blank">Nuxt 3 beta</a>. My background with front-end web development is in <a href="https://reactjs.org/" target="_blank">React</a>, but the plan is to build the web front-end for Outrank with Nuxt 3 once it's out in production.
+There is no web front-end for this yet, but that is one of my goals for the app. I'm <a href="/blog/rocking-with-the-jamstack/" target="_blank">big into Jamstack</a> web development and have recently been experimenting with the <a href="https://v3.nuxtjs.org/" target="_Blank">Nuxt 3 beta</a>. My background with front-end web development is in <a href="https://reactjs.org/" target="_blank">React</a>, but the plan is to build the web front-end for Outrank with Nuxt 3 once it's out in production.
 
 ## A Quick Note on Privacy
 
-I collect/store *none* of your data. Literally 0. I have no interest in any of it, so let's put that to bed right now. You can read my <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms-of-use">Terms of Use</a> for more information.
+I collect/store *none* of your data. Literally 0. I have no interest in any of it, so let's put that to bed right now. You can read my <a href="/privacy-policy" target="_blank">Privacy Policy</a> and <a href="/terms-of-use" target="_blank">Terms of Use</a> for more information.
 
 ## Signing Off
 

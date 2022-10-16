@@ -44,7 +44,7 @@ As you might know, I also run <a href="https://thegoldenhurricast.com" target="_
 
 ### 3. My professional interests
 
-My previous two blog posts have been about 1) <a href="/blog/rocking-with-the-jamstack">the Jamstack</a>, and 2) <a href="/blog/learning-webrtc">WebRTC</a>. This role combines both of those interests and so many more.
+My previous two blog posts have been about 1) <a href="/blog/rocking-with-the-jamstack" target="_blank">the Jamstack</a>, and 2) <a href="/blog/learning-webrtc" target="_blank">WebRTC</a>. This role combines both of those interests and so many more.
 
 I spend the vast majority of my time both in my professional work and my side projects in the world of AWS - specifically on the serverless side of things. Recently, I've been deep into the AWS CDK for efficient management and development of AWS infrastructure. The CDK is incredibly powerful and I plan to use it as much as possible in my role with Storyboard.
 

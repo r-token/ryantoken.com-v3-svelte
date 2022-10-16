@@ -25,7 +25,7 @@ When I graduated from college in 2017 I was primarily only familiar with web dev
 
 I spent the next several months learning the basics of Swift, UIKit, and everything else that comes along with iOS development. Most of that learning came via courses on <a href="https://udemy.com" target="_blank">Udemy</a>, tutorials from <a href="https://hackingwithswift.com" target="_blank">Hacking with Swift</a> and <a href="https://swiftbysundell.com" target="_blank">Swift by Sundell</a>, finding answers on <a href="https://stackoverflow.com" target="_blank">Stack Overflow</a>, and stumbling around in the dark by myself until I happened upon a solution.
 
-When all was said and done, I had my first app. And it worked! Much like <a href="https://ryantoken.com/blog/rebuilding-my-website" target="_blank">version one of my website</a>, it wasn't the greatest app in the world. But it was my app, and I was proud to have built it.
+When all was said and done, I had my first app. And it worked! Much like <a href="/blog/rebuilding-my-website" target="_blank">version one of my website</a>, it wasn't the greatest app in the world. But it was my app, and I was proud to have built it.
 
 I put it out on the App Store on May 6, 2018, and, to my surprise, it did reasonably well. It even caught some publicity in the form of a feature in Brett Terpstra's <a href="https://systematicpod.com/ep/218" target="_blank">Systematic</a> podcast around the 46:00 minute mark of episode 218.
 
@@ -80,7 +80,7 @@ So there was my path forward. A complete rebuild using SwiftUI over UIKit, and C
 
 ## Implementing SwiftUI
 
-On the same day that SwiftUI was first announced back in 2019, I started working through Apple's (legitimately wonderful) <a href="https://developer.apple.com/tutorials/swiftui/tutorials" target="_blank">Learn to Make Apps with SwiftUI"</a> tutorials. I also participated in Hacking with Swift's (also wonderful) <a href="https://hackingwithswift.com/100/swiftui" target="_blank">100 Days of SwiftUI</a> course and read <a href="https://www.hackingwithswift.com/quick-start/swiftui" target="_blank">SwiftUI By Example</a> All of these things together gave me enough knowledge to feel somewhat comfortable with SwiftUI, even though documentation around it was/is not quite there.
+On the same day that SwiftUI was first announced back in 2019, I started working through Apple's (legitimately wonderful) "<a href="https://developer.apple.com/tutorials/swiftui/tutorials" target="_blank">Learn to Make Apps with SwiftUI</a>" tutorials. I also participated in Hacking with Swift's (also wonderful) <a href="https://hackingwithswift.com/100/swiftui" target="_blank">100 Days of SwiftUI</a> course and read <a href="https://www.hackingwithswift.com/quick-start/swiftui" target="_blank">SwiftUI By Example</a> All of these things together gave me enough knowledge to feel somewhat comfortable with SwiftUI, even though documentation around it was/is not quite there.
 
 In the case of implementing Core Data, it's been around since 2005. There are *plenty* of resources out there to help you learn and understand how it works. SwiftUI was built to play nicely with Core Data as well, so after a few articles and WWDC videos from previous years, I felt good enough on that side of things.
 
@@ -92,7 +92,11 @@ Of course, as expected and as I've heard from others who have used SwiftUI, once
 
 In CatchUp's 'Preference' screen, there are a few different pickers you might work with. I wanted to run some code every time one of those pickers was interacted with. Sounds simple enough, right? Using SwiftUI's onReceive modifier *does* work, but actually getting the value out the picker when onReceive is triggered is much weirder than you'd think.
 
-You have to attach `[self.*someSelection*].publisher.first()` to the onReceive call, and then pass in the value from the picker via a closure. I can only hope that this is fixed in a subsequent SwiftUI update because it was maddeningly difficult to figure that out.
+You have to attach:
+```swift
+[self.*someSelection*].publisher.first()
+```
+to the onReceive call, and then pass in the value from the picker via a closure. I can only hope that this is fixed in a subsequent SwiftUI update because it was maddeningly difficult to figure that out.
 
 Here's the workaround I found on Stack Overflow - the fix is highlighted at the bottom of the picture:
 

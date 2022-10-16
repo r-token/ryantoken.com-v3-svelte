@@ -21,7 +21,9 @@ I've been working heavily with the standard over the past several weeks and want
 
 ## First, What is WebRTC?
 
-<a href="https://webrtc.org" target="_blank">WebRTC</a> stands for <b>Web</b> <b>R</b>eal-<b>T</b>ime <b>C</b>ommunication and, as you'd expect from the name, enables real-time communication for the web. Think video calls, web-based chat, etc.
+<p class="text-lg">
+	<a href="https://webrtc.org" target="_blank">WebRTC</a> stands for <b>Web</b> <b>R</b>eal-<b>T</b>ime <b>C</b>ommunication and, as you'd expect from the name, enables real-time communication for the web. Think video calls, web-based chat, etc.
+</p>
 
 The technology has grown significantly since its initial implementation in 2011 as an open-source project by Google. Today, it's implemented as an open, standardized API that enables rich peer-to-peer communications, including the transmission of audio, video, and generic data between browsers, mobile devices, IoT devices, and more.
 
@@ -322,7 +324,7 @@ remoteConnection.dataChannel.send("Not much Peer A, what about you?")
 
 * WebRTC provides a standardized way for developers to implement this functionality with an API that we don't have to build ourselves
 
-* It's a popular open-source technology supported by Google, Mozilla, Opera, and others. You can browse the source code <a href="https://webrtc.googlesource.com/src/" target="_blank">here</a>.
+* It's a popular open-source technology supported by Google, Mozilla, Opera, and others. You can browse the source code <a href="https://webrtc.googlesource.com/src/" target="_blank">here</a>
 
 ***Cons***:
 
@@ -341,7 +343,9 @@ remoteConnection.dataChannel.send("Not much Peer A, what about you?")
 
 As mentioned, one of the cons of WebRTC is the need to maintain and manage various STUN and TURN servers.
 
-<a href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/what-is-kvswebrtc.html" target="_blank">Amazon Kinesis Video Streams with WebRTC</a> offers a potential solution to this problem, as well as handling the signaling implementation for you.
+<p class="text-lg">
+	<a href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/what-is-kvswebrtc.html" target="_blank">Amazon Kinesis Video Streams with WebRTC</a> offers a potential solution to this problem, as well as handling the signaling implementation for you.
+</p>
 
 AWS offers <a href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/webrtc-sdks.html" target="_blank">SDKs</a> to work with this service from the web, iOS, Android, and embedded devices.
 
