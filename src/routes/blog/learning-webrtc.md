@@ -21,7 +21,7 @@ I've been working heavily with the standard over the past several weeks and want
 
 ## First, What is WebRTC?
 
-<a href="https://webrtc.org" target="_blank">WebRTC</a> stands for **Web** **R**eal-**T**ime **C**ommunication and, as you'd expect from the name, enables real-time communication for the web. Think video calls, web-based chat, etc.
+<a href="https://webrtc.org" target="_blank">WebRTC</a> stands for <b>Web</b> <b>R</b>eal-<b>T</b>ime <b>C</b>ommunication and, as you'd expect from the name, enables real-time communication for the web. Think video calls, web-based chat, etc.
 
 The technology has grown significantly since its initial implementation in 2011 as an open-source project by Google. Today, it's implemented as an open, standardized API that enables rich peer-to-peer communications, including the transmission of audio, video, and generic data between browsers, mobile devices, IoT devices, and more.
 

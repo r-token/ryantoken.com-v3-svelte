@@ -99,7 +99,7 @@ I am all-in on the Jamstack. As always, there are plenty of areas still for me t
 
 My front ends are all currently either using Gatsby or Create React App. I am _very_ interested in <a href="https://nextjs.org" target="_blank">Next.js</a>, and will be diving into this heavily in the near future. Netlify was very quick to support Next.js, and I'm psyched about this integration.
 
-I'm also (in my opinion) a bit too much of an AWS purist right now. Don't get me wrong, AWS is fantastic, but I need to diversify a bit. Some of the other options I mentioned above, specifically in the data storage realm, sound quite exciting. Using <a href="https://fauna.com" target="_blank">Fauna</a>as a data store over AWS's DynamoDB is likely in my future.
+I'm also (in my opinion) a bit too much of an AWS purist right now. Don't get me wrong, AWS is fantastic, but I need to diversify a bit. Some of the other options I mentioned above, specifically in the data storage realm, sound quite exciting. Using <a href="https://fauna.com" target="_blank">Fauna</a> as a data store over AWS's DynamoDB is likely in my future.
 
 Further, I want to try out Netlify's own serverless Netlify Functions feature instead of manually building my own Lambda functions within AWS.
 

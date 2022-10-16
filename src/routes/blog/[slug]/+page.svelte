@@ -18,7 +18,7 @@
 
 <div>
 	<LargeHeader text={ data.title } />
-	<Subheader text={ data.description } />
+	<h2 class="italic mb-2 text-gray-500 dark:text-gray-400">{ data.description }</h2>
 	<Subheader text={ 'Published ' + formattedDate() } />
 </div>
 
@@ -27,3 +27,5 @@
 <aricle class="prose dark:prose-invert prose-a:text-indigo-500 dark:prose-a:text-slate-200">
 	<svelte:component this={data.content} />
 </aricle>
+
+<br />

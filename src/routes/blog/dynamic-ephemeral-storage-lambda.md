@@ -20,7 +20,7 @@ I published an article on <a href="https://medium.com/storyboard-podcasts/storyb
 
 AWS does not let you do this natively. You manually set the amount of storage on the function itself, and then you’re done. You *can* edit it after the fact, but you can’t change the amount of storage allocated with each invocation.
 
-In the post, I detail (what I think is) a clever solution to this limitation which can save you a significant amount of money in the long run.
+In the post, I detail (what I think is) a clever solution to this limitation which can save you a significant amount of money in the long run. Hint: it's built with the <a href="https://www.serverless.com/framework" target="_blank">Serverless Framework</a>.
 
 Check out the full post in the link below, and let me know what you think!
 
