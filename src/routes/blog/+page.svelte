@@ -13,7 +13,7 @@
 <LargeHeader text="Blog"/>
 	
 <h2 class="italic mb-6 text-gray-500 dark:text-gray-400">
-	All blog posts. Check out the <a href="/rss">RSS feed</a>.
+	All blog posts. Check out the <a href="/feed.rss">RSS feed</a>.
 </h2>
 
 <ul class="grid gap-6 grid-cols-1 xl:grid-cols-2">

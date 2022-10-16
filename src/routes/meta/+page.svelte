@@ -40,7 +40,7 @@
 </p>
 
 <p class="italic text-gray-500 dark:text-gray-400">
-	Check out the <a href="/rss">RSS feed</a>
+	Check out the <a href="/feed.rss">RSS feed</a>
 </p>
 
 <p class="mb-4 italic text-gray-500 dark:text-gray-400">

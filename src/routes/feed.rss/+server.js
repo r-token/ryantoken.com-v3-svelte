@@ -31,7 +31,7 @@ const render = (posts) =>
 <title>${siteTitle}</title>
 <description>${siteDescription}</description>
 <link>${siteURL}</link>
-<atom:link href="${siteURL}/rss.xml" rel="self" type="application/rss+xml"/>
+<atom:link href="${siteURL}/feed.rss.xml" rel="self" type="application/rss+xml"/>
 ${posts
 	.map(
 		(post) => `<item>
