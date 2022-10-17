@@ -5,9 +5,21 @@
 
 <svelte:head>
 	<title>Ryan Token - Tags</title>
-	<meta name="description" content="All tags on Ryan's blog posts">
-	<meta property="og:description" content="All tags on Ryan's blog posts">
-	<meta name="keywords" content="Ryan Token, Blog, Serverless, Jamstack, iOS, Web, Javascript, AWS, Cloud">
+	
+	<meta name="description" content="All tags on Ryan's blog posts" />
+	<meta name="keywords" content="Ryan Token, Blog, Tags, Serverless, Jamstack, iOS, Web, Javascript, AWS, Cloud" />
+	<meta name="author" content="Ryan Token" />
+	
+	<meta property="og:title" content="Ryan Token - Tags" />
+	<meta property="og:description" content="All tags on Ryan's blog posts" />
+	<meta property="og:url" content="https://ryantoken.com/blog/tags" />
+	<meta property="og:image" content="https://ryantoken.com/android-chrome-512x512.png" />
+	
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Ryan Token - Tags" />
+	<meta name="twitter:description" content="All tags on Ryan's blog posts" />
+	<meta name="twitter:site" content="@_ryantoken" />
+	<meta name="twitter:image" content="https://ryantoken.com/android-chrome-512x512.png" />
 </svelte:head>
 
 <LargeHeader text="All Tags"/>

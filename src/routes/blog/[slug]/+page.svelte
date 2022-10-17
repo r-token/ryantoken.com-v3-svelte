@@ -1,7 +1,8 @@
 <script>
-	import '../../../prism-dracula.css'
+	import { page } from '$app/stores'
 	import LargeHeader from '$lib/components/LargeHeader.svelte'
 	import Subheader from '$lib/components/Subheader.svelte'
+	import '../../../prism-dracula.css'
 	export let data
 	
 	const formattedDate = () => {
@@ -13,13 +14,23 @@
 
 <svelte:head>
 	<title>Ryan Token - {data.title}</title>
+	
+	<meta name="description" content={data.description} />
+	<meta name="keywords" content="Ryan Token, Serverless, Jamstack, iOS, Web, Javascript" />
+	<meta name="author" content="Ryan Token" />
+	
 	<meta property="og:title" content={"Ryan Token – " + data.title} />
-	<meta name="description" content={data.description}>
 	<meta property="og:description" content={data.description} />
-	<meta property="og:image" content={"ryantoken.com" + data.imagePath} />
-	<meta property=“og:type” content="blog post"/>
-	<meta name="keywords" content="Ryan Token, Serverless, Jamstack, iOS, Web, Javascript">
-	<meta name="author" content="Ryan Token">
+	<meta property="og:url" content={"https://ryantoken.com/blog/" + $page.params.slug} />
+	<meta property="og:image" content={"https://ryantoken.com" + data.imagePath} />
+	<meta property=“og:type” content="article" />
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={"Ryan Token – " + data.title} />
+	<meta name="twitter:description" content={data.description} />
+	<meta name="twitter:site" content="@_ryantoken" />
+	<meta name="twitter:image" content={"https://ryantoken.com" + data.imagePath} />
+	<meta name="twitter:creator" content="@_ryantoken" />
 </svelte:head>
 
 <div>

@@ -19,10 +19,21 @@
 
 <svelte:head>
 	<title>Ryan Token - Experimentation</title>
-	<meta name="description" content="Ryan's Experimentation Page">
-	<meta property="og:description" content="Ryan's Experimentation Page">
-	<meta name="keywords" content="Ryan Token, Serverless, Jamstack, iOS, Web, Javascript, AWS, Cloud">
-	<meta name="author" content="Ryan Token">
+	
+	<meta name="description" content="Ryan's experimentation page" />
+	<meta name="keywords" content="Ryan Token, Experimentation, Serverless, Jamstack, iOS, Web, Javascript, AWS, Cloud" />
+	<meta name="author" content="Ryan Token" />
+	
+	<meta property="og:title" content="Ryan Token - Experimentation" />
+	<meta property="og:description" content="Ryan's experimentation page" />
+	<meta property="og:url" content="https://ryantoken.com/experimentation" />
+	<meta property="og:image" content="https://ryantoken.com/android-chrome-512x512.png" />
+	
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Ryan Token - Experimentation" />
+	<meta name="twitter:description" content="Ryan's experimentation page" />
+	<meta name="twitter:site" content="@_ryantoken" />
+	<meta name="twitter:image" content="https://ryantoken.com/android-chrome-512x512.png" />
 </svelte:head>
 
 <LargeHeader text="Experimentation"/>
