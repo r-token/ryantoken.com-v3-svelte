@@ -20,6 +20,21 @@
 
 <svelte:head>
 	<title>{'Ryan Token - ' + getFormattedTag() + ' Tag'}</title>
+	
+	<meta name="description" content={ "Ryan's blog posts tagged with " + getFormattedTag() } />
+	<meta name="keywords" content="Ryan Token, Blog, Tags" />
+	<meta name="author" content="Ryan Token" />
+	
+	<meta property="og:title" content={'Ryan Token - ' + getFormattedTag() + ' Tag'} />
+	<meta property="og:description" content={ "Ryan's blog posts tagged with " + getFormattedTag() } />
+	<meta property="og:url" content={"https://www.ryantoken.com/blog/tags/" + data.tag} />
+	<meta property="og:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
+	
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content={'Ryan Token - ' + getFormattedTag() + ' Tag'} />
+	<meta name="twitter:description" content={ "Ryan's blog posts tagged with " + getFormattedTag() } />
+	<meta name="twitter:site" content="@_ryantoken" />
+	<meta name="twitter:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
 </svelte:head>
 
 <h1 class="text-2xl font-bold mb-0 text-indigo-500 dark:text-slate-200">Blog posts tagged with:</h1>

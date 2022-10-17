@@ -18,14 +18,14 @@
   
   <meta property="og:title" content="Ryan Token - About" />
   <meta property="og:description" content="About Ryan" />
-  <meta property="og:url" content="https://ryantoken.com/about" />
-  <meta property="og:image" content="https://ryantoken.com/_app/immutable/assets/profile-668eaa31.jpg" />
+  <meta property="og:url" content="https://www.ryantoken.com/about" />
+  <meta property="og:image" content="https://www.ryantoken.com/_app/immutable/assets/profile-668eaa31.jpg" />
   
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Ryan Token - About" />
   <meta name="twitter:description" content="About Ryan" />
   <meta name="twitter:site" content="@_ryantoken" />
-  <meta name="twitter:image" content="https://ryantoken.com/_app/immutable/assets/profile-668eaa31.jpg" />
+  <meta name="twitter:image" content="https://www.ryantoken.com/_app/immutable/assets/profile-668eaa31.jpg" />
 </svelte:head>
 
 <div>

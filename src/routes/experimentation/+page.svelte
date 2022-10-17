@@ -26,14 +26,14 @@
 	
 	<meta property="og:title" content="Ryan Token - Experimentation" />
 	<meta property="og:description" content="Ryan's experimentation page" />
-	<meta property="og:url" content="https://ryantoken.com/experimentation" />
-	<meta property="og:image" content="https://ryantoken.com/android-chrome-512x512.png" />
+	<meta property="og:url" content="https://www.ryantoken.com/experimentation" />
+	<meta property="og:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
 	
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="Ryan Token - Experimentation" />
 	<meta name="twitter:description" content="Ryan's experimentation page" />
 	<meta name="twitter:site" content="@_ryantoken" />
-	<meta name="twitter:image" content="https://ryantoken.com/android-chrome-512x512.png" />
+	<meta name="twitter:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
 </svelte:head>
 
 <LargeHeader text="Experimentation"/>

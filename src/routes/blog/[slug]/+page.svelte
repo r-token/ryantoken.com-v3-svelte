@@ -21,15 +21,15 @@
 	
 	<meta property="og:title" content={"Ryan Token – " + data.title} />
 	<meta property="og:description" content={data.description} />
-	<meta property="og:url" content={"https://ryantoken.com/blog/" + $page.params.slug} />
-	<meta property="og:image" content={"https://ryantoken.com" + data.imagePath} />
+	<meta property="og:url" content={"https://www.ryantoken.com/blog/" + $page.params.slug} />
+	<meta property="og:image" content={"https://www.ryantoken.com" + data.imagePath} />
 	<meta property=“og:type” content="article" />
 	
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={"Ryan Token – " + data.title} />
 	<meta name="twitter:description" content={data.description} />
 	<meta name="twitter:site" content="@_ryantoken" />
-	<meta name="twitter:image" content={"https://ryantoken.com" + data.imagePath} />
+	<meta name="twitter:image" content={"https://www.ryantoken.com" + data.imagePath} />
 	<meta name="twitter:creator" content="@_ryantoken" />
 </svelte:head>
 
