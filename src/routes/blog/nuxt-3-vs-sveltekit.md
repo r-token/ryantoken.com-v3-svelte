@@ -46,9 +46,11 @@ Neither of those issues are complete dealbreakers though. I can 1) not use Nuxt 
 
 ### Developer Experience
 
-Despite those hurdles, I sincerely enjoyed the developer experience of building with Nuxt 3 and Vue 3. Things like this:
+Despite those hurdles, I sincerely enjoyed the developer experience of building with Nuxt 3 and Vue 3.
 
-```js
+Things like this:
+
+```html
 <script>
 export default {
 	data() {
@@ -67,7 +69,7 @@ export default {
 
 Turn into this:
 
-```js
+```html
 <script setup>
 	const count = ref(0)
 	const increment = () => count.value++
@@ -80,7 +82,7 @@ My website is not a complicated one. It's primarily just a bunch of static pages
 
 The blog, though, needs to be as simple as possible to maintain and update over time. If blog posts are hard to write, or, once written, are hard to connect to the rest of the site, that puts up a large mental roadblock for me to want to continue writing.
 
-### The Blog - Nuxt and Nuxt content
+### The Blog - Nuxt and Nuxt Content
 
 Nuxt 3 and Nuxt Content solves the blog problem. All you need to do is create a `/content` directory at the root of the project, a `/blog` directory within that, and a new folder for each blog post. You can then write blog posts in standard markdown, and you can include Vue components within them via <a href="https://content.nuxtjs.org/guide/writing/mdc" target="_blank">MDC</a> syntax. Nuxt will then automatically configure the routing for you. For example, an `index.md` markdown file within `/content/blog/fancy-blog-post` will be accessible at https://your-website.com/blog/fancy-blog-post. Pretty sweet!
 
