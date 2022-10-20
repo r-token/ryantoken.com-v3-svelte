@@ -1,6 +1,5 @@
 <script>
   import { SidebarIcon } from 'svelte-feather-icons'
-
   export let open
   export let currentPage
   
