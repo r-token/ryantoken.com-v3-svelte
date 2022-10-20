@@ -2,12 +2,26 @@
 	import LargeHeader from '$lib/components/LargeHeader.svelte'
 	import Subheader from '$lib/components/Subheader.svelte'
 	import BlogPreview from '$lib/components/BlogPreview.svelte'
-	
 	export let data
 </script>
 
 <svelte:head>
-	<title>Ryan Token - Blog Posts</title>
+	<title>Ryan Token - Blog</title>
+	
+	<meta name="description" content="Ryan's blog posts" />
+	<meta name="keywords" content="Ryan Token, Blog, Serverless, Jamstack, iOS, Web, Javascript, AWS, Clou" />
+	<meta name="author" content="Ryan Token" />
+	
+	<meta property="og:title" content="Ryan Token - Blog" />
+	<meta property="og:description" content="Ryan's blog posts" />
+	<meta property="og:url" content="https://www.ryantoken.com/blog" />
+	<meta property="og:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
+	
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Ryan Token - Blog" />
+	<meta name="twitter:description" content="Ryan's blog posts" />
+	<meta name="twitter:site" content="@_ryantoken" />
+	<meta name="twitter:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
 </svelte:head>
 
 <LargeHeader text="Blog"/>

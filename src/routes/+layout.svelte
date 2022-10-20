@@ -4,7 +4,6 @@
 	import Sidebar from '$lib/components/Sidebar.svelte'
 	import Topbar from '$lib/components/Topbar.svelte'
 	import { fade } from 'svelte/transition'
-	
 	export let data
 
 	let sidebarOpened = false

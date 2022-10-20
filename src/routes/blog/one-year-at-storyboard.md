@@ -69,7 +69,7 @@ I have no problem staying fresh on *two* of these areas at a time. I'll always b
 
 For the last couple of years I've been most confident in my back-end and mobile skills, but I've lost some of the front-end skills I used to have. Before that, front-end and mobile were my stronger suits, but back-end dropped off. And the pattern continues.
 
-I have all three going right now. I hope to keep that up and take them all to new heights this year. I'm taking on some smaller front-end projects at work while spending most of my time on back-end development. I'm keeping up with mobile in my spare time. I released a native iOS app in October of 2021 <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank">Outrank</a> and am coming down to the wire on another as I write this.
+I have all three going right now. I hope to keep that up and take them all to new heights this year. I'm taking on some smaller front-end projects at work while spending most of my time on back-end development. I'm keeping up with mobile in my spare time. I released a native iOS app in October of 2021 called <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank">Outrank</a> and am coming down to the wire on another as I write this.
 
 I think this is the combination that works best for me. Doing mobile development primarily outside of work keeps it fresh and offers a break from the web technologies I typically work with during the day. This change of pace in the tech I work with, I hope, will keep the momentum going as I become a significant contributor in *all* facets of application development.
 

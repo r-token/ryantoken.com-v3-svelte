@@ -1,38 +1,9 @@
-# create-svelte
+## ryantoken.com
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+<a href="https://ryantoken.com" target="_blank">ryantoken.com</a> is a <a href="https://jamstack.org" target="_blank">Jamstack</a> website created with <a href="https://svelte.dev/" target="_blank">Svelte</a>, <a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a>, and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>. It's all hosted on <a href="https://vercel.com/" target="_blank">Vercel</a>.
 
-## Creating a project
+The blog is generated with <a href="https://mdsvex.com/" target="_blank">mdsvex</a> and <a href="https://daringfireball.net/projects/markdown/syntax#overview" target="_blank">Markdown</a>.
 
-If you're seeing this, you've probably already done this step. Congrats!
+The serverless functions and API endpoints are configured with the <a href="https://www.serverless.com/framework" target="_blank">Serverless Framework</a>.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+I will have a short blog post on my experience building the site this way in the future.

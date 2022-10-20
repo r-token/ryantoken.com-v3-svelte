@@ -4,6 +4,25 @@
 	import Header from '$lib/components/Header.svelte'
 </script>
 
+<svelte:head>
+	<title>Ryan Token - Terms of Use</title>
+	
+	<meta name="description" content="Ryan's terms of use" />
+	<meta name="keywords" content="Ryan Token, Terms, Terms of Use" />
+	<meta name="author" content="Ryan Token" />
+	
+	<meta property="og:title" content="Ryan Token - Terms of Use" />
+	<meta property="og:description" content="Ryan's terms of use" />
+	<meta property="og:url" content="https://www.ryantoken.com/terms-of-use" />
+	<meta property="og:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
+	
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Ryan Token - Terms of Use" />
+	<meta name="twitter:description" content="Ryan's terms of use" />
+	<meta name="twitter:site" content="@_ryantoken" />
+	<meta name="twitter:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
+</svelte:head>
+
 <LargeHeader text="Terms of Use"/>
 
 <Subheader text="An agreement between you and me."/>

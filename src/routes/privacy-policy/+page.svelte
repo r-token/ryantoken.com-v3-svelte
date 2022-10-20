@@ -4,6 +4,25 @@
 	import Header from '$lib/components/Header.svelte'
 </script>
 
+<svelte:head>
+	<title>Ryan Token - Privacy Policy</title>
+	
+	<meta name="description" content="Ryan's privacy policy" />
+	<meta name="keywords" content="Ryan Token, Privacy, Privacy Policy" />
+	<meta name="author" content="Ryan Token" />
+	
+	<meta property="og:title" content="Ryan Token - Privacy Policy" />
+	<meta property="og:description" content="Ryan's privacy policy" />
+	<meta property="og:url" content="https://www.ryantoken.com/privacy-policy" />
+	<meta property="og:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
+	
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Ryan Token - Privacy Policy" />
+	<meta name="twitter:description" content="Ryan's privacy policy" />
+	<meta name="twitter:site" content="@_ryantoken" />
+	<meta name="twitter:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
+</svelte:head>
+
 <LargeHeader text="Privacy Policy"/>
 
 <Subheader text="Long story short: I don't collect any of your data."/>
