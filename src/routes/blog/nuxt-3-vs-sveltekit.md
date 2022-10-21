@@ -169,7 +169,7 @@ I've already discussed most of the primary benefits of using Svelte and SvelteKi
 
 1. Like Nuxt 3, the developer experience was great and the development feedback loop was extremely fast. SvelteKit also uses Vite, but comes bundled with a <a href="https://github.com/sveltejs/vite-plugin-svelte" target="_blank">Svelte plugin</a> and <a href="https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/config.md#hot" target="_blank">Hot Module Replacement (HMR)</a> to reflect changes to your code in the browser immediately.
 
-2. Svelte itself is not hard to learn. I mentioned the <a href="https://svelte.dev/tutorial/basics" target="_blank">tutorial</a> already, but it really is very simple to get a hang of while you work through that. It's a clean and simple framework.
+2. Svelte itself was surprisingly easy to learn. I mentioned the <a href="https://svelte.dev/tutorial/basics" target="_blank">tutorial</a> already, but it really is very simple to get a hang of while you work through that. It's a clean and simple framework.
 
 3. Due to its smaller size, no virtual DOM, optimizing at build-time rather than run-time, and no need for extra state management work, Svelte is arguably <a href="https://procoders.tech/blog/svelte-vs-vue-frameworks-comparison/" target="_blank">the fastest</a> JavaScript framework on the market today
 
@@ -178,21 +178,177 @@ I've already discussed most of the primary benefits of using Svelte and SvelteKi
 Ok, enough on my experience with each. Let's get into some hands-on comparisons between how each performed when actually building this website. I'll start with a couple component comparisons before comparing page sizes, load speeds, and syntax differences.
 
 ### Component Comparisons
-* Topbar component example with emits in Nuxt vs standard stuff in Svelte
-* MDC vs mdsvex
+A good first component to look at for comparison's sake is the top bar. This only appears on small screens/mobile phones, and interacts with the sidebar.
 
+This is how it looks in Nuxt 3:
+
+```html
+<script setup>
+	import IconShowSidebar from '~icons/zondicons/show-sidebar'
+	
+	const emit = defineEmits(["toggleSidebar", "updateSelectedPageFromTopbar"])
+	const toggleSidebar = () => emit("toggleSidebar", true)
+	const updateSelectedPage = () => emit("updateSelectedPageFromTopbar", "index")
+</script>
+
+<template>
+	<div class="lg:hidden z-50 v-screen sticky top-0 flex justify-between py-3 px-3 lg:px-6 bg-slate-100 dark:bg-slate-700 border-b border-slate-100 dark:border-slate-700 space-x-3 lg:space-x-6">
+		<div class="flex items-center flex-1">
+			<button 
+				@click='toggleSidebar'
+				class="mr-3 lg:hidden flex items-center justify-center w-10 h-10 rounded-full text-gray-600 dark:text-gray-300"
+				type="button" 
+				value="Open sidebar"
+			>
+				<icon-show-sidebar />
+			</button>
+
+			<NuxtLink to="/" @click="updateSelectedPage" class="lg:hidden text-indigo-500 dark:text-slate-200 font-bold">Ryan Token</NuxtLink>
+		</div>
+	</div>
+</template>
+```
+
+And this is how the Topbar components looks in SvelteKit:
+
+```html
+<script>
+	import { SidebarIcon } from 'svelte-feather-icons'
+	export let open
+	export let currentPage
+	
+	const toggleSidebar = () => open = true
+	const updateSelectedPage = () => currentPage = 'index'
+</script>
+
+<div class="lg:hidden z-40 v-screen sticky top-0 flex justify-between py-3 px-3 lg:px-6 bg-slate-100 dark:bg-slate-700 border-b border-slate-100 dark:border-slate-700 space-x-3 lg:space-x-6">
+	<div class="flex items-center flex-1">
+		<button 
+			on:click={toggleSidebar}
+			class="mr-3 lg:hidden flex items-center justify-center w-10 h-10 rounded-full text-gray-600 dark:text-gray-300"
+			type="button"
+			value="Open sidebar"
+		>
+			<SidebarIcon />
+		</button>
+
+		<a href="/" on:click={updateSelectedPage} class="lg:hidden text-indigo-500 dark:text-slate-200 font-bold">Ryan Token</a>
+	</div>
+</div>
+```
+
+The Topbar component and the Sidebar component are at the same level in the component hierarchy. Both are used by a common `layout` file that Nuxt 3 and SvelteKit use. The Sidebar has to react to changes in the Topbar's state, though, like when a user taps the sidebar icon in the Topbar to open/close the sidebar. Lots of "bar"s here, I know.
+
+Regardless, a change in the Topbar's state needs to be bubbled up to its parent, then relayed to the Sidebar component so the Sidebar knows whether it should be opened or closed.
+
+Vue uses the concept of <a href="https://vuejs.org/guide/components/events.html#emitting-and-listening-to-events" target="_blank">emits</a> to send messages from a component to its parent.
+
+Svelte uses <a href="https://svelte.dev/repl/e6f91174592d45c78f4701b2d311b62e?version=3.29.4" target="_blank">two-way data bindings</a>. In the parent `layout` component, I can pass the value of the Topbar's `open` prop to the Sidebar like so: `<Sidebar bind:open={sidebarOpened} />`
+
+Personally, I found Svelte's approach to be more straightforward than needing to `emit` an event and then set up an event listener that reacts to that. Neither approach was overly complex, but Svelte's felt more natural to me.
+
+### MDC vs MDsveX
+
+I mentioned my preference for Svelte's MDsveX to Nuxt's MDC syntax earlier, but I wanted to give a side-by-side comparison here so it was easier to understand why. Again, these are the libraries that allow you to use Svelte or Vue components within Markdown.
+
+Here's how you use a block component, like a resizable image, with Vue and MDC:
+
+```js
+::ResizableBlogImage{src="/path/to-image.png" altText="Some alt text"}
+::
+```
+
+And here's how you do the same thing with Svelte and MDsveX:
+
+```js
+<ResizableImage src="/path/to-image.png" altText="Some alt text" />
+```
+
+Again, neither are *bad*, but one of them makes more sense and is more concise. And that, to me, is the Svelte solution.
 
 ### Page Size Comparisons
 
+So we've talked now for a while about conceptual differences, syntactic differences, and developer experience differences between the frameworks, but what about real-world speed and size comparisons?
+
+Let's start with size.
+
+To gauge a page's size, I'm using Chrome's standard Developer Tools and the Network tab. Doing a hard refresh of the home page of my site, I see the following:
+
+**Nuxt 3 site**:
+* 45 requests
+* 942 kB transferred
+* 2.0 MB resources
+
+**SvelteKit site**:
+* 37 requests
+* 627 kB transferred
+* 1.6 MB resources
+
+The SvelteKit site is smaller in every way despite being outwardly the exact same.
+
+Also, I at first didn't know what the difference between "transferred" and "resources" was. <a href="https://stackoverflow.com/a/56043891" target="_blank">Stack Overflow</a> tells me that "'Transferred' is the compressed size of all resources. You can think of it as the amount of upload and download data that a mobile user will use in order to load this page. 'Resources' is the uncompressed size of all resources."
+
+Additionally, Svelte, as its name implies, is a small framework. This is because there's no virtual DOM or extra state management libraries that Svelte needs to deal with. This results in smaller overall size of the framework and less <a href="https://builtin.com/software-engineering-perspectives/fix-javascript-bloat" target="_blank">JavaScript bloat</a>.
+
+The size difference between the two pages also lends itself to our next point of comparison: speed.
 
 ### Page Load Speed Comparisons
-* No virtual DOM
 
+Speed is harder to measure reliably. While using the dev tools Network tab I was using for page size calculations was consistent and reliable, the time it took to load the page changed significantly on every refresh for both the Nuxt 3 site and the SvelteKit site.
 
-### Syntax Differences
-* No extra work for state management
+To try to put some more concrete numbers around this, we'll defer to Google's <a href="https://pagespeed.web.dev/" target="_blank">PageSpeed Insights</a>.
 
+Note: these are first-run numbers. I have not yet put serious time into optimizing either site for increased performance metrics aside from compressing images.
 
+**Nuxt 3 site - mobile**
+* Performance score: 88
+* First Contentful Paint: 2.0 s
+* Speed Index: 2.0 s
+* Largest Contentful Paint: 2.4 s
+* Time to Interactive: 4.7 s
+* Total Blocking Time: 310 ms
+* Cumulative Layout Shift: 0.023
+
+<ResizableImage src="/blog-images/nuxt-3-vs-sveltekit/nuxt-pagespeed-mobile.png" altText="PageSpeed Insights scores for the Nuxt 3 site on mobile" />
+
+**Nuxt 3 site - desktop**
+* Performance score: 100
+* First Contentful Paint: 0.5 s
+* Speed Index: 0.7 s
+* Largest Contentful Paint: 0.7 s
+* Time to Interactive: 0.5 s
+* Total Blocking Time: 0 ms
+* Cumulatie Layout Shift: 0.002
+
+<ResizableImage src="/blog-images/nuxt-3-vs-sveltekit/nuxt-pagespeed-desktop.png" altText="PageSpeed Insights scores for the Nuxt 3 site on desktop" />
+
+**SvelteKit site - mobile**
+* Performance score: 93
+* First Contentful Paint: 1.7 s
+* Speed Index: 2.2 s
+* Largest Contentful Paint: 2.3 s
+* Time to Interactive: 4.0 s
+* Total Blocking Time: 190 ms
+* Cumulative Layout Shift: 0.023
+
+<ResizableImage src="/blog-images/nuxt-3-vs-sveltekit/svelte-pagespeed-mobile.png" altText="PageSpeed Insights scores for the SvelteKit site on mobile" />
+
+**SvelteKit site - desktop**
+* Performance score: 100
+* First Contentful Paint: 0.5 s
+* Speed Index: 0.8 s
+* Largest Contentful Paint: 0.6 s
+* Time to Interactive: 0.7 s
+* Total Blocking Time: 10 ms
+* Cumulatie Layout Shift: 0.002
+
+<ResizableImage src="/blog-images/nuxt-3-vs-sveltekit/svelte-pagespeed-desktop.png" altText="PageSpeed Insights scores for the SvelteKit site on desktop" />
+
+Some interesting takeaways there. First, they both scored perfect 100s on desktop. Again, I have put almost 0 time into deeper page optimizations. All I've really actively done is compressed the image files throughout the site so they're smaller. To get perfect 100s on desktop effectively out of the box with both of these frameworks is impressive.
+
+There's a bigger difference in how they scored for mobile, though. The Nuxt site performed moderately worse in every metric on mobile than the SvelteKit site. The primary performance drag for both sites was the Apple Podcasts embedded player I include on the home screen. PageSpeed Insights complained about that player being slow to load every time. Since it's lazily loaded though, and it's at the bottom of the page and you typically need to scroll to get there, I'm not too worried about it.
+
+Like the Network tab, there were differences every time I ran the PageSpeed Insights process on each site. They were relatively close each time though, so I think it's a fair comparison.
 
 And now a quick comparison on some of the other noteworthy differences:
 * Diff one
