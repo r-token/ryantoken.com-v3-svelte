@@ -12,15 +12,28 @@ tags:
 
 <script>
 	import ResizableImage from '$lib/components/ResizableImage.svelte'
+	import bmcLogo from '$lib/assets/site-images/bmc-button.png'
 </script>
 
-## Beginning the Rebuild
+## Rebuilding ryantoken.com
 
 I've been thinking for several months about rebuilding my website (<a href="/blog/rebuilding-my-website">again</a>). There were several reasons. First, to dig into some modern front-end work to re-familiarize myself with that world. Second, to get up to speed with what the latest and greatest JavaScript framework options were and how they worked. And finally, my previous website was no longer cutting it for me in several different ways.
 
-The <a href="https://twitter.com/_ryantoken/status/1517504062563835904?s=20&t=yyC5y-1gbqkHw8equ9g3Sw" target="_blank">primary debate</a> was between which framework I was going to use. After some thought, I came down to two options. Option one was <a href="https://v3.nuxtjs.org/" target="_blank">Nuxt 3</a>: a Vue framework we use at <a href="https://trystoryboard.com" target="_blank">Storyboard</a>. Option two was <a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a>: a new framework <a href="https://scotttolinski.com/" target="_blank">Scott Tolinski</a> constantly sings the praises of on the <a href="https://syntax.fm/" target="_blank">Syntax</a> podcast. I come from a <a href="https://reactjs.org/" target="_blank">React</a> background, so regardless of my choice it was going to be quite new syntactically. Additionally, I did have *some* experience with <a href="https://prismic.io/blog/javascript-meta-frameworks-ecosystem#meta-framework" target="_blank">meta-frameworks</a> like <a href="https://www.gatsbyjs.com/" target="_blank">Gatsby</a>, but not much.
+For reference, here's what my website looked like before:
 
-Let me preface the rest of this post by emphasizing that I am not a front-end expert. My full-time job is primarily in serverless back-end development. On top of that, the relatively little front-end framework experience I do have is in React. I had played around with Vue before, but was completely new to Nuxt, Svelte, and SvelteKit.
+<ResizableImage src="/blog-images/nuxt-3-vs-sveltekit/publish-website.png" altText="v2 of ryantoken.com - built with Swift and Publish" />
+
+I actually built that version of the site with <a href="https://www.apple.com/swift/" target="_blank">Swift</a> and <a href="https://github.com/johnsundell/publish" target="_blank">Publish</a> - a static site generator for Swift. While a great tool, I needed something more flexible that aligned with how I feel about web development today. Thus, the rewrite project began.
+
+## The Debate
+
+The <a href="https://twitter.com/_ryantoken/status/1514393045319536650?s=20&t=2XnKuxMtMirv-q0s8RJXbw" target="_blank">primary debate</a> was between which framework I was going to use. After some thought, I came down to two options. Option one was <a href="https://v3.nuxtjs.org/" target="_blank">Nuxt 3</a>: a Vue framework we use at <a href="https://trystoryboard.com" target="_blank">Storyboard</a>. Option two was <a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a>: a new framework I originally heard about due to <a href="https://scotttolinski.com/" target="_blank">Scott Tolinski</a> often singing its praises on the <a href="https://syntax.fm/" target="_blank">Syntax</a> podcast. I come from a <a href="https://reactjs.org/" target="_blank">React</a> background, so regardless of my choice it was going to be quite new conceptually and syntactically.
+
+Additionally, Nuxt 3 and SvelteKit are both <a href="https://prismic.io/blog/javascript-meta-frameworks-ecosystem#meta-framework" target="_blank">meta-frameworks</a>. Nuxt is a meta-framework for Vue, and SvelteKit is a meta-framework for Svelte. This means that they're frameworks that provide abstractions on top of other frameworks - primarily to handle the boring/routine stuff for you. Think wiring up page routes, sharing common layouts between pages, and handling smooth page transitions. They also generally come with best practices built in like build optimizations, link prefetching, and more. I did have *some* experience with meta-frameworks like <a href="https://www.gatsbyjs.com/" target="_blank">Gatsby</a>, but not much. And while most of this post will compare the meta-frameworks of Nuxt 3 and SvelteKit, we'll also get into some of the differences between the core Vue and Svelte frameworks.
+
+Let me preface the rest of this post by emphasizing that I am not a front-end expert. My full-time job is primarily in serverless back-end development. On top of that, most of the relatively little front-end framework experience I do have is in React. I had played around with Vue before, but was completely new to Nuxt, Svelte, and SvelteKit. I'm certain I will get some front-end terminology or facts wrong. Please <a href="mailto:ryantoken13@gmail.com" target="_blank">email me</a> with corrections or clarifications if you have them.
+
+Ok, on to some comparisons.
 
 Both Nuxt 3 and SvelteKit offer some similar features out of the box, including:
 * Filesystem-based routing
@@ -30,7 +43,7 @@ Both Nuxt 3 and SvelteKit offer some similar features out of the box, including:
 * Single-file components
 * Easy integration with <a href="https://tailwindcss.com/" target="_blank">Tailwind</a>, which I knew I wanted to try for this rewrite
 
-At first, I decided to do the rewrite with Nuxt 3. At time of publish, Nuxt 3 is still in Release Candidate mode, but, as mentioned, we use Nuxt at my place of work and I wanted to get a better understanding of how it actually works - as, again, I currently spend most of my time doing back-end work.
+At first, I <a href="https://twitter.com/_ryantoken/status/1517504062563835904?s=20&t=yyC5y-1gbqkHw8equ9g3Sw" target="_blank">decided</a> to do the rewrite with Nuxt 3. At time of publish, Nuxt 3 is still in Release Candidate mode, but, as mentioned, we use Vue and Nuxt at my place of work and I wanted to get a better understanding of how it actually works - as, again, I currently spend most of my time doing back-end work.
 
 However, Nuxt 3 has now been in Release Candidate mode since April of 2022 (about 6 months at time of writing), and is still missing some key features for me to be fully satisfied with the end result. After waiting long enough for Nuxt 3 to be fully released, I decided I would *also* rewrite my website with <a href="https://svelte.dev/" target="_blank">Svelte</a> and SvelteKit.
 
@@ -76,7 +89,7 @@ Turn into this:
 </script>
 ```
 
-So much nicer. Additionally, one of the primary reasons I wanted to use Nuxt 3 was to take advantage of the complete rewrite of <a href="https://content.nuxtjs.org/" target="_blank">Nuxt Content</a>.
+So much nicer. Additionally, one of the primary reasons I wanted to use Nuxt 3 was to take advantage of the complete rewrite of <a href="https://content.nuxtjs.org/" target="_blank">Nuxt Content</a> - their content engine.
 
 My website is not a complicated one. It's primarily just a bunch of static pages. The only relatively complex parts are the responsive sidebar and the blog. The sidebar could be solved once and considered "done" - it's not something I should need to revisit often.
 
@@ -149,9 +162,9 @@ Regardless, that gives us a dead-simple way to add posts to our blog. All I have
 
 ### mdsvex
 
-Svelte's counterpart to Nuxt's MDC syntax is called <a href="https://mdsvex.com/" target="_blank">mdsvex</a>. An odd name for sure, but it's supposed to be the svelte-y naming equivalent of the popular <a href="https://mdxjs.com/" target="_blank">MDX</a> for React. MD and X for dynamic markdown, plus SVE in the middle for Svelte, equals MDsveX 🤷‍♂️
+Svelte's counterpart to Nuxt's MDC syntax is called <a href="https://mdsvex.com/" target="_blank">mdsvex</a>. An odd name for sure, but it's supposed to be the svelte-y naming equivalent of the popular <a href="https://mdxjs.com/" target="_blank">MDX</a> for React. MD and X for dynamic markdown, plus SVE in the middle for Svelte, equals mdsvex 🤷‍♂️
 
-Additionally, mdsvex is **not** an officially sanctioned "components-in-markdown" markdown preprocessor like MDC is for Nuxt. It's a <a href="https://github.com/pngwn/MDsveX" target="_blank">third-party library</a>. Even with it not being a first-party piece of technology, I found it simpler and easier to use than MDC in Nuxt. You can see some side-by-side comparisons in the <a href="#comparing-nuxt-3-and-sveltekit">Comparing Nuxt 3 and SvelteKit</a> section.
+Additionally, mdsvex is **not** an officially sanctioned "components-in-markdown" markdown preprocessor like MDC is for Nuxt. It's a <a href="https://github.com/pngwn/mdsvex" target="_blank">third-party library</a>. Even with it not being a first-party piece of technology, I found it simpler and easier to use than MDC in Nuxt. You can see some side-by-side comparisons in the <a href="#comparing-nuxt-3-and-sveltekit">Comparing Nuxt 3 and SvelteKit</a> section.
 
 Here's how you use components in markdown with mdsvex:
 
@@ -178,10 +191,11 @@ I've already discussed most of the primary benefits of using Svelte and SvelteKi
 Ok, enough on my experience with each. Let's get into some hands-on comparisons between how each performed when actually building this website. I'll start with a couple component comparisons before comparing page sizes, load speeds, and syntax differences.
 
 ### Component Comparisons
-A good first component to look at for comparison's sake is the top bar. This only appears on small screens/mobile phones, and interacts with the sidebar.
+A good first component to look at for comparison's sake is the Topbar component. This only appears on small screens/mobile phones, and interacts with the sidebar.
 
 This is how it looks in Nuxt 3:
 
+*Topbar.vue*
 ```html
 <script setup>
 	import IconShowSidebar from '~icons/zondicons/show-sidebar'
@@ -211,6 +225,7 @@ This is how it looks in Nuxt 3:
 
 And this is how the Topbar components looks in SvelteKit:
 
+*Topbar.svelte*
 ```html
 <script>
 	import { SidebarIcon } from 'svelte-feather-icons'
@@ -247,9 +262,9 @@ Svelte uses <a href="https://svelte.dev/repl/e6f91174592d45c78f4701b2d311b62e?ve
 
 Personally, I found Svelte's approach to be more straightforward than needing to `emit` an event and then set up an event listener that reacts to that. Neither approach was overly complex, but Svelte's felt more natural to me.
 
-### MDC vs MDsveX
+### MDC vs mdsvex
 
-I mentioned my preference for Svelte's MDsveX to Nuxt's MDC syntax earlier, but I wanted to give a side-by-side comparison here so it was easier to understand why. Again, these are the libraries that allow you to use Svelte or Vue components within Markdown.
+I mentioned my preference for Svelte's mdsvex to Nuxt's MDC syntax earlier, but I wanted to give a side-by-side comparison here so it was easier to understand why. Again, these are the libraries that allow you to use Svelte or Vue components within Markdown.
 
 Here's how you use a block component, like a resizable image, with Vue and MDC:
 
@@ -258,7 +273,7 @@ Here's how you use a block component, like a resizable image, with Vue and MDC:
 ::
 ```
 
-And here's how you do the same thing with Svelte and MDsveX:
+And here's how you do the same thing with Svelte and mdsvex:
 
 ```js
 <ResizableImage src="/path/to-image.png" altText="Some alt text" />
@@ -350,15 +365,73 @@ There's a bigger difference in how they scored for mobile, though. The Nuxt site
 
 Like the Network tab, there were differences every time I ran the PageSpeed Insights process on each site. They were relatively close each time though, so I think it's a fair comparison.
 
-And now a quick comparison on some of the other noteworthy differences:
-* Diff one
-* Diff two
-* Diff three
-* Total lines of code
+### Other Noteworthy Differences
+
+Before we wrap up, a couple other notes to share.
+
+Total lines of code (counted with <a href="https://github.com/AlDanial/cloc" target="_blank">cloc</a>):
+* Nuxt 3 site: 27,939 total lines of code	
+
+```
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+JSON                             8              0              0          26092
+Vuejs Component                 26            222             59            842
+Markdown                        11            500              0            767
+JavaScript                       3             17              0             75
+YAML                             1              9              0             69
+TypeScript                       3              9              3             61
+CSS                              1              3              0             21
+TOML                             1              2              0             10
+Text                             1              0              0              2
+-------------------------------------------------------------------------------
+SUM:                            55            762             62          27939
+-------------------------------------------------------------------------------
+```
+
+* SvelteKit site: 8,439 total lines of code
+
+```
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+JSON                             4              0              0           6463
+Svelte                          21            265              3           1001
+Markdown                        10            452              0            656
+JavaScript                      14             29              3            188
+CSS                              2             21              8            119
+HTML                             1              0              0             12
+-------------------------------------------------------------------------------
+SUM:                            52            767             14           8439
+-------------------------------------------------------------------------------
+```
+
+Honestly, I have no idea why the amount of JSON is so much higher in the Nuxt 3 site than it is in the SvelteKit site. I certainly am not writing 26,092 lines of JSON. I assume that's something Nuxt is doing in the background. Or the `cloc` tool I'm using to count the lines of code in a git repo is a bit flawed.
 
 ## The Winner
 
-I chose SvelteKit and this is why
+By now, you probably already guessed which framework I ended up choosing for the production version of the site. I chose SvelteKit, and these were the primary reasons:
 
-1. It's no-nonsense. The syntax is clean and concise while using traditional HTML, CSS, and JavaScript. There is some "magic" with SvelteKit, like the filesystem-based routing, but Svelte itself is very self-explanatory
-2. 
+1. It's no-nonsense. The syntax is clean, concise, and consistent while using traditional HTML, CSS, and JavaScript. There is some "magic" with SvelteKit, like the filesystem-based routing, but Svelte itself is very self-explanatory
+2. No virtual DOM diffing or complex state management code
+3. It's extremely fast and performs better on mobile out of the box
+4. I prefer Svelte's `mdsvex` to Nuxt's `MDC` for components in Markdown
+5. I prefer Svelte's two-way binding feature to Vue's `emit` feature for bubbling props from child components up to their parents
+
+Don't misunderstand, though. Nuxt 3 is amazing. It's performant, provides a wonderful developer experience, and has a great team behind it and a bright future ahead of it.
+
+I loved building the website with Nuxt. I was consistently impressed with how intuitive its features were to implement and how quickly I was able to get off the ground. I began this project with Nuxt for a reason.
+
+I plan to maintain both the Nuxt 3 site and the SvelteKit site over time. I may even switch which one the ryantoken.com domain points to at various times. Doing this will keep me up-to-date with how each framework is progressing and keep my skillset up on both simultaneously.
+
+This was a wonderful exercise to go through, and I've never been happier with my personal website. Thanks for reading if you made it all the way here, and feel free to <a href="mailto:ryantoken13@gmail.com" target="_blank">get in touch</a> if you have feedback on the site or this blog post.
+
+And if you particularly enjoyed this post, feel free to <a href="https://www.buymeacoffee.com/ryantoken" target="_blank">buy me a coffee</a>!
+
+<div class="flex items-stretch mb-8">
+	<a href="https://www.buymeacoffee.com/ryantoken" class="w-2/3 xl:w-1/3 lg:w-1/3 max-w-xs" target="_blank">
+		<img src={bmcLogo} alt="Buy Me a Coffee button" loading="lazy" decoding="async" class="rounded-3xl" />
+	</a>
+</div>
+
