@@ -17,35 +17,35 @@ tags:
 
 ## Rebuilding ryantoken.com
 
-I've been thinking for several months about rebuilding my website (<a href="/blog/rebuilding-my-website">again</a>). There were several reasons. First, to dig into some modern front-end work to re-familiarize myself with that world. Second, to get up to speed with what the latest and greatest JavaScript framework options were and how they worked. And finally, my previous website was no longer cutting it for me in several different ways.
+I've been thinking for several months about rebuilding my website (<a href="/blog/rebuilding-my-website">again</a>). There were several reasons. First, to dig into some modern front-end work to re-familiarize myself with that world. Second, to get up to speed with what the latest JavaScript framework options were and how they worked. And finally, my previous website was no longer cutting it for me in several different ways.
 
 For reference, here's what my website looked like before:
 
 <ResizableImage src="/blog-images/nuxt-3-vs-sveltekit/publish-website.png" altText="v2 of ryantoken.com - built with Swift and Publish" />
 
-I actually built that version of the site with <a href="https://www.apple.com/swift/" target="_blank">Swift</a> and <a href="https://github.com/johnsundell/publish" target="_blank">Publish</a> - a static site generator for Swift. While a great tool, I needed something more flexible that aligned with how I feel about web development today. Thus, the rewrite project began.
+I actually built that version of the site with <a href="https://www.apple.com/swift/" target="_blank">Swift</a> and <a href="https://github.com/johnsundell/publish" target="_blank">Publish</a> - a static site generator for Swift. While a great tool, I needed something more flexible that better aligned with how I feel about web development today. Thus, the rewrite project began.
 
 ## The Debate
 
 The <a href="https://twitter.com/_ryantoken/status/1514393045319536650?s=20&t=2XnKuxMtMirv-q0s8RJXbw" target="_blank">primary debate</a> was between which framework I was going to use. After some thought, I came down to two options. Option one was <a href="https://v3.nuxtjs.org/" target="_blank">Nuxt 3</a>: a Vue framework we use at <a href="https://trystoryboard.com" target="_blank">Storyboard</a>. Option two was <a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a>: a new framework I originally heard about due to <a href="https://scotttolinski.com/" target="_blank">Scott Tolinski</a> often singing its praises on the <a href="https://syntax.fm/" target="_blank">Syntax</a> podcast. I come from a <a href="https://reactjs.org/" target="_blank">React</a> background, so regardless of my choice it was going to be quite new conceptually and syntactically.
 
-Additionally, Nuxt 3 and SvelteKit are both <a href="https://prismic.io/blog/javascript-meta-frameworks-ecosystem#meta-framework" target="_blank">meta-frameworks</a>. Nuxt is a meta-framework for Vue, and SvelteKit is a meta-framework for Svelte. This means that they're frameworks that provide abstractions on top of other frameworks - primarily to handle the boring/routine stuff for you. Think wiring up page routes, sharing common layouts between pages, and handling smooth page transitions. They also generally come with best practices built in like build optimizations, link prefetching, and more. I did have *some* experience with meta-frameworks like <a href="https://www.gatsbyjs.com/" target="_blank">Gatsby</a>, but not much. And while most of this post will compare the meta-frameworks of Nuxt 3 and SvelteKit, we'll also get into some of the differences between the core Vue and Svelte frameworks.
+Additionally, Nuxt 3 and SvelteKit are both <a href="https://prismic.io/blog/javascript-meta-frameworks-ecosystem#meta-framework" target="_blank">meta-frameworks</a>. Nuxt is a meta-framework for <a href="https://vuejs.org/" target="_blank">Vue</a>, and SvelteKit is a meta-framework for <a href="https://svelte.dev/" target="_blank">Svelte</a>. This means that they're frameworks that provide abstractions on top of other frameworks - primarily to handle the boring/routine stuff for you. Think wiring up page routes, sharing common layouts between pages, and handling smooth page transitions. They also generally come with best practices built in like build optimizations, link prefetching, and more. I did have *some* experience with meta-frameworks like <a href="https://www.gatsbyjs.com/" target="_blank">Gatsby</a>, but not much. And while most of this post will compare the meta-frameworks of Nuxt 3 and SvelteKit, we'll also get into some of the differences between the core Vue and Svelte frameworks.
 
-Let me preface the rest of this post by emphasizing that I am not a front-end expert. My full-time job is primarily in serverless back-end development. On top of that, most of the relatively little front-end framework experience I do have is in React. I had played around with Vue before, but was completely new to Nuxt, Svelte, and SvelteKit. I'm certain I will get some front-end terminology or facts wrong. Please <a href="mailto:ryantoken13@gmail.com" target="_blank">email me</a> with corrections or clarifications if you have them.
+Let me preface the rest of this post by emphasizing that I am not a front-end expert. My full-time job is primarily in serverless back-end development with `node.js`. On top of that, most of the front-end framework experience I do have is in React. I've played around with Vue before, but was completely new to Nuxt, Svelte, and SvelteKit. Because of this, I'm certain I will get some front-end terminology or facts wrong. Please <a href="mailto:ryantoken13@gmail.com" target="_blank">email me</a> with corrections or clarifications if you have them.
 
-Ok, on to some comparisons.
+Ok, on to the main event.
 
 Both Nuxt 3 and SvelteKit offer some similar features out of the box, including:
 * Filesystem-based routing
 * Route prerendering
 * Link prefetching
-* Fully static rendering options
+* Fully static and server-side rendering options
 * Single-file components
 * Easy integration with <a href="https://tailwindcss.com/" target="_blank">Tailwind</a>, which I knew I wanted to try for this rewrite
 
-At first, I <a href="https://twitter.com/_ryantoken/status/1517504062563835904?s=20&t=yyC5y-1gbqkHw8equ9g3Sw" target="_blank">decided</a> to do the rewrite with Nuxt 3. At time of publish, Nuxt 3 is still in Release Candidate mode, but, as mentioned, we use Vue and Nuxt at my place of work and I wanted to get a better understanding of how it actually works - as, again, I currently spend most of my time doing back-end work.
+I first <a href="https://twitter.com/_ryantoken/status/1517504062563835904?s=20&t=yyC5y-1gbqkHw8equ9g3Sw" target="_blank">decided</a> to do the rewrite with Nuxt 3. At time of publish, Nuxt 3 is still in Release Candidate mode, but, as mentioned, we use Vue and Nuxt at my place of work and I wanted to get a better understanding of how it actually works. Again, I currently spend most of my time doing back-end work.
 
-However, Nuxt 3 has now been in Release Candidate mode since April of 2022 (about 6 months at time of writing), and is still missing some key features for me to be fully satisfied with the end result. After waiting long enough for Nuxt 3 to be fully released, I decided I would *also* rewrite my website with <a href="https://svelte.dev/" target="_blank">Svelte</a> and SvelteKit.
+However, Nuxt 3 has now been in Release Candidate mode since April of 2022 (about 6 months at time of writing), and is still missing some key features for me to be fully satisfied with the end result. After waiting long enough for Nuxt 3 to be fully released, I decided I would *also* rewrite my website with Svelte and SvelteKit.
 
 Both of these rewrites have been completed and live at different URLs.
 
@@ -53,15 +53,15 @@ Before spoiling which one I chose, let's get into my experience with each:
 
 ## Nuxt 3
 
-Nuxt 3 is a brand new framework. It doesn't have a 1.0 release yet and I'm still waiting on several key features (in my opinion) to be released. Primarily <a href="https://github.com/nuxt/image/discussions/548" target="_blank">Nuxt Image support for static sites or sites hosted on Netlify or Vercel</a> and <a href="https://github.com/nuxt/content/issues/1154" target="_blank">Nuxt Content support for static sites</a>.
+Nuxt 3 is a brand new framework. It doesn't have a 1.0 release yet and I'm still waiting on several key features to be released. Primarily <a href="https://github.com/nuxt/image/discussions/548" target="_blank">Nuxt Image support</a> for static sites or sites hosted on Netlify or Vercel, and <a href="https://github.com/nuxt/content/issues/1154" target="_blank">Nuxt Content support</a> for static sites.
 
-Neither of those issues are complete dealbreakers though. I can 1) not use Nuxt Image, and 2) go with server-side rendering instead of a fully static site. That would work around both of those issues for the time being.
+Neither of those issues are complete dealbreakers though. I can 1) not use Nuxt Image, and 2) go with server-side rendering instead of a fully static site. That works around both of those issues for the time being.
 
 ### Developer Experience
 
 Despite those hurdles, I sincerely enjoyed the developer experience of building with Nuxt 3 and Vue 3.
 
-Things like this:
+Things like this from Nuxt 2:
 
 ```html
 <script>
@@ -80,7 +80,7 @@ export default {
 </script>
 ```
 
-Turn into this:
+Turn into this with Nuxt 3:
 
 ```html
 <script setup>
@@ -258,7 +258,7 @@ Regardless, a change in the Topbar's state needs to be bubbled up to its parent,
 
 Vue uses the concept of <a href="https://vuejs.org/guide/components/events.html#emitting-and-listening-to-events" target="_blank">emits</a> to send messages from a component to its parent.
 
-Svelte uses <a href="https://svelte.dev/repl/e6f91174592d45c78f4701b2d311b62e?version=3.29.4" target="_blank">two-way data bindings</a>. In the parent `layout` component, I can pass the value of the Topbar's `open` prop to the Sidebar like so: `<Sidebar bind:open={sidebarOpened} />`
+Svelte uses <a href="https://svelte.dev/repl/e6f91174592d45c78f4701b2d311b62e?version=3.29.4" target="_blank">two-way data bindings</a> instead. In the parent `layout` component, I can pass the value of the Topbar's `open` prop to the Sidebar like so: `<Sidebar bind:open={sidebarOpened} />`
 
 Personally, I found Svelte's approach to be more straightforward than needing to `emit` an event and then set up an event listener that reacts to that. Neither approach was overly complex, but Svelte's felt more natural to me.
 
@@ -299,7 +299,7 @@ To gauge a page's size, I'm using Chrome's standard Developer Tools and the Netw
 * 627 kB transferred
 * 1.6 MB resources
 
-The SvelteKit site is smaller in every way despite being outwardly the exact same.
+The SvelteKit site is smaller in every way despite outwardly being the exact same.
 
 Also, I at first didn't know what the difference between "transferred" and "resources" was. <a href="https://stackoverflow.com/a/56043891" target="_blank">Stack Overflow</a> tells me that "'Transferred' is the compressed size of all resources. You can think of it as the amount of upload and download data that a mobile user will use in order to load this page. 'Resources' is the uncompressed size of all resources."
 
@@ -411,7 +411,11 @@ Honestly, I have no idea why the amount of JSON is so much higher in the Nuxt 3 
 
 ## The Winner
 
-By now, you probably already guessed which framework I ended up choosing for the production version of the site. I chose SvelteKit, and these were the primary reasons:
+<div class="max-w-lg">
+	<ResizableImage src="/blog-images/nuxt-3-vs-sveltekit/sveltekit.png" altText="The SvelteKit logo" url="https://kit.svelte.dev" />
+</div>
+
+You probably could've guessed long ago which framework I ended up choosing for the production version of the site. I chose SvelteKit, and these were the primary reasons:
 
 1. It's no-nonsense. The syntax is clean, concise, and consistent while using traditional HTML, CSS, and JavaScript. There is some "magic" with SvelteKit, like the filesystem-based routing, but Svelte itself is very self-explanatory
 2. No virtual DOM diffing or complex state management code
