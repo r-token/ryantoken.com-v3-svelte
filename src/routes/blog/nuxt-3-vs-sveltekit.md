@@ -17,7 +17,7 @@ tags:
 
 ## Rebuilding ryantoken.com
 
-I've been thinking for several months about rebuilding my website (<a href="/blog/rebuilding-my-website">again</a>). There were several reasons. First, to dig back into front-end work and re-familiarize myself with that world. Next, to get up to speed with what the latest JavaScript framework options were and how they worked. And finally, my previous website was no longer cutting it for me in several different ways.
+I've been thinking for several months about rebuilding my website (<a href="/blog/rebuilding-my-website">again</a>). There were several reasons. First, to dig back into front-end work and re-familiarize myself with that world. Next, to get up to speed with the latest JavaScript framework options and how they worked. And finally, my previous website was no longer cutting it for me in several different ways.
 
 For reference, here's what my website looked like before:
 
@@ -47,7 +47,7 @@ I first <a href="https://twitter.com/_ryantoken/status/1517504062563835904?s=20&
 
 However, Nuxt 3 has now been in Release Candidate mode since April of 2022 (about 6 months at time of writing). It still isn't done and is missing some key features for me to be fully satisfied with it. After waiting long enough for Nuxt 3 to be fully released, I decided I would *also* rewrite my website with Svelte and SvelteKit.
 
-Both of these rewrites have been completed and live at different URLs.
+Both of these rewrites have been more-or-less completed and live at different URLs.
 
 Before spoiling which one I chose, let's get into my experience with each:
 
@@ -190,12 +190,21 @@ I've already discussed most of the primary benefits I found when using Svelte an
 
 ## Comparing Nuxt 3 and SvelteKit
 
-Ok, enough on my experience with each. Let's get into some hands-on comparisons between how they performed when actually building this website. I'll start with a couple of component comparisons before getting into total page sizes, load speeds, and code brevity.
+Ok, enough on my experience with each. Let's get into some hands-on comparisons between how they performed when actually building this website. I'll start with a couple of component comparisons before getting into total page sizes, load speeds, and total lines of code.
 
 ### Component Comparisons
-A good first component to look at for comparison's sake is the Topbar component. The Topbar only appears on small screens/mobile phones, but it interacts with the sidebar in an interesting way.
 
-This is a simplified version of the Topbar component in Nuxt 3:
+#### Topbar Component
+
+A good first component to look at for comparison's sake is the Topbar component. The Topbar only appears on small screens/mobile phones, but it interacts with the Sidebar in an interesting way.
+
+When you tap the sidebar icon, it needs to send some kind of notification to the Sidebar component to let it know that it should open/close itself.
+
+Here's what the Topbar looks like:
+
+<ResizableImage src="/blog-images/nuxt-3-vs-sveltekit/topbarComponent.png" altText="The Topbar component" />
+
+Here's a simplified implementation of the Topbar component in Vue 3:
 
 *Topbar.vue*
 ```html
@@ -222,7 +231,7 @@ This is a simplified version of the Topbar component in Nuxt 3:
 </template>
 ```
 
-And this is a simplified version of the Topbar components in SvelteKit:
+And here it is in Svelte:
 
 *Topbar.svelte*
 ```html
@@ -248,7 +257,7 @@ And this is a simplified version of the Topbar components in SvelteKit:
 </div>
 ```
 
-The Topbar component and the Sidebar component are rendered at the same level in the component hierarchy - one is not a child of the other. However, the Sidebar needs to react to changes in the Topbar's state. For example, when a user taps the "toggle sidebar" icon in the Topbar, it should open/close the Sidebar. Lots of "bar"s here, I know. Roll with me for a minute longer.
+The Topbar component and the Sidebar component are rendered at the same level in the component hierarchy - one is not a child of the other. However, the Sidebar needs to react to changes in the Topbar's state. As mentioned, when a user taps the "toggle sidebar" icon in the Topbar, it should open/close the Sidebar.
 
 For reference, here's a simplified version of the parent component that renders both the Sidebar and the Topbar:
 
@@ -282,6 +291,117 @@ Vue uses the concept of <a href="https://vuejs.org/guide/components/events.html#
 Svelte uses <a href="https://svelte.dev/repl/e6f91174592d45c78f4701b2d311b62e?version=3.29.4" target="_blank">two-way data bindings</a> instead. In the parent component, I can pass the value of the Topbar's `open` prop to the Sidebar with the `bind` keyword like so: `<Sidebar bind:open={sidebarOpened} />`
 
 Personally, I found Svelte's approach to be more straightforward than needing to `emit` an event and then set up an event listener that reacts to that. Neither approach was overly complex, but Svelte's felt more natural to me.
+
+#### BlogPreview Component
+
+Let's look at one more component comparison before moving on.
+
+The BlogPreview component is the responsive card that shows each blog post's primary image, title, description, publish date, and tags. Here's how it looks:
+
+<ResizableImage src="/blog-images/nuxt-3-vs-sveltekit/blogPreviewComponent.png" altText="The BlogPreview component" />
+
+Here's a simplified implementation of it in Vue 3:
+
+```html
+<script setup>
+  const props = defineProps({
+    slug: String,
+    title: String,
+    description: String,
+    date: String,
+    image: String,
+    imageAlt: String,
+    tags: Array
+  })
+  
+  function navigate(path){
+    return navigateTo({
+      path: path
+    })
+  }
+
+  const formattedDate = computed(() => {
+    const isoDate = props.date
+    const dateString = new Date(isoDate.replace(/-/g, '\/').replace(/T.+/, ''))
+    const conciseDate = dateString.toLocaleDateString()
+    return conciseDate
+  })
+</script>
+
+<template>
+  <div>
+    <div @click="navigate(slug)">
+      <div>
+        <div>
+          <img :src="image" :alt="imageAlt" />
+        </div>
+
+        <div>
+          <p>{{ title }}</p>
+          <p>{{ description }}</p>
+          <p>{{ formattedDate }}</p>
+          <div>
+            <div v-for="tag in tags" :key="tag">
+              <NuxtLink :to="'/tags/' + tag" @click.stop="navigate(`/tags/${tag}`)">
+                {{ tag }}
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+```
+
+And here's how it looks in Svelte:
+
+```html
+<script>
+  import { goto } from '$app/navigation'
+  export let slug, title, description, date, image, imageAlt, tags
+
+  const formattedDate = () => {
+    const isoDate = date
+    const dateString = new Date(isoDate.replace(/-/g, '\/').replace(/T.+/, ''))
+    const conciseDate = dateString.toLocaleDateString()
+    return conciseDate
+  }
+</script>
+
+<div>
+  <div on:click={() => goto(slug)}>
+    <div>
+      <div>
+        <img src={image} alt={imageAlt} loading="lazy" decoding="async" />
+      </div>
+
+      <div>
+        <p>{ title }</p>
+        <p>{ description }</p>
+        <p>{ formattedDate() }</p>
+        <div>
+          {#each tags as tag (tag)}
+            <div>
+              <a href="/blog/tags/{tag}">
+                { tag }
+              </a>
+            </div>
+          {/each}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+The main difference to outline here is how each framework handles a `for-each` loop within the HTML. For this component, we want to loop through an array of tags. For each tag in the array, we need to render out the name of the tag and a link to it.
+
+Vue 3 (what Nuxt uses) does this with the <a href="https://vuejs.org/guide/essentials/list.html" target="_blank">v-for</a> directive.
+
+Svelte uses an <a href="https://svelte.dev/tutorial/each-blocks" target="_blank">#each</a> block around the `div` that should be repeated.
+
+Both are relatively nice and concise. I don't have a strong preference between the two here. However, the Svelte component is 13 lines shorter than its Vue counterpart.
 
 ### MDC vs mdsvex
 
@@ -328,7 +448,7 @@ Additionally, Svelte, as its name implies, is simply a small framework. This is 
 
 The size difference between the two pages also lends itself to our next point of comparison: speed.
 
-### Page Load Speed Comparisons
+### Page Speed Comparisons
 
 Speed is harder to measure reliably. While the Network tab was consistent and reliable for calculating page size, it showed a significant variance in page load speed on every refresh for both versions of the site.
 
