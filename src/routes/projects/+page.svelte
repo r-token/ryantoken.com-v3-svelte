@@ -138,7 +138,7 @@
 
 	<p class="mb-4">CatchUp is free with no ads, but has a tip jar if you want to buy me a coffee ☕</p>
 
-	<p class="mb-8">Read my blog post about modernizing CatchUp <a href="https://ryantoken.com/blog/catching-up" target="_blank">here</a>.</p>
+	<p class="mb-8">Read my blog post about modernizing CatchUp <a href="/blog/catching-up" target="_blank">here</a>.</p>
 
 	<a class="mb-8" href="https://itunes.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;"></a>
 
