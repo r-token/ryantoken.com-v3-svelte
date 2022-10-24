@@ -156,7 +156,7 @@ Let's look at some of the items we mentioned in the Nuxt 3 section and how they'
 
 We can get automatic blog post routing with SvelteKit by just using their standard filesystem-based routing and a dynamic route. We can simply create a directory structure at `/src/routes/blog` and drop all of our markdown files inside the `/blog` folder.
 
-This won't work right away, though, because every route on a SvelteKit site needs a `+page.svelte` file. We want our markdown files to serve as this `+page.svelte` file though, and that's where SvelteKit's <a href="https://kit.svelte.dev/docs/routing" target="_blank">dynamic routes</a> come into play. We create a `[slug]` folder (brackets included) within the `/blog` folder and we put both a `+page.svelte` file and a `+page.js` file in there. This allows us to use Svelte's built-in `load` function within `+page.js` and dynamically load the data that a given route will need. We can then display it in `+page.svelte`.
+This won't work right away, though, because every route on a SvelteKit site needs a `+page.svelte` file. We want our markdown files to serve as this `+page.svelte` file though, and that's where SvelteKit's <a href="https://kit.svelte.dev/docs/routing" target="_blank">dynamic routes</a> come into play. We create a `[slug]` folder (brackets included) within the `/blog` folder and we put both a `+page.svelte` file and a `+page.js` file in there. This allows us to use Svelte's built-in `load` function within `+page.js` and dynamically load the data that a given blog post will need. We can then display it in `+page.svelte`.
 
 I know that's a lot of Svelte-specific info. If you want to get deeper into the weeds on how this works and how to set up a SvelteKit blog yourself, check out <a href="https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog" target="_blank">Josh Collinsworth's SvelteKit tutorial</a>. And <a href="https://ko-fi.com/collinsworth" target="_blank">tip him a few bucks</a> while you're at it for the fantastic content. I sure did.
 
@@ -442,8 +442,6 @@ To gauge a page's size, I'm using Chrome's standard Developer Tools and the Netw
 
 The SvelteKit site is smaller in every way despite being a nearly identical website. Plus one for SvelteKit.
 
-Also, I at first didn't know what the difference between "transferred" and "resources" was. <a href="https://stackoverflow.com/a/56043891" target="_blank">Stack Overflow</a> tells me that "'Transferred' is the compressed size of all resources. You can think of it as the amount of upload and download data that a mobile user will use to load this page. 'Resources' is the uncompressed size of all resources."
-
 Additionally, Svelte, as its name implies, is simply a small framework. This is primarily because there's no virtual DOM or extra state management libraries that Svelte needs to deal with. This results in a framework that's smaller in overall size and has less <a href="https://builtin.com/software-engineering-perspectives/fix-javascript-bloat" target="_blank">JavaScript bloat</a>.
 
 The size difference between the two pages also lends itself to our next point of comparison: speed.
@@ -522,7 +520,7 @@ SUM:                            52            767             14           8439
 
 A monstrous difference. 27,939 lines of code for the Nuxt 3 project, and only 8,439 for the SvelteKit project.
 
-The major difference here is the amount of JSON. I'm not writing much JSON myself for this website - nearly all of that is coming from the `package-lock.json` file that manages dependency versions. This means that the Nuxt 3 version requires a *lot* more internal dependencies than the SvelteKit version.
+The major difference here is the amount of JSON. I'm not writing much JSON myself for this website - nearly all of that is coming from the `package-lock.json` file that manages dependency versions. This means that the Nuxt 3 version has a *lot* more internal dependencies than the SvelteKit version.
 
 Doing an `npm install` from the root of each project reveals that the Nuxt 3 site is using 961 individual packages, while the SvelteKit site is using just 302. That is significant.
 

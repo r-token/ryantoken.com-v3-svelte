@@ -51,7 +51,7 @@
 </p>
 
 <p class="mb-8">
-	Previous versions of the site were built with <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, <a href="https://github.com/johnsundell/publish" target="_blank">Swift</a>, <a href="https://www.netlify.com/" target="_blank">Netlify</a>, and others.
+	Previous versions of the site were built with <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, <a href="https://github.com/johnsundell/publish" target="_blank">Swift</a>, <a href="https://www.netlify.com/" target="_blank">Netlify</a>, and others. I'm <a href="/blog/nuxt-3-vs-sveltekit">simultaneously</a> maintaining a <a href="https://ryantoken-v3.vercel.app/" target="_blank">Nuxt 3 version</a> of this website.
 </p>
 
 <p class="italic text-gray-500 dark:text-gray-400">
