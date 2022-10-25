@@ -44,7 +44,7 @@
 <ul class="mb-10">
 	{#each data.posts as post}
 		<li>
-			<BlogPreview slug={post.slug} title={post.meta.title} description={post.meta.description} date={post.meta.date} image={post.meta.imagePath} imageAlt={post.meta.imageAlt} tags={post.meta.tags} />
+			<BlogPreview slug={post.path} title={post.meta.title} description={post.meta.description} date={post.meta.date} image={post.meta.imagePath} imageAlt={post.meta.imageAlt} tags={post.meta.tags} />
 		</li>
 	{/each}
 </ul>
