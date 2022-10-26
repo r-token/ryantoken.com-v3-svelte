@@ -120,6 +120,14 @@ The only way I found to get around this was to include the punctuation within th
 
 This component in particular styled the URL a certain way though, so it would also style the ending period that way. Not ideal. That's how it works in the Nuxt version of the site today. If this issue has since been fixed, please let me know!
 
+**Edit**: <a href="https://twitter.com/manutopik/status/1584906534408130562?s=20&t=NG2MIaY9tREYnsNubMl7nw" target="_blank">@manutopik</a> informed me on Twitter that "standard" component syntax works as well! So this is also appropriate MDC syntax:
+
+```js
+<ResizableBlogImage src="/path/to-image.png" altText="Some alt text"></ResizableBlogImage>
+```
+
+Additionally, Sébastien Chopin, the author of Nuxt, <a href="https://twitter.com/Atinux/status/1584928666748096513?s=20&t=NG2MIaY9tREYnsNubMl7nw" target="_blank">let me know on Twitter</a> that the inline component issue with punctuation should be fixed very soon.
+
 ### Other - Nuxt
 
 That covers the key components of what differentiated Nuxt for me. The developer experience was largely wonderful, and Nuxt Content gave me an easy way to hook up blog posts to the rest of the site.
@@ -529,7 +537,7 @@ The amount of actual code you write as a developer is relatively similar for eac
 ## The Winner (for now)
 
 <div class="max-w-lg">
-  <ResizableImage src="/blog-images/nuxt-3-vs-sveltekit/sveltekit.png" altText="The SvelteKit logo" url="https://kit.svelte.dev" />
+  <ResizableImage src="/blog-images/nuxt-3-vs-sveltekit/sveltekit-full-res.png" altText="The SvelteKit logo" url="https://kit.svelte.dev" />
 </div>
 
 You've probably already guessed which framework I ended up choosing for the production version of the site.
