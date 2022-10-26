@@ -4,10 +4,16 @@
 	import Sidebar from '$lib/components/Sidebar.svelte'
 	import Topbar from '$lib/components/Topbar.svelte'
 	import { fade } from 'svelte/transition'
+  import { inject } from '@vercel/analytics'
+  import { onMount } from 'svelte'
 	export let data
 
 	let sidebarOpened = false
 	let currentPage = $page.url.pathname
+  
+  onMount(() => {
+    inject()
+  })
 </script>
 
 <div class="flex min-h-screen dark:bg-slate-800">
