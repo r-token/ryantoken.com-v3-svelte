@@ -529,7 +529,7 @@ The amount of actual code you write as a developer is relatively similar for eac
 ## The Winner (for now)
 
 <div class="max-w-lg">
-  <ResizableImage src="/blog-images/nuxt-3-vs-sveltekit/sveltekit.png" altText="The SvelteKit logo" url="https://kit.svelte.dev" />
+  <ResizableImage src="/blog-images/nuxt-3-vs-sveltekit/sveltekit-full-res.png" altText="The SvelteKit logo" url="https://kit.svelte.dev" />
 </div>
 
 You've probably already guessed which framework I ended up choosing for the production version of the site.
