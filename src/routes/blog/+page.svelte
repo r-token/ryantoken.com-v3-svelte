@@ -22,6 +22,8 @@
 	<meta name="twitter:description" content="Ryan's blog posts" />
 	<meta name="twitter:site" content="@_ryantoken" />
 	<meta name="twitter:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
+	
+	<link rel="canonical" href="https://www.ryantoken.com/blog">
 </svelte:head>
 
 <LargeHeader text="Blog"/>

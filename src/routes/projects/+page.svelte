@@ -32,6 +32,8 @@
 	<meta name="twitter:description" content="Ryan's projects" />
 	<meta name="twitter:site" content="@_ryantoken" />
 	<meta name="twitter:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
+	
+	<link rel="canonical" href="https://www.ryantoken.com/projects">
 </svelte:head>
 
 <div>

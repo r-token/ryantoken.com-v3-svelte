@@ -22,6 +22,8 @@
 	<meta name="twitter:description" content="How ryantoken.com is built" />
 	<meta name="twitter:site" content="@_ryantoken" />
 	<meta name="twitter:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
+	
+	<link rel="canonical" href="https://www.ryantoken.com/meta">
 </svelte:head>
 
 <LargeHeader text="Meta"/>

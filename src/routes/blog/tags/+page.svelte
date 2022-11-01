@@ -20,6 +20,8 @@
 	<meta name="twitter:description" content="All tags on Ryan's blog posts" />
 	<meta name="twitter:site" content="@_ryantoken" />
 	<meta name="twitter:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
+	
+	<link rel="canonical" href="https://www.ryantoken.com/blog/tags">
 </svelte:head>
 
 <LargeHeader text="All Tags"/>

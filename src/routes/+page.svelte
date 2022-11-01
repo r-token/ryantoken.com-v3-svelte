@@ -21,6 +21,8 @@
 	<meta name="twitter:description" content="Ryan's personal website and blog" />
 	<meta name="twitter:site" content="@_ryantoken" />
 	<meta name="twitter:image" content="https://www.ryantoken.com/_app/immutable/assets/profile-668eaa31.jpg" />
+	
+	<link rel="canonical" href="https://www.ryantoken.com/">
 </svelte:head>
 
 <LargeHeader text="Hi, I'm Ryan" />
