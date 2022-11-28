@@ -23,11 +23,11 @@ This post talks about the origins of CatchUp, my decision to start over from scr
 
 When I graduated from college in 2017 I was primarily only familiar with web development. I had never taken a mobile development course in school and knew nothing about Objective-C or Swift. For whatever reason, iOS/mobile development hadn't truly crossed my mind until after graduation. But once I started down that path in late 2017 I never turned back.
 
-I spent the next several months learning the basics of Swift, UIKit, and everything else that comes along with iOS development. Most of that learning came via courses on <a href="https://udemy.com" target="_blank">Udemy</a>, tutorials from <a href="https://hackingwithswift.com" target="_blank">Hacking with Swift</a> and <a href="https://swiftbysundell.com" target="_blank">Swift by Sundell</a>, finding answers on <a href="https://stackoverflow.com" target="_blank">Stack Overflow</a>, and stumbling around in the dark by myself until I happened upon a solution.
+I spent the next several months learning the basics of Swift, UIKit, and everything else that comes along with iOS development. Most of that learning came via courses on <a href="https://udemy.com" target="_blank" rel="noreferrer">Udemy</a>, tutorials from <a href="https://hackingwithswift.com" target="_blank" rel="noreferrer">Hacking with Swift</a> and <a href="https://swiftbysundell.com" target="_blank" rel="noreferrer">Swift by Sundell</a>, finding answers on <a href="https://stackoverflow.com" target="_blank" rel="noreferrer">Stack Overflow</a>, and stumbling around in the dark by myself until I happened upon a solution.
 
-When all was said and done, I had my first app. And it worked! Much like <a href="/blog/rebuilding-my-website" target="_blank">version one of my website</a>, it wasn't the greatest app in the world. But it was my app, and I was proud to have built it.
+When all was said and done, I had my first app. And it worked! Much like <a href="/blog/rebuilding-my-website" target="_blank" rel="noreferrer">version one of my website</a>, it wasn't the greatest app in the world. But it was my app, and I was proud to have built it.
 
-I put it out on the App Store on May 6, 2018, and, to my surprise, it did reasonably well. It even caught some publicity in the form of a feature in Brett Terpstra's <a href="https://systematicpod.com/ep/218" target="_blank">Systematic</a> podcast around the 46:00 minute mark of episode 218.
+I put it out on the App Store on May 6, 2018, and, to my surprise, it did reasonably well. It even caught some publicity in the form of a feature in Brett Terpstra's <a href="https://systematicpod.com/ep/218" target="_blank" rel="noreferrer">Systematic</a> podcast around the 46:00 minute mark of episode 218.
 
 However, over the following months/years, CatchUp began to suffer from some poor original choices made in the app.
 
@@ -65,13 +65,13 @@ This probably would have taken less time than the option I ended up choosing, bu
 
 Why not just blow away the whole project and start over?
 
-A headlining announcement from WWDC 2019 was the debut of <a href="https://developer.apple.com/xcode/swiftui/" target="_blank">SwiftUI</a>. SwiftUI is a brand new framework from Apple that allows you to build user interfaces declaratively. Previously, all of iOS development was done imperatively using <a href="https://developer.apple.com/documentation/uikit" target="_blank">UIKit</a>. I watched the announcement happen live, and was instantly excited and drawn to it. I had initially considered rewriting parts of CatchUp with SwiftUI, but not the entire app.
+A headlining announcement from WWDC 2019 was the debut of <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>. SwiftUI is a brand new framework from Apple that allows you to build user interfaces declaratively. Previously, all of iOS development was done imperatively using <a href="https://developer.apple.com/documentation/uikit" target="_blank" rel="noreferrer">UIKit</a>. I watched the announcement happen live, and was instantly excited and drawn to it. I had initially considered rewriting parts of CatchUp with SwiftUI, but not the entire app.
 
 ---
 
 Clearly I picked **Option 3**. SwiftUI marked the dawn of a new era in iOS development, and this was the perfect excuse for me to start a new project and learn how SwiftUI works.
 
-Option 3 also provided the perfect opportunity to address what ended up being one of the worst decisions I made while building the original app: using <a href="https://developer.apple.com/documentation/foundation/userdefaults" target="_blank">UserDefaults</a> as my entire persistence/storage system instead of <a href="https://developer.apple.com/documentation/coredata" target="_blank">Core Data</a>.
+Option 3 also provided the perfect opportunity to address what ended up being one of the worst decisions I made while building the original app: using <a href="https://developer.apple.com/documentation/foundation/userdefaults" target="_blank" rel="noreferrer">UserDefaults</a> as my entire persistence/storage system instead of <a href="https://developer.apple.com/documentation/coredata" target="_blank" rel="noreferrer">Core Data</a>.
 
 Everything in version 1.x of CatchUp uses UserDefaults. I didn't choose UserDefaults because I thought that was the *right* way to do it, I chose UserDefaults simply because that's what I had learned from the Udemy course I took when first learning iOS development. I knew nothing about Core Data or how it worked at the time, and storing everything in UserDefaults has plagued CatchUp from the beginning. Until today.
 
@@ -80,7 +80,7 @@ So there was my path forward. A complete rebuild using SwiftUI over UIKit, and C
 
 ## Implementing SwiftUI
 
-On the same day that SwiftUI was first announced back in 2019, I started working through Apple's (legitimately wonderful) "<a href="https://developer.apple.com/tutorials/swiftui/tutorials" target="_blank">Learn to Make Apps with SwiftUI</a>" tutorials. I also participated in Hacking with Swift's (also wonderful) <a href="https://hackingwithswift.com/100/swiftui" target="_blank">100 Days of SwiftUI</a> course and read <a href="https://www.hackingwithswift.com/quick-start/swiftui" target="_blank">SwiftUI By Example</a> All of these things together gave me enough knowledge to feel somewhat comfortable with SwiftUI, even though documentation around it was/is not quite there.
+On the same day that SwiftUI was first announced back in 2019, I started working through Apple's (legitimately wonderful) "<a href="https://developer.apple.com/tutorials/swiftui/tutorials" target="_blank" rel="noreferrer">Learn to Make Apps with SwiftUI</a>" tutorials. I also participated in Hacking with Swift's (also wonderful) <a href="https://hackingwithswift.com/100/swiftui" target="_blank" rel="noreferrer">100 Days of SwiftUI</a> course and read <a href="https://www.hackingwithswift.com/quick-start/swiftui" target="_blank" rel="noreferrer">SwiftUI By Example</a> All of these things together gave me enough knowledge to feel somewhat comfortable with SwiftUI, even though documentation around it was/is not quite there.
 
 In the case of implementing Core Data, it's been around since 2005. There are *plenty* of resources out there to help you learn and understand how it works. SwiftUI was built to play nicely with Core Data as well, so after a few articles and WWDC videos from previous years, I felt good enough on that side of things.
 
@@ -104,9 +104,9 @@ Here's the workaround I found on Stack Overflow - the fix is highlighted at the 
 
 **SwiftUI Issue #2:**
 
-At the time of writing, you need to manually pass Core Data's <a href="https://developer.apple.com/documentation/coredata/nsmanagedobject/1506677-managedobjectcontext" target="_blank">managed object context</a> from one view to another if you want to be able to use that context in the view you're navigating to.
+At the time of writing, you need to manually pass Core Data's <a href="https://developer.apple.com/documentation/coredata/nsmanagedobject/1506677-managedobjectcontext" target="_blank" rel="noreferrer">managed object context</a> from one view to another if you want to be able to use that context in the view you're navigating to.
 
-SwiftUI's <a href="https://developer.apple.com/documentation/swiftui/environment" target="_blank">`@Environment`</a> property wrapper should theoretically allow the managed object context to be accessible from anywhere. You shouldn't need to manually pass it along.
+SwiftUI's <a href="https://developer.apple.com/documentation/swiftui/environment" target="_blank" rel="noreferrer">`@Environment`</a> property wrapper should theoretically allow the managed object context to be accessible from anywhere. You shouldn't need to manually pass it along.
 
 Unfortunately, this appears to be a bug in the version of SwiftUI I built the app on. So I had to use the following workaround to pass in the managed object context.
 
@@ -126,13 +126,13 @@ To be fair, this is the case with several frameworks since SwiftUI is still so n
 
 Unfortunately, I've found the bridging between SwiftUI and UIKit for the contact picker to be especially buggy. This is not ideal. The contact picker - which shows up when you tap the 'Add Contacts' button on CatchUp's home screen - is likely the first button you'll ever tap in the app. I don't want a user's first experience with my app to feel buggy and show strange animation glitches.
 
-I filed my first ever <a href="https://developer.apple.com/support/technical" target="_blank">Technical Support Incident (TSI)</a> with Apple, and hope to have a resolution for that bug shortly.
+I filed my first ever <a href="https://developer.apple.com/support/technical" target="_blank" rel="noreferrer">Technical Support Incident (TSI)</a> with Apple, and hope to have a resolution for that bug shortly.
 
 I want to make something especially clear, though: Despite the somewhat bumpy road, I have **loved** working with SwiftUI. It has been a true joy and has significantly improved how I go about creating user interfaces. CatchUp V1 used Storyboards exclusively, and I would be more than OK with never having to create a Storyboard again. I know I could have done my layout programmatically with UIKit, but it's hard to imagine a system as clean and as nice as SwiftUI is proving to be.
 
 ## Wrapping Up with Clean Code
 
-As I was putting the finishing touches on version 2.0 of CatchUp, I started reading <a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882" target="_blank">Clean Code</a> by "Uncle" Bob Martin.
+As I was putting the finishing touches on version 2.0 of CatchUp, I started reading <a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882" target="_blank" rel="noreferrer">Clean Code</a> by "Uncle" Bob Martin.
 
 I'll tell you what, dear reader, there could not have been a better time for me to read this book.
 
@@ -152,7 +152,7 @@ Lines of code is by no means a proper metric for overall code quality, but I thi
 
 **Total lines of code in CatchUp version 2.0.0:** 1,905
 
-*Lines of code counted with <a href="https://github.com/AlDanial/cloc" target="_blank">cloc</a>*
+*Lines of code counted with <a href="https://github.com/AlDanial/cloc" target="_blank" rel="noreferrer">cloc</a>*
 
 Over 1,000 fewer lines of code! For an app that is more advanced and has more functionality. Talk about a significant win.
 
@@ -164,4 +164,4 @@ I'm proud of the product that's available out there now, and look forward to con
 
 CatchUp is completely free with no ads. Download the all-new CatchUp – Keep in Touch here:
 
-<a href="https://itunes.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;" />
+<a href="https://itunes.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" rel="noreferrer" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;" />

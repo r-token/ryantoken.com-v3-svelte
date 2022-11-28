@@ -43,6 +43,7 @@
         ? 'opacity-50'
         : 'opacity-0'}"
       on:click={handleClickAway}
+      on:keyup={handleClickAway}
     />
     <div
       class="absolute {placement} top-0 shadow-xl overflow-y-auto bg-white transition-all duration-300 h-full {maxScreenSize} {isOpen

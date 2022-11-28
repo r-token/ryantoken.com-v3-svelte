@@ -20,7 +20,7 @@ tags:
 
 Hello out there! Relatively quick life update here – I'm joining a new company!
 
-After nearly four years with <a href="https://conocophillips.com" target="_blank">ConocoPhillips</a>, I'm joining <a href="https://trystoryboard.com" target="_blank">Storyboard</a> as a Full Stack Software Engineer.
+After nearly four years with <a href="https://conocophillips.com" target="_blank" rel="noreferrer">ConocoPhillips</a>, I'm joining <a href="https://trystoryboard.com" target="_blank" rel="noreferrer">Storyboard</a> as a Full Stack Software Engineer.
 
 I did truly enjoy my time working at ConocoPhillips. I worked on projects I'm proud of and teams I loved, I grew significantly as an employee and as a human being, and I made some very good friends along the way. It was my first job out of college, and I loved it – it was tough to step away.
 
@@ -40,11 +40,11 @@ Storyboard solves this problem. If the company uses Storyboard to record/distrib
 
 Podcasts are just cool. I'd argue that I've gotten more value out of listening to podcasts than any other form of media. Some of my favorites include Accidental Tech Podcast, Big Technology Podcast, How I Built This, Syntax, and Startups For the Rest of Us.
 
-As you might know, I also run <a href="https://thegoldenhurricast.com" target="_blank">my own podcast</a> about athletics at The University of Tulsa. I love listening to and creating podcasts. The idea that I could actively help bring this medium to the enterprise is extremely exciting.
+As you might know, I also run <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">my own podcast</a> about athletics at The University of Tulsa. I love listening to and creating podcasts. The idea that I could actively help bring this medium to the enterprise is extremely exciting.
 
 ### 3. My professional interests
 
-My previous two blog posts have been about 1) <a href="/blog/rocking-with-the-jamstack" target="_blank">the Jamstack</a>, and 2) <a href="/blog/learning-webrtc" target="_blank">WebRTC</a>. This role combines both of those interests and so many more.
+My previous two blog posts have been about 1) <a href="/blog/rocking-with-the-jamstack" target="_blank" rel="noreferrer">the Jamstack</a>, and 2) <a href="/blog/learning-webrtc" target="_blank" rel="noreferrer">WebRTC</a>. This role combines both of those interests and so many more.
 
 I spend the vast majority of my time both in my professional work and my side projects in the world of AWS - specifically on the serverless side of things. Recently, I've been deep into the AWS CDK for efficient management and development of AWS infrastructure. The CDK is incredibly powerful and I plan to use it as much as possible in my role with Storyboard.
 
@@ -52,7 +52,7 @@ I spend the vast majority of my time both in my professional work and my side pr
 
 The ethos of Storyboard is that employees should be able to collaborate and work together from anywhere. As such, everyone at Storyboard is remote. At the time of publishing I haven't met everyone quite yet, but of those I'm aware - there are employees in Los Angeles, Denver, New York, and Nashville.
 
-I'll be working remotely out of Tulsa. It's wonderful to be able to stay in the town where my wife and I graduated from college just four years ago, where my wife still works downtown, and where I still have so many close friends. The technology scene in Tulsa is also booming right now. Coworking spaces like <a href="https://36degreesnorth.co" target="_blank">36°N</a> and others, along with the <a href="https://tulsaremote.com" target="_blank">Tulsa Remote</a> program, have accelerated the city's technology ecosystem rapidly.
+I'll be working remotely out of Tulsa. It's wonderful to be able to stay in the town where my wife and I graduated from college just four years ago, where my wife still works downtown, and where I still have so many close friends. The technology scene in Tulsa is also booming right now. Coworking spaces like <a href="https://36degreesnorth.co" target="_blank" rel="noreferrer">36°N</a> and others, along with the <a href="https://tulsaremote.com" target="_blank" rel="noreferrer">Tulsa Remote</a> program, have accelerated the city's technology ecosystem rapidly.
 
 ### 5. It's a startup
 
@@ -76,4 +76,4 @@ My first day with Storyboard is April 26th, 2021. I can't wait.
 
 While I did sincerely enjoy my time with ConocoPhillips, I couldn't be more excited to begin this new adventure.
 
-And if your company wants to get started with a private podcast, <a href="mailto:admin@trystoryboard.com" target="_blank">get in touch</a>!
+And if your company wants to get started with a private podcast, <a href="mailto:admin@trystoryboard.com" target="_blank" rel="noreferrer">get in touch</a>!

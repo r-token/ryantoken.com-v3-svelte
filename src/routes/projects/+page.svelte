@@ -40,11 +40,11 @@
 	<LargeHeader text="Projects" />
 
 	<h1 class="italic mb-6 text-gray-500 dark:text-gray-400">
-		What I'm currently working on in my spare time. You can support my work on <a href="https://patreon.com/ryantoken" target="_blank">Patreon</a> or <a href="https://www.buymeacoffee.com/ryantoken" target="_self">Buy Me a Coffee</a>.
+		What I'm currently working on in my spare time. You can support my work on <a href="https://patreon.com/ryantoken" target="_blank" rel="noreferrer">Patreon</a> or <a href="https://www.buymeacoffee.com/ryantoken" target="_self">Buy Me a Coffee</a>.
 	</h1>
 
 	<div class="flex items-stretch mb-8">
-		<a href="https://www.buymeacoffee.com/ryantoken" class="w-2/3 xl:w-1/3 lg:w-1/3 max-w-xs" target="_blank">
+		<a href="https://www.buymeacoffee.com/ryantoken" class="w-2/3 xl:w-1/3 lg:w-1/3 max-w-xs" target="_blank" rel="noreferrer">
 			<img src={bmcLogo} alt="Buy Me a Coffee button" loading="lazy" decoding="async" class="rounded-3xl" />
 		</a>
 	</div>
@@ -68,21 +68,21 @@
 		<ResizableImage src={outrankSettings} altText="Outrank's settings screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
 	</div>
 
-	<p class="mb-4">Outrank is built with 100% <a href="https://developer.apple.com/xcode/swiftui/" target="_blank">SwiftUI</a>.</p>
+	<p class="mb-4">Outrank is built with 100% <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>.</p>
 
-	<p class="mb-4">On the back-end, it leverages <a href="https://developer.apple.com/icloud/cloudkit/" target="_blank">CloudKit</a> as well as various AWS services including <a href="https://aws.amazon.com/dynamodb/" target="_blank">DynamoDB</a>,  <a href="https://aws.amazon.com/api-gateway/" target="_blank">API Gateway</a>, and  <a href="https://aws.amazon.com/lambda/" target="_blank">Lambda</a>.</p>
+	<p class="mb-4">On the back-end, it leverages <a href="https://developer.apple.com/icloud/cloudkit/" target="_blank" rel="noreferrer">CloudKit</a> as well as various AWS services including <a href="https://aws.amazon.com/dynamodb/" target="_blank" rel="noreferrer">DynamoDB</a>,  <a href="https://aws.amazon.com/api-gateway/" target="_blank" rel="noreferrer">API Gateway</a>, and  <a href="https://aws.amazon.com/lambda/" target="_blank" rel="noreferrer">Lambda</a>.</p>
 
-	<p class="mb-8">You can follow <a href="https://twitter.com/OutrankApp" target="_blank">Outrank on Twitter</a>, and you can read my blog post about building Outrank <a href="https://www.ryantoken.com/blog/introducing-outrank/" target="_blank">here</a>.</p>
+	<p class="mb-8">You can follow <a href="https://twitter.com/OutrankApp" target="_blank" rel="noreferrer">Outrank on Twitter</a>, and you can read my blog post about building Outrank <a href="https://www.ryantoken.com/blog/introducing-outrank/" target="_blank" rel="noreferrer">here</a>.</p>
 
-	<a class="mb-8" href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;"></a>
+	<a class="mb-8" href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;"></a>
 
 	<hr class="mb-8" />
 
 	<Header text="The Golden Hurricast" />
 
-	<p class="mb-4"><a href="https://www.thegoldenhurricast.com" target="_blank">The Golden Hurricast</a> is the leading independent podcast and blog covering Golden Hurricane athletics at The University of Tulsa.</p>
+	<p class="mb-4"><a href="https://www.thegoldenhurricast.com" target="_blank" rel="noreferrer">The Golden Hurricast</a> is the leading independent podcast and blog covering Golden Hurricane athletics at The University of Tulsa.</p>
 
-	<p>The website was built with <a href="https://reactjs.org" target="_blank">React</a>, <a href="https://graphql.org/" target="_blank">GraphQL</a>, and <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>.</p>
+	<p>The website was built with <a href="https://reactjs.org" target="_blank" rel="noreferrer">React</a>, <a href="https://graphql.org/" target="_blank" rel="noreferrer">GraphQL</a>, and <a href="https://www.gatsbyjs.org/" target="_blank" rel="noreferrer">Gatsby</a>.</p>
 
 	<div class="max-w-5xl">
 		<ResizableImage src={hurricastWebsite} altText="The Golden Hurricast home page" url="https://thegoldenhurricast.com"/>
@@ -94,7 +94,7 @@
 
 	<Header text="Eagle Crest STL"/>
 
-	<p class="mb-4"><a href="https://eaglecreststl.org" target="_blank">Eagle Crest STL</a> is a fully serverless web app tailor-made for the Eagle Crest HOA in St. Louis, MO.</p>
+	<p class="mb-4"><a href="https://eaglecreststl.org" target="_blank" rel="noreferrer">Eagle Crest STL</a> is a fully serverless web app tailor-made for the Eagle Crest HOA in St. Louis, MO.</p>
 
 	<p class="mb-4">It allows members and trustees to easily send messages, make requests, give announcements, view documents, and see a list of all homeowners in the HOA.</p>
 
@@ -102,7 +102,7 @@
 		<ResizableImage src={eagleCrestHome} altText="Eagle Crest STL home page" url="https://eaglecreststl.org"/>
 	</div>
 
-	<p class="mb-4">It's a Jamstack app built with <a href="https://reactjs.org" target="_blank">React</a> on the front end, <a href="https://aws.amazon.com" target="_blank">AWS</a> as the middle tier and the back end, and is hosted on <a href="https://www.netlify.com" target="_blank">Netlify</a>.</p>
+	<p class="mb-4">It's a Jamstack app built with <a href="https://reactjs.org" target="_blank" rel="noreferrer">React</a> on the front end, <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">AWS</a> as the middle tier and the back end, and is hosted on <a href="https://www.netlify.com" target="_blank" rel="noreferrer">Netlify</a>.</p>
 
 	<p class="mb-8">AWS services used for this include S3, Lambda, API Gateway, DynamoDB, SES, Cognito, Amplify, and more.</p>
 
@@ -110,11 +110,11 @@
 
 	<Header text="Dashing Through the 'Ville"/>
 
-	<p class="mb-4"><a href="https://dashingthroughtheville.com" target="_blank">Dashing Through the 'Ville</a> is a city-wide scavenger hunt held throughout Bartlesville, Oklahoma.</p>
+	<p class="mb-4"><a href="https://dashingthroughtheville.com" target="_blank" rel="noreferrer">Dashing Through the 'Ville</a> is a city-wide scavenger hunt held throughout Bartlesville, Oklahoma.</p>
 
 	<p class="mb-4">Proceeds from the event benefitted Youth and Family Services of Washington County, and it helped them raise a total of $15,000.</p>
 
-	<p class="mb-4">The web app is fully serverless - built with <a href="https://reactjs.org" target="_blank">React</a> on the front end, <a href="https://aws.amazon.com" target="_blank">AWS</a> as the middle tier and back end, and hosted on <a href="https://www.netlify.com" target="_blank">Netlify</a>. The AWS services used include Lambda, API Gateway, DynamoDB, SES, Cognito, Amplify, IAM, and more.</p>
+	<p class="mb-4">The web app is fully serverless - built with <a href="https://reactjs.org" target="_blank" rel="noreferrer">React</a> on the front end, <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">AWS</a> as the middle tier and back end, and hosted on <a href="https://www.netlify.com" target="_blank" rel="noreferrer">Netlify</a>. The AWS services used include Lambda, API Gateway, DynamoDB, SES, Cognito, Amplify, IAM, and more.</p>
 
 	<div class="mb-4 max-w-5xl">
 		<ResizableImage src={dttvWebsite} altText="Dashing Through the 'Ville game page" url="https://dashingthroughtheville.com"/>
@@ -132,16 +132,16 @@
 		<ResizableImage src={catchupIcon} altText="CatchUp's app icon" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
 	</div>
 
-	<p class="italic mb-4">*Featured on Brett Terpstra's <a href="https://systematicpod.com/ep/218" target="_blank">Systematic</a> Podcast as one of his 'Top 3' picks (around 46:21)</p>
+	<p class="italic mb-4">*Featured on Brett Terpstra's <a href="https://systematicpod.com/ep/218" target="_blank" rel="noreferrer">Systematic</a> Podcast as one of his 'Top 3' picks (around 46:21)</p>
 
-	<p class="mb-4">My first public-facing iOS app! First released in May of 2018, I completely rewrote it in May of 2020 using <a href="https://developer.apple.com/xcode/swiftui/" target="_blank">SwiftUI</a>, <a href="https://developer.apple.com/documentation/coredata" target="_blank">Core Data</a>, and several other improvements.</p>
+	<p class="mb-4">My first public-facing iOS app! First released in May of 2018, I completely rewrote it in May of 2020 using <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>, <a href="https://developer.apple.com/documentation/coredata" target="_blank" rel="noreferrer">Core Data</a>, and several other improvements.</p>
 
 	<p class="mb-4">CatchUp helps you stay in touch with the people who matter most. You can set reminders for the contacts you choose, and get notified when it's time to CatchUp with them again.</p>
 
 	<p class="mb-4">CatchUp is free with no ads, but has a tip jar if you want to buy me a coffee ☕</p>
 
-	<p class="mb-8">Read my blog post about modernizing CatchUp <a href="/blog/catching-up" target="_blank">here</a>.</p>
+	<p class="mb-8">Read my blog post about modernizing CatchUp <a href="/blog/catching-up" target="_blank" rel="noreferrer">here</a>.</p>
 
-	<a class="mb-8" href="https://itunes.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;"></a>
+	<a class="mb-8" href="https://itunes.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" rel="noreferrer" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;"></a>
 
 </div>

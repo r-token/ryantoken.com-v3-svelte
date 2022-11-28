@@ -149,7 +149,7 @@
   
       {#each myProjects as navItem (navItem.label)}
         <div class="mb-0">
-          <a href={navItem.href} target="_blank" on:click={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+          <a href={navItem.href} target="_blank" rel="noreferrer" on:click={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
             <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
               <div class="mr-3 mt-0.5">
                 {#if navItem.label === 'Outrank'}
@@ -179,7 +179,7 @@
       
       {#each externalNavigationLinks as navItem (navItem.label)}
         <div class="mb-0">
-          <a href={navItem.href} target="_blank" on:click={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+          <a href={navItem.href} target="_blank" rel="noreferrer" on:click={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
             <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
               <div class="mr-3 mt-0.5">
                 {#if navItem.label === 'Twitter'}
@@ -259,7 +259,7 @@
 
     {#each myProjects as navItem (navItem.label)}
       <div class="mb-0">
-        <a href={navItem.href} target="_blank" on:click={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+        <a href={navItem.href} target="_blank" rel="noreferrer" on:click={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
           <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
             <div class="mr-3 mt-0.5">
               {#if navItem.label === 'Outrank'}
@@ -289,7 +289,7 @@
     
     {#each externalNavigationLinks as navItem (navItem.label)}
       <div class="mb-0">
-        <a href={navItem.href} target="_blank" on:click={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+        <a href={navItem.href} target="_blank" rel="noreferrer" on:click={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
           <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
             <div class="mr-3 mt-0.5">
               {#if navItem.label === 'Twitter'}

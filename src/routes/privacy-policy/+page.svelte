@@ -76,5 +76,5 @@
 </p>
 
 <p class="mb-8">
-	<i>Adapted from the <a href="https://automattic.com/privacy/" target="_blank">automattic.com privacy policy</a> under a <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">Creative Commons Sharealike license</a></i>
+	<i>Adapted from the <a href="https://automattic.com/privacy/" target="_blank" rel="noreferrer">automattic.com privacy policy</a> under a <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank" rel="noreferrer">Creative Commons Sharealike license</a></i>
 </p>

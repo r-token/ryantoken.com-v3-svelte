@@ -22,7 +22,7 @@ I've been working heavily with the standard over the past several weeks and want
 ## First, What is WebRTC?
 
 <p class="text-lg">
-	<a href="https://webrtc.org" target="_blank">WebRTC</a> stands for <b>Web</b> <b>R</b>eal-<b>T</b>ime <b>C</b>ommunication and, as you'd expect from the name, enables real-time communication for the web. Think video calls, web-based chat, etc.
+	<a href="https://webrtc.org" target="_blank" rel="noreferrer">WebRTC</a> stands for <b>Web</b> <b>R</b>eal-<b>T</b>ime <b>C</b>ommunication and, as you'd expect from the name, enables real-time communication for the web. Think video calls, web-based chat, etc.
 </p>
 
 The technology has grown significantly since its initial implementation in 2011 as an open-source project by Google. Today, it's implemented as an open, standardized API that enables rich peer-to-peer communications, including the transmission of audio, video, and generic data between browsers, mobile devices, IoT devices, and more.
@@ -31,7 +31,7 @@ The most important thing WebRTC takes off your plate is the challenge of finding
 
 <ResizableImage src="/blog-images/learning-webrtc/webrtc-overview.jpg" altText="WebRTC overview" />
 
-*WebRTC Pathfinding - diagram from <a href="https://www.youtube.com/watch?v=FExZvpVvYxA" target="_blank">WebRTC Crash Course</a>*
+*WebRTC Pathfinding - diagram from <a href="https://www.youtube.com/watch?v=FExZvpVvYxA" target="_blank" rel="noreferrer">WebRTC Crash Course</a>*
 
 ## A Typical WebRTC Lifecycle
 
@@ -69,11 +69,11 @@ NAT bridges this gap. NAT operates on the router and translates our devices' pri
 
 When others try to reach you, they ultimately reach your router's public IP and your router translates that back to your device's private IP.
 
-There are four different NAT types: Full Cone NAT (normal NAT), Address-Restricted NAT, Port-Restricted NAT, and Symmetric NAT. All of these work well with WebRTC *except* Symmetric NAT. More info on the four NAT types <a href="https://dh2i.com/kbs/kbs-2961448-understanding-different-nat-types-and-hole-punching/" target="_blank">here</a>.
+There are four different NAT types: Full Cone NAT (normal NAT), Address-Restricted NAT, Port-Restricted NAT, and Symmetric NAT. All of these work well with WebRTC *except* Symmetric NAT. More info on the four NAT types <a href="https://dh2i.com/kbs/kbs-2961448-understanding-different-nat-types-and-hole-punching/" target="_blank" rel="noreferrer">here</a>.
 
-> *Edit*: According to the <a href="https://tools.ietf.org/html/rfc4787" target="_blank">Internet Engineering Task Force</a>, the "Cone" and "Symmetric" NAT terminology has done a poor job explaining NAT behavior. While you may still see these terms when reading about NAT, it is recommended to use the following terminology instead: Endpoint-Independent mapping and filtering, Address-Dependent mapping and filtering, and Address and Port-Dependent mapping and filtering.
+> *Edit*: According to the <a href="https://tools.ietf.org/html/rfc4787" target="_blank" rel="noreferrer">Internet Engineering Task Force</a>, the "Cone" and "Symmetric" NAT terminology has done a poor job explaining NAT behavior. While you may still see these terms when reading about NAT, it is recommended to use the following terminology instead: Endpoint-Independent mapping and filtering, Address-Dependent mapping and filtering, and Address and Port-Dependent mapping and filtering.
 
-> Address and Port-Dependent mapping and filtering is the equivalent of Symmetric NAT, which is the only type that does not work with WebRTC. You can read more about the new NAT terminology <a href="https://en.wikipedia.org/wiki/Network_address_translation#Methods_of_translation" target="_blank">here</a>.
+> Address and Port-Dependent mapping and filtering is the equivalent of Symmetric NAT, which is the only type that does not work with WebRTC. You can read more about the new NAT terminology <a href="https://en.wikipedia.org/wiki/Network_address_translation#Methods_of_translation" target="_blank" rel="noreferrer">here</a>.
 
 
 In the context of WebRTC, our devices pass through our routers to a STUN server. The STUN server sends us back a public IP address we can use to connect peer-to-peer with another client.
@@ -82,7 +82,7 @@ In the context of WebRTC, our devices pass through our routers to a STUN server.
 
 <ResizableImage src="/blog-images/learning-webrtc/webrtc-STUN.jpg" altText="STUN server" />
 
-*A STUN Server Example - diagram from <a href="https://www.youtube.com/watch?v=FExZvpVvYxA" target="_blank">WebRTC Crash Course</a>*
+*A STUN Server Example - diagram from <a href="https://www.youtube.com/watch?v=FExZvpVvYxA" target="_blank" rel="noreferrer">WebRTC Crash Course</a>*
 
 A STUN server's main job is to tell a client what its public IP address/port is through NAT.
 
@@ -94,7 +94,7 @@ STUN servers are cheap to maintain, and many are publicly available for free usa
 
 <ResizableImage src="/blog-images/learning-webrtc/webrtc-TURN.jpg" altText="TURN server" />
 
-*A TURN Server Example - diagram from <a href="https://www.youtube.com/watch?v=FExZvpVvYxA" target="_blank">WebRTC Crash Course</a>*
+*A TURN Server Example - diagram from <a href="https://www.youtube.com/watch?v=FExZvpVvYxA" target="_blank" rel="noreferrer">WebRTC Crash Course</a>*
 
 As I mentioned previously, WebRTC does not work well with Symmetric NAT. This is caused by Symmetric NAT blocking communications with the STUN server.
 
@@ -164,7 +164,7 @@ Once you have your SDP string, you'll need to signal it out yourself. WebRTC doe
 
 <ResizableImage src="/blog-images/learning-webrtc/webrtc-security.png" altText="WebRTC Data Flow Diagram" />
 
-*WebRTC Data Flow - diagram concept from <a href="https://bloggeek.me/sctp-data-channel/" target="_blank">BlogGeek.me</a>*
+*WebRTC Data Flow - diagram concept from <a href="https://bloggeek.me/sctp-data-channel/" target="_blank" rel="noreferrer">BlogGeek.me</a>*
 
 Note that WebRTC did not introduce these protocols. They were around long before WebRTC was established in 2011. DTLS was invented in 2006, SRTP in 2004, SCTP in 2000.
 
@@ -324,12 +324,12 @@ remoteConnection.dataChannel.send("Not much Peer A, what about you?")
 
 * WebRTC provides a standardized way for developers to implement this functionality with an API that we don't have to build ourselves
 
-* It's a popular open-source technology supported by Google, Mozilla, Opera, and others. You can browse the source code <a href="https://webrtc.googlesource.com/src/" target="_blank">here</a>
+* It's a popular open-source technology supported by Google, Mozilla, Opera, and others. You can browse the source code <a href="https://webrtc.googlesource.com/src/" target="_blank" rel="noreferrer">here</a>
 
 ***Cons***:
 
 * Maintaining STUN and TURN servers
-		* STUN isn't too bad since there are free STUN servers <a href="https://gist.github.com/zziuni/3741933" target="_blank">publicly available for you to use</a>.
+		* STUN isn't too bad since there are free STUN servers <a href="https://gist.github.com/zziuni/3741933" target="_blank" rel="noreferrer">publicly available for you to use</a>.
 		* TURN is expensive and more difficult, and no one offers them for free usage like STUN servers
 		* Kind of a Pro, but you *can* create your own STUN and TURN servers with the <a href="https://github.com/coturn/coturn">COTURN</a> open-source project
 		
@@ -344,44 +344,44 @@ remoteConnection.dataChannel.send("Not much Peer A, what about you?")
 As mentioned, one of the cons of WebRTC is the need to maintain and manage various STUN and TURN servers.
 
 <p class="text-lg">
-	<a href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/what-is-kvswebrtc.html" target="_blank">Amazon Kinesis Video Streams with WebRTC</a> offers a potential solution to this problem, as well as handling the signaling implementation for you.
+	<a href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/what-is-kvswebrtc.html" target="_blank" rel="noreferrer">Amazon Kinesis Video Streams with WebRTC</a> offers a potential solution to this problem, as well as handling the signaling implementation for you.
 </p>
 
-AWS offers <a href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/webrtc-sdks.html" target="_blank">SDKs</a> to work with this service from the web, iOS, Android, and embedded devices.
+AWS offers <a href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/webrtc-sdks.html" target="_blank" rel="noreferrer">SDKs</a> to work with this service from the web, iOS, Android, and embedded devices.
 
 In AWS's words, Amazon Kinesis Video Streams (KVS) "provides a standards-compliant WebRTC implementation as a fully managed capability. You can use Amazon Kinesis Video Streams with WebRTC to securely live stream media or perform two-way audio or video interaction between any camera IoT device and WebRTC-compliant mobile or web players. As a fully managed capability, you don't have to build, operate, or scale any WebRTC-related cloud infrastructure, such as signaling or media relay servers to securely stream media across applications and devices."
 
 Using this service abstracts away the need to manage your own STUN and TURN servers while optimizing for even lower latency and higher bandwidth streaming.
 
-There's a fantastic walkthrough of how to get up and running with this service <a href="https://aws.amazon.com/blogs/media/enabling-video-chats-using-amazon-kinesis-video-streams-for-webrtc/" target="_blank">here</a>. Familiarity with AWS isn't necessarily required to follow that blog post but is certainly helpful.
+There's a fantastic walkthrough of how to get up and running with this service <a href="https://aws.amazon.com/blogs/media/enabling-video-chats-using-amazon-kinesis-video-streams-for-webrtc/" target="_blank" rel="noreferrer">here</a>. Familiarity with AWS isn't necessarily required to follow that blog post but is certainly helpful.
 
 <ResizableImage src="/blog-images/learning-webrtc/webrtc-kvs.png" altText="AWS KVS with WebRTC Diagram" />
 
 *AWS Kinesis Video Streams with WebRTC Architecture Diagram*
 
-I was able to build a very performant peer-to-peer video streaming application by building on top of the aforementioned walkthrough. I recommend giving it a try and seeing how it goes for you. There's also some fantastic sample code on <a href="https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-js" target="_blank">GitHub</a>.
+I was able to build a very performant peer-to-peer video streaming application by building on top of the aforementioned walkthrough. I recommend giving it a try and seeing how it goes for you. There's also some fantastic sample code on <a href="https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-js" target="_blank" rel="noreferrer">GitHub</a>.
 
 ## Resources I Used While Learning
 
-* *Getting Started with WebRTC* on <a href="https://webrtc.org/getting-started/overview" target="_blank">WebRTC.org</a>
+* *Getting Started with WebRTC* on <a href="https://webrtc.org/getting-started/overview" target="_blank" rel="noreferrer">WebRTC.org</a>
 
 * *WebRTC API* on the <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">Mozilla Developer Network</a>
 
-* *<a href="https://webrtcforthecurious.com" target="_blank">WebRTC For The Curious</a>*
+* *<a href="https://webrtcforthecurious.com" target="_blank" rel="noreferrer">WebRTC For The Curious</a>*
 
-* *WebRTC Crash Course* on <a href="https://www.youtube.com/watch?v=FExZvpVvYxA" target="_blank">YouTube</a>
+* *WebRTC Crash Course* on <a href="https://www.youtube.com/watch?v=FExZvpVvYxA" target="_blank" rel="noreferrer">YouTube</a>
 		* This was particularly helpful. I highly recommend you take the time to watch the full thing
 		* Many of the concepts in this post were inspired directly by this video
 		
-* *Introduction to WebRTC* on <a href="https://www.youtube.com/watch?v=NdEEp_WvnvU&t=705s" target="_blank">YouTube</a>
+* *Introduction to WebRTC* on <a href="https://www.youtube.com/watch?v=NdEEp_WvnvU&t=705s" target="_blank" rel="noreferrer">YouTube</a>
 
-* *What is Kinesis Video Streams with WebRTC* from <a href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/what-is-kvswebrtc.html" target="_blank">AWS</a>
+* *What is Kinesis Video Streams with WebRTC* from <a href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/what-is-kvswebrtc.html" target="_blank" rel="noreferrer">AWS</a>
 
-* *Kinesis Video Streams with WebRTC: How it Works* from <a href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/kvswebrtc-how-it-works.html" target="_blank">AWS</a>
+* *Kinesis Video Streams with WebRTC: How it Works* from <a href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide/kvswebrtc-how-it-works.html" target="_blank" rel="noreferrer">AWS</a>
 
-* *Enabling Video Chats Using Amazon Kinesis Video Streams with WebRTC* from <a href="https://aws.amazon.com/blogs/media/enabling-video-chats-using-amazon-kinesis-video-streams-for-webrtc/" target="_blank">AWS</a>
+* *Enabling Video Chats Using Amazon Kinesis Video Streams with WebRTC* from <a href="https://aws.amazon.com/blogs/media/enabling-video-chats-using-amazon-kinesis-video-streams-for-webrtc/" target="_blank" rel="noreferrer">AWS</a>
 
-* *Amazon Kinesis Video Streams implementation* on <a href="https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-js" target="_blank">GitHub</a>
+* *Amazon Kinesis Video Streams implementation* on <a href="https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-js" target="_blank" rel="noreferrer">GitHub</a>
 
 ## A Final Note
 

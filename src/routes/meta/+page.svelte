@@ -33,27 +33,27 @@
 <hr class="mb-6" />
 
 <p class="mb-4">
-	This is a <a href="https://jamstack.org" target="_blank">Jamstack</a> website created with <a href="https://svelte.dev/" target="_blank">Svelte</a>, <a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a>, and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>. It's all hosted on <a href="https://vercel.com/" target="_blank">Vercel</a>.
+	This is a <a href="https://jamstack.org" target="_blank" rel="noreferrer">Jamstack</a> website created with <a href="https://svelte.dev/" target="_blank" rel="noreferrer">Svelte</a>, <a href="https://kit.svelte.dev/" target="_blank" rel="noreferrer">SvelteKit</a>, and <a href="https://tailwindcss.com" target="_blank" rel="noreferrer">Tailwind</a>. It's all hosted on <a href="https://vercel.com/" target="_blank" rel="noreferrer">Vercel</a>.
 </p>
 
 <p class="mb-4">
-	The blog is generated with <a href="https://mdsvex.com/" target="_blank">mdsvex</a> and <a href="https://daringfireball.net/projects/markdown/syntax#overview" target="_blank">Markdown</a>.
+	The blog is generated with <a href="https://mdsvex.com/" target="_blank" rel="noreferrer">mdsvex</a> and <a href="https://daringfireball.net/projects/markdown/syntax#overview" target="_blank" rel="noreferrer">Markdown</a>.
 </p>
 
 <p class="mb-4">
-	The serverless functions and API endpoints are configured with the <a href="https://www.serverless.com/framework" target="_blank">Serverless Framework</a>.
+	The serverless functions and API endpoints are configured with the <a href="https://www.serverless.com/framework" target="_blank" rel="noreferrer">Serverless Framework</a>.
 </p>
 
 <p class="mb-4">
-	My code editor of choice is <a href="https://nova.app" target="_blank">Nova</a>.
+	My code editor of choice is <a href="https://nova.app" target="_blank" rel="noreferrer">Nova</a>.
 </p>
 
 <p class="mb-4">
-	The source code and README for this site are on <a href="https://github.com/r-token/ryantoken.com-v3-svelte" target="_blank">GitHub</a>.
+	The source code and README for this site are on <a href="https://github.com/r-token/ryantoken.com-v3-svelte" target="_blank" rel="noreferrer">GitHub</a>.
 </p>
 
 <p class="mb-8">
-	Previous versions of the site were built with <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, <a href="https://github.com/johnsundell/publish" target="_blank">Swift</a>, <a href="https://www.netlify.com/" target="_blank">Netlify</a>, and others. I'm <a href="/blog/nuxt-3-vs-sveltekit">simultaneously</a> maintaining a <a href="https://ryantoken-v3.vercel.app/" target="_blank">Nuxt 3 version</a> of this website.
+	Previous versions of the site were built with <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">Bootstrap</a>, <a href="https://github.com/johnsundell/publish" target="_blank" rel="noreferrer">Swift</a>, <a href="https://www.netlify.com/" target="_blank" rel="noreferrer">Netlify</a>, and others. I'm <a href="/blog/nuxt-3-vs-sveltekit">simultaneously</a> maintaining a <a href="https://ryantoken-v3.vercel.app/" target="_blank" rel="noreferrer">Nuxt 3 version</a> of this website.
 </p>
 
 <p class="italic text-gray-500 dark:text-gray-400">

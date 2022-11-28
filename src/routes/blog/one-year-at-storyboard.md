@@ -15,7 +15,7 @@ tags:
 
 <ResizableImage src="/blog-images/one-year-at-storyboard/sb.jpeg" altText="Storyboard's logo" />
 
-This week marks one year since I joined <a href="https://new.trystoryboard.com" target="_blank">Storyboard</a>.
+This week marks one year since I joined <a href="https://new.trystoryboard.com" target="_blank" rel="noreferrer">Storyboard</a>.
 
 From a high level, it looked like a bit of a leap of faith. I left a larger, more "stable" company for an early-stage startup in the middle of a pandemic. From my perspective, though, it was more a necessity than it was a risk. Yes, I was happy at my previous company, but it wasn't enough. I wanted to be challenged, I wanted to be involved in areas outside of just software, and, most importantly, I wanted out of my comfort zone.
 
@@ -25,7 +25,7 @@ I'm learning technologies I hadn't heard of previously; I'm working with the des
 
 Writing this now, I can't believe it's already been a full year since I joined the team.
 
-The company has grown substantially, both in terms of revenue and team size, but we're careful and sustainable with that growth. See <a href="https://newsletter.pragmaticengineer.com/p/the-scoop-fast?s=r" target="_blank">Fast's recent collapse</a> for some insight into why that's important.
+The company has grown substantially, both in terms of revenue and team size, but we're careful and sustainable with that growth. See <a href="https://newsletter.pragmaticengineer.com/p/the-scoop-fast?s=r" target="_blank" rel="noreferrer">Fast's recent collapse</a> for some insight into why that's important.
 
 My own skillset has seen significant growth over this year as well. With the *possible* exception of my first year out of college, this is the most I've learned in a single year in my career. From creating our serverless architecture, to going deep on WebRTC and Hypercore, to helping with difficult authentication problems, to learning a new front-end framework, it has been a massive year for me.
 
@@ -51,7 +51,7 @@ I have a few ideas that are outside the traditional "keep learning" norms:
 
 ### 1. Produce more internal content
 
-Storyboard is all about podcasting. I run <a href="https://thegoldenhurricast.com/podcast" target="_blank">my own podcast</a> outside of work. While I've done my share of episodes internally for Storyboard, there's plenty of room for me to do more. And I have more to say! I've yet to decide whether that be a quick audio journal on what I worked on/learned that day or week, or something else. But more internal content is certainly a priority for me this year.
+Storyboard is all about podcasting. I run <a href="https://thegoldenhurricast.com/podcast" target="_blank" rel="noreferrer">my own podcast</a> outside of work. While I've done my share of episodes internally for Storyboard, there's plenty of room for me to do more. And I have more to say! I've yet to decide whether that be a quick audio journal on what I worked on/learned that day or week, or something else. But more internal content is certainly a priority for me this year.
 
 ### 2. Engage in more open-source software development
 
@@ -69,7 +69,7 @@ I have no problem staying fresh on *two* of these areas at a time. I'll always b
 
 For the last couple of years I've been most confident in my back-end and mobile skills, but I've lost some of the front-end skills I used to have. Before that, front-end and mobile were my stronger suits, but back-end dropped off. And the pattern continues.
 
-I have all three going right now. I hope to keep that up and take them all to new heights this year. I'm taking on some smaller front-end projects at work while spending most of my time on back-end development. I'm keeping up with mobile in my spare time. I released a native iOS app in October of 2021 called <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank">Outrank</a> and am coming down to the wire on another as I write this.
+I have all three going right now. I hope to keep that up and take them all to new heights this year. I'm taking on some smaller front-end projects at work while spending most of my time on back-end development. I'm keeping up with mobile in my spare time. I released a native iOS app in October of 2021 called <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer">Outrank</a> and am coming down to the wire on another as I write this.
 
 I think this is the combination that works best for me. Doing mobile development primarily outside of work keeps it fresh and offers a break from the web technologies I typically work with during the day. This change of pace in the tech I work with, I hope, will keep the momentum going as I become a significant contributor in *all* facets of application development.
 
