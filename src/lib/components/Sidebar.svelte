@@ -17,6 +17,7 @@
   import hurricastIcon from '$lib/assets/site-images/hurricast/hurricast-icon.jpg'
   
   import FaTwitterSquare from 'svelte-icons/fa/FaTwitterSquare.svelte'
+  import FaMastodon from 'svelte-icons/fa/FaMastodon.svelte'
   import FaGithubSquare from 'svelte-icons/fa/FaGithubSquare.svelte'
   import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte'
 
@@ -38,6 +39,7 @@
   
   const externalNavigationLinks = [
     { href: 'https://twitter.com/_ryantoken', label: 'Twitter' },
+    { href: 'https://indieweb.social/@ryantoken', label: 'Mastodon' },
     { href: 'https://github.com/r-token', label: 'GitHub' },
     { href: 'https://linkedin.com/in/ryantoken', label: 'LinkedIn' },
     { href: 'mailto:ryantoken13@gmail.com', label: 'Email' },
@@ -186,6 +188,10 @@
                   <div class="text-sky-400 w-5">
                     <FaTwitterSquare />
                   </div>
+                {:else if navItem.label === 'Mastodon'}
+                  <div class="text-blue-500 w-5">
+                    <FaMastodon />
+                  </div>
                 {:else if navItem.label === 'GitHub'}
                   <div class="text-black dark:text-white w-5">
                     <FaGithubSquare />
@@ -295,6 +301,10 @@
               {#if navItem.label === 'Twitter'}
                 <div class="text-sky-400 w-5">
                   <FaTwitterSquare />
+                </div>
+              {:else if navItem.label === 'Mastodon'}
+                <div class="text-blue-500 w-5">
+                  <FaMastodon />
                 </div>
               {:else if navItem.label === 'GitHub'}
                 <div class="text-black dark:text-white w-5">
