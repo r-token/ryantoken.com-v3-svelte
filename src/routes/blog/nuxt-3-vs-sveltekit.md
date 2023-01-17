@@ -1,6 +1,6 @@
 ---
 title: Nuxt 3 vs SvelteKit
-description: Choosing between Nuxt 3 and SvelteKit for ryantoken.com v3
+description: Choosing between Nuxt 3 and SvelteKit for ryantoken.com v3.
 date: 2022-10-24
 imagePath: /blog-images/nuxt-3-vs-sveltekit/cover.png
 imageAlt: Nuxt 3 logo vs the SvelteKit logo

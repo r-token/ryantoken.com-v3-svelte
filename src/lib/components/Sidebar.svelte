@@ -12,6 +12,7 @@
     ArrowUpRightIcon
   } from 'svelte-feather-icons'
   
+  import hlfIcon from '$lib/assets/site-images/hot-local-food/hlf-64.png'
   import outrankIcon from '$lib/assets/site-images/outrank/outrank-64.png'
   import catchupIcon from '$lib/assets/site-images/catchup/catchup-64.png'
   import hurricastIcon from '$lib/assets/site-images/hurricast/hurricast-icon.jpg'
@@ -31,7 +32,9 @@
     { href: '/experimentation', label: 'Experimentation' },
   ]
   
+  // TODO: UPDATE HLF URL WHEN APP IS RELEASED
   const myProjects = [
+    { href: 'https://apps.apple.com/us/app/outrank/id1588983785', label: 'HLF' },
     { href: 'https://apps.apple.com/us/app/outrank/id1588983785', label: 'Outrank' },
     { href: 'https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550', label: 'CatchUp' },
     { href: 'https://podcasts.apple.com/us/podcast/the-golden-hurricast/id1435008302?mt=2', label: 'Hurricast' },
@@ -154,7 +157,9 @@
           <a href={navItem.href} target="_blank" rel="noreferrer" on:click={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
             <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
               <div class="mr-3 mt-0.5">
-                {#if navItem.label === 'Outrank'}
+                {#if navItem.label === 'HLF'}
+                  <img src={hlfIcon} alt="Hot Local Food app icon" loading="lazy" decoding="async" class="rounded w-11 -mr-2.5" />
+                {:else if navItem.label === 'Outrank'}
                   <img src={outrankIcon} alt="Outrank app icon" loading="lazy" decoding="async" class="rounded w-11" />
                 {:else if navItem.label === 'CatchUp'}
                   <img src={catchupIcon} alt="CatchUp app icon" loading="lazy" decoding="async" class="rounded w-11" />
@@ -268,7 +273,9 @@
         <a href={navItem.href} target="_blank" rel="noreferrer" on:click={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
           <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
             <div class="mr-3 mt-0.5">
-              {#if navItem.label === 'Outrank'}
+              {#if navItem.label === 'HLF'}
+                <img src={hlfIcon} alt="Hot Local Food app icon" loading="lazy" decoding="async" class="rounded w-11 -mr-2.5" />
+              {:else if navItem.label === 'Outrank'}
                 <img src={outrankIcon} alt="Outrank app icon" loading="lazy" decoding="async" class="rounded w-11" />
               {:else if navItem.label === 'CatchUp'}
                 <img src={catchupIcon} alt="CatchUp app icon" loading="lazy" decoding="async" class="rounded w-11" />

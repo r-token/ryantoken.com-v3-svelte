@@ -4,9 +4,9 @@
   import ResizableImage from '$lib/components/ResizableImage.svelte'
   
   import profileImage from '$lib/assets/site-images/profile.jpg'
-  import outrankIcon from '$lib/assets/site-images/outrank/outrank-icon.png'
+  import hlfIcon from '$lib/assets/site-images/hot-local-food/hlf-icon.png'
+  import outrankIcon from '$lib/assets/site-images/outrank/outrank-icon-rounded.png'
   import hurricastIcon from '$lib/assets/site-images/hurricast/hurricast-icon.jpg'
-  import catchupIcon from '$lib/assets/site-images/catchup/catchup-icon.png'
 </script>
 
 <svelte:head>
@@ -42,13 +42,14 @@
   </p>
 
   <p class="mb-4">
-    My latest projects include <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer">Outrank for iOS and iPadOS</a>, <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">The Golden Hurricast</a>, and <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" rel="noreferrer">CatchUp for iOS</a>.
+    My latest projects include <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer">Hot Local Food for iOS</a>, <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">The Golden Hurricast</a>, and <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer">Outrank for iOS and iPadOS</a>.
   </p>
 
+  <!-- TODO: UPDATE HLF URL ONCE APP IS RELEASED -->
   <div class="flex items-stretch mb-4">
-    <ResizableImage src={outrankIcon} altText="Outrank's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+    <ResizableImage src={hlfIcon} altText="CatchUp's app icon" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
     <ResizableImage src={hurricastIcon} altText="The Golden Hurricast's logo" url="https://thegoldenhurricast.com"/>
-    <ResizableImage src={catchupIcon} altText="CatchUp's app icon" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
+    <ResizableImage src={outrankIcon} altText="Outrank's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
   </div>
 
   <p class="mb-4">
