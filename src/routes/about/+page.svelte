@@ -6,7 +6,7 @@
   import profileImage from '$lib/assets/site-images/profile.jpg'
   import hlfIcon from '$lib/assets/site-images/hot-local-food/hlf-icon.png'
   import outrankIcon from '$lib/assets/site-images/outrank/outrank-icon-rounded.png'
-  import hurricastIcon from '$lib/assets/site-images/hurricast/hurricast-icon.jpg'
+  import hurricastIcon from '$lib/assets/site-images/hurricast/hurricast-icon-rounded.png'
 </script>
 
 <svelte:head>
