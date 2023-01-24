@@ -57,7 +57,7 @@
 	
 	<!-- TODO: UPDATE URL WHEN APP IS RELEASED -->
 	<div class="flex items-stretch mb-4">
-		<ResizableImage src={hlfIcon} altText="Hot Local Food's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+		<ResizableImage src={hlfIcon} altText="Hot Local Food's app icon" url="https://apps.apple.com/us/app/hot-local-food/id1621818779"/>
 	</div>
 	
 	<p class="mb-4">Think Tinder, but for food, and it already likes you back. Say hello to <b>Hot Local Food</b>. Free, hot, and available on iOS 15 and newer.</p>
@@ -67,7 +67,7 @@
 	<p class="mb-4">With a photo-heavy Tinder-style swipe interface, a cohesive library of restaurants powered by <a href="https://fusion.yelp.com/" target="_blank" rel="noreferrer">Yelp</a>, and slick features built on top, Hot Local Food will help you find exactly what you need.</p>
 	
 	<!-- TODO: UPDATE URL WHEN APP IS RELEASED -->
-	<ResizableImage src={hlfPrimary} altText="Hot Local Food screenshots" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+	<ResizableImage src={hlfPrimary} altText="Hot Local Food screenshots" url="https://apps.apple.com/us/app/hot-local-food/id1621818779"/>
 	
 	<br />
 	
@@ -88,8 +88,7 @@
 	
 	<p class="mb-8">You can follow <a href="https://twitter.com/OutrankApp" target="_blank" rel="noreferrer">Hot Local Food on Twitter</a>, and you can read my blog post about building Hot Local Food <a href="https://www.ryantoken.com/blog/hot-local-food/" target="_blank" rel="noreferrer">here</a>.</p>
 	
-	<!-- TODO: UPDATE ONCE APP IS RELEASED -->
-	<a class="mb-8" href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;"></a>
+	1588983785
 
 	<hr class="mb-8" />
 

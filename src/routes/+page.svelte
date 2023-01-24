@@ -37,7 +37,7 @@
 
 <!-- TODO: UPDATE HLF URL ONCE RELEASED -->
 <p class="text-gray-600 dark:text-gray-400 mb-6">
-	In my free time, I build native iOS apps (<a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" rel="noreferrer">Hot Local Food</a>, <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer">Outrank</a>, and <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" rel="noreferrer">CatchUp</a>) and co-host <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">The Golden Hurricast</a>, a weekly podcast covering athletics at The University of Tulsa.
+	In my free time, I build native iOS apps (<a href="https://apps.apple.com/us/app/hot-local-food/id1621818779" target="_blank" rel="noreferrer">Hot Local Food</a>, <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer">Outrank</a>, and <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" rel="noreferrer">CatchUp</a>) and co-host <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">The Golden Hurricast</a>, a weekly podcast covering athletics at The University of Tulsa.
 </p>
 
 <h1 class="text-xl font-bold mb-6">Latest blog posts</h1>
