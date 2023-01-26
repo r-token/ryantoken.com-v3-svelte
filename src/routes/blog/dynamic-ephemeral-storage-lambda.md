@@ -1,6 +1,6 @@
 ---
 title: Dynamic Ephemeral Storage
-description: A repost to an article I published on the Storyboard Dev Blog.
+description: Serverless Compute with Dynamic Ephemeral Storage.
 date: 2022-06-10
 imagePath: /blog-images/dynamic-ephemeral-storage/cover.png
 imageAlt: A custom diagram showcasing dynamic ephemeral storage with lambda

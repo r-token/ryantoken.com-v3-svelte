@@ -14,7 +14,7 @@ tags:
 	import ResizableImage from '$lib/components/ResizableImage.svelte'
 	import ResizableIcon from '$lib/components/ResizableIcon.svelte'
 	
-	import outrankIcon from '$lib/assets/site-images/outrank/outrank-icon.png'
+	import outrankIcon from '$lib/assets/site-images/outrank/outrank-icon-rounded.png'
 	import outrankRankings from '$lib/assets/site-images/outrank/outrank-rankings.png'
 	import outrankDetail from '$lib/assets/site-images/outrank/outrank-detail.png'
 	import outrankCompare from '$lib/assets/site-images/outrank/outrank-compare.png'
