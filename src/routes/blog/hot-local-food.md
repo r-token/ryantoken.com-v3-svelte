@@ -1,7 +1,7 @@
 ---
 title: Hot Local Food for iOS
 description: It's like Tinder, but for food, and it already likes you back.
-date: 2023-01-23
+date: 2023-01-26
 imagePath: /blog-images/hot-local-food/hlf-icon-square.png
 imageAlt: Hot Local Food App Icon for iOS
 tags:
