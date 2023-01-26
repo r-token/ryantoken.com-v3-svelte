@@ -55,7 +55,6 @@
 	
 	<Header text="Hot Local Food"/>
 	
-	<!-- TODO: UPDATE URL WHEN APP IS RELEASED -->
 	<div class="flex items-stretch mb-4">
 		<ResizableImage src={hlfIcon} altText="Hot Local Food's app icon" url="https://apps.apple.com/us/app/hot-local-food/id1621818779"/>
 	</div>
@@ -64,9 +63,8 @@
 	
 	<p class="mb-4">Want something to eat or drink but don't know where to go? Want to explore the local scene nearby or far away? Just want to look at some good pictures of good food? Hot Local Food is there for you.</p>
 	
-	<p class="mb-4">With a photo-heavy Tinder-style swipe interface, a cohesive library of restaurants powered by <a href="https://fusion.yelp.com/" target="_blank" rel="noreferrer">Yelp</a>, and slick features built on top, Hot Local Food will help you find exactly what you need.</p>
+	<p class="mb-4">With a photo-heavy, Tinder-style swipe interface, an extensive library of restaurants powered by <a href="https://fusion.yelp.com/" target="_blank" rel="noreferrer">Yelp</a>, and slick features built on top, Hot Local Food will help you find exactly what you need.</p>
 	
-	<!-- TODO: UPDATE URL WHEN APP IS RELEASED -->
 	<ResizableImage src={hlfPrimary} altText="Hot Local Food screenshots" url="https://apps.apple.com/us/app/hot-local-food/id1621818779"/>
 	
 	<br />
@@ -82,13 +80,11 @@
 	
 	<p class="mb-4">For vegans, carnivores, and everyone in between, Hot Local Food is the best place to find what you love, so you can eat it.</p>
 	
-	<p class="mb-4">Hot Local Food is built with 100% <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>.</p>
+	<p class="mb-4">Hot Local Food is built with 100% <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>, and it uses <a href="https://developer.apple.com/icloud/cloudkit/" target="_blank" rel="noreferrer">CloudKit</a> as a back end to enable syncing between iOS devices.</p>
 	
-	<p class="mb-4">It uses <a href="https://developer.apple.com/icloud/cloudkit/" target="_blank" rel="noreferrer">CloudKit</a> as a back end to enable syncing between iOS devices.</p>
+	<p class="mb-8">You can follow <a href="https://twitter.com/HotLocalFood" target="_blank" rel="noreferrer">Hot Local Food on Twitter</a>, check out its <a href="https://www.hotlocalfood.app" target="_blank" rel="noreferrer">marketing website</a>, or read my <a href="/blog/hot-local-food/" rel="noreferrer">blog post</a> about building it.</p>
 	
-	<p class="mb-8">You can follow <a href="https://twitter.com/OutrankApp" target="_blank" rel="noreferrer">Hot Local Food on Twitter</a>, and you can read my blog post about building Hot Local Food <a href="https://www.ryantoken.com/blog/hot-local-food/" target="_blank" rel="noreferrer">here</a>.</p>
-	
-	1588983785
+	<a class="mb-8" href="https://apps.apple.com/us/app/hot-local-food/id1621818779" target="_blank" rel="noreferrer" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;"></a>
 
 	<hr class="mb-8" />
 

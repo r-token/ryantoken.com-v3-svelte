@@ -45,9 +45,8 @@
     My latest projects include <a href="https://apps.apple.com/us/app/hot-local-food/id1621818779" target="_blank" rel="noreferrer">Hot Local Food for iOS</a>, <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">The Golden Hurricast</a>, and <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer">Outrank for iOS and iPadOS</a>.
   </p>
 
-  <!-- TODO: UPDATE HLF URL ONCE APP IS RELEASED -->
   <div class="flex items-stretch mb-4">
-    <ResizableImage src={hlfIcon} altText="CatchUp's app icon" url="https://apps.apple.com/us/app/hot-local-food/id1621818779"/>
+    <ResizableImage src={hlfIcon} altText="Hot Local Food's app icon" url="https://apps.apple.com/us/app/hot-local-food/id1621818779"/>
     <ResizableImage src={hurricastIcon} altText="The Golden Hurricast's logo" url="https://thegoldenhurricast.com"/>
     <ResizableImage src={outrankIcon} altText="Outrank's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
   </div>

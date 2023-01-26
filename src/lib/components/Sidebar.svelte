@@ -32,7 +32,6 @@
     { href: '/experimentation', label: 'Experimentation' },
   ]
   
-  // TODO: UPDATE HLF URL WHEN APP IS RELEASED
   const myProjects = [
     { href: 'https://apps.apple.com/us/app/hot-local-food/id1621818779', label: 'HLF' },
     { href: 'https://apps.apple.com/us/app/outrank/id1588983785', label: 'Outrank' },
