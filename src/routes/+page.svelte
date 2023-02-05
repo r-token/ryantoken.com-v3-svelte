@@ -32,7 +32,7 @@
 </p>
 
 <p class="text-gray-600 dark:text-gray-400 mb-4">
-	I'm <a href="https://ryan-token-cv-prod.s3.us-east-2.amazonaws.com/Ryan+Token+CV.pdf" target="_blank" rel="noreferrer">currently</a> the lead full-stack software engineer at <a href="https://new.trystoryboard.com" target="_blank" rel="noreferrer">Storyboard</a>. My primary focus there is on <a href="https://aws.amazon.com/serverless/" target="_blank" rel="noreferrer">serverless cloud development</a>, but I build software that touches every part of the company.
+	I'm <a href="https://ryan-token-cv-prod.s3.us-east-2.amazonaws.com/Ryan+Token+CV.pdf" target="_blank" rel="noreferrer">currently</a> the lead software engineer on the Cloud Services team at <a href="https://new.trystoryboard.com" target="_blank" rel="noreferrer">Storyboard</a>. My primary focus there is on building <a href="https://aws.amazon.com/serverless/" target="_blank" rel="noreferrer">serverless</a> applications, and I build software that touches every part of the company.
 </p>
 
 <p class="text-gray-600 dark:text-gray-400 mb-6">

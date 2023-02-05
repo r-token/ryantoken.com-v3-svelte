@@ -16,7 +16,7 @@
 	<title>Ryan Token - {data.title}</title>
 	
 	<meta name="description" content={data.description} />
-	<meta name="keywords" content="Ryan Token, Serverless, Jamstack, iOS, Web, Javascript" />
+	<meta name="keywords" content={"Ryan Token, Serverless, Jamstack, iOS, Web, Javascript, " + data.title} />
 	<meta name="author" content="Ryan Token" />
 	
 	<meta property="og:title" content={"Ryan Token – " + data.title} />
