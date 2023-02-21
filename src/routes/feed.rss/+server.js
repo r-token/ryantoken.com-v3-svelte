@@ -4,6 +4,10 @@ const siteURL = 'https://ryantoken.com'
 const siteTitle = 'Ryan Token'
 const siteDescription = "Ryan's personal website and blog"
 
+const cleanHtmlString = (htmlString) => {
+	return htmlString.replace(/<[^>]+>/g, '')
+}
+
 export const prerender = true
 	
 export const GET = async () => {
@@ -26,7 +30,7 @@ export const GET = async () => {
 
 const render = (posts) =>
 (`<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
 <title>${siteTitle}</title>
 <description>${siteDescription}</description>
@@ -34,13 +38,15 @@ const render = (posts) =>
 <atom:link href="${siteURL}/feed.rss.xml" rel="self" type="application/rss+xml"/>
 ${posts
 	.map(
-		(post) => `<item>
-<guid isPermaLink="true">${siteURL}${post.path}</guid>
-<title>${post.meta.title}</title>
-<link>${siteURL}${post.path}</link>
-<description>${post.meta.description}</description>
-<pubDate>${new Date(post.meta.date).toUTCString()}</pubDate>
-</item>`
+		(post) => `
+		<item>
+			<guid isPermaLink="true">${siteURL}${post.path}</guid>
+			<title>${post.meta.title}</title>
+			<link>${siteURL}${post.path}</link>
+			<description>${post.meta.description}</description>
+			<pubDate>${new Date(post.meta.date).toUTCString()}</pubDate>
+			<content:encoded>"${post.postContent.html}"</content:encoded>
+		</item>`
 	)
 	.join('')}
 </channel>
