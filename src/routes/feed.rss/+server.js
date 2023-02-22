@@ -30,12 +30,12 @@ export const GET = async () => {
 
 const render = (posts) =>
 (`<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
 <title>${siteTitle}</title>
 <description>${siteDescription}</description>
+<language>en</language>
 <link>${siteURL}</link>
-<atom:link href="${siteURL}/feed.rss.xml" rel="self" type="application/rss+xml"/>
 ${posts
 	.map(
 		(post) => `
