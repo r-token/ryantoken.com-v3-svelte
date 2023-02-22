@@ -1,8 +1,8 @@
 import { fetchMarkdownPosts } from '$lib/utils'
 
-const siteURL = 'https://ryantoken.com'
-const siteTitle = 'Ryan Token'
-const siteDescription = "Ryan's personal website and blog"
+const siteURL = 'https://www.ryantoken.com/blog'
+const siteTitle = 'Ryan Token - Blog'
+const siteDescription = "Ryan's blog posts"
 
 export const prerender = true
 	
@@ -25,22 +25,24 @@ export const GET = async () => {
 }
 
 const render = (posts) =>
-(`<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+(
+`<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
 <channel>
 <title>${siteTitle}</title>
 <description>${siteDescription}</description>
+<language>en</language>
 <link>${siteURL}</link>
-<atom:link href="${siteURL}/feed.rss.xml" rel="self" type="application/rss+xml"/>
 ${posts
 	.map(
-		(post) => `<item>
-<guid isPermaLink="true">${siteURL}${post.path}</guid>
-<title>${post.meta.title}</title>
-<link>${siteURL}${post.path}</link>
-<description>${post.meta.description}</description>
-<pubDate>${new Date(post.meta.date).toUTCString()}</pubDate>
-</item>`
+		(post) => `
+		<item>
+			<guid isPermaLink="true">${siteURL}${post.path}</guid>
+			<title><![CDATA[ ${post.meta.title} ]]></title>
+			<link>${siteURL}${post.path}</link>
+			<description><![CDATA[ ${post.meta.description} ]]></description>
+			<pubDate>${new Date(post.meta.date).toUTCString()}</pubDate>
+			<content:encoded><![CDATA[ ${post.postContent.html} ]]></content:encoded>
+		</item>`
 	)
 	.join('')}
 </channel>

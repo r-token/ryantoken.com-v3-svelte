@@ -14,13 +14,13 @@
 	<meta property="og:title" content="Ryan Token" />
 	<meta property="og:description" content="Ryan's personal website and blog" />
 	<meta property="og:url" content="https://www.ryantoken.com" />
-	<meta property="og:image" content="https://www.ryantoken.com/_app/immutable/assets/profile-668eaa31.jpg" />
+	<meta property="og:image" content="https://res.cloudinary.com/dcu4ssa4m/image/upload/v1677081894/profile-square_veahoc.jpg" />
 	
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="Ryan Token" />
 	<meta name="twitter:description" content="Ryan's personal website and blog" />
 	<meta name="twitter:site" content="@_ryantoken" />
-	<meta name="twitter:image" content="https://www.ryantoken.com/_app/immutable/assets/profile-668eaa31.jpg" />
+	<meta name="twitter:image" content="https://res.cloudinary.com/dcu4ssa4m/image/upload/v1677081894/profile-square_veahoc.jpg" />
 	
 	<link rel="canonical" href="https://www.ryantoken.com/">
 </svelte:head>
