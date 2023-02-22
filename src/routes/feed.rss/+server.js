@@ -4,10 +4,6 @@ const siteURL = 'https://ryantoken.com'
 const siteTitle = 'Ryan Token'
 const siteDescription = "Ryan's personal website and blog"
 
-const cleanHtmlString = (htmlString) => {
-	return htmlString.replace(/<[^>]+>/g, '')
-}
-
 export const prerender = true
 	
 export const GET = async () => {
@@ -41,11 +37,11 @@ ${posts
 		(post) => `
 		<item>
 			<guid isPermaLink="true">${siteURL}${post.path}</guid>
-			<title>${post.meta.title}</title>
+			<title><![CDATA[ ${post.meta.title} ]]></title>
 			<link>${siteURL}${post.path}</link>
-			<description>${post.meta.description}</description>
+			<description><![CDATA[ ${post.meta.description} ]]></description>
 			<pubDate>${new Date(post.meta.date).toUTCString()}</pubDate>
-			<content:encoded>"${post.postContent.html}"</content:encoded>
+			<content:encoded><![CDATA[ ${post.postContent.html} ]]></content:encoded>
 		</item>`
 	)
 	.join('')}
