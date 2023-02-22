@@ -9,8 +9,6 @@ export const fetchMarkdownPosts = async () => {
 			const postContent = await defaults.render()
 			const { metadata } = await resolver()
 			const postPath = path.slice(11, -3)
-			
-			console.log('postContent:', postContent)
 
 			return {
 				meta: metadata,

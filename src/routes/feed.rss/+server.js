@@ -29,8 +29,8 @@ export const GET = async () => {
 }
 
 const render = (posts) =>
-(`<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+(
+`<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
 <title>${siteTitle}</title>
 <description>${siteDescription}</description>
