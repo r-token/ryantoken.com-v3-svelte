@@ -32,11 +32,11 @@
 </p>
 
 <p class="text-gray-600 dark:text-gray-400 mb-4">
-	I'm <a href="https://ryan-token-cv-prod.s3.us-east-2.amazonaws.com/Ryan+Token+CV.pdf" target="_blank" rel="noreferrer">currently</a> the lead software engineer on the Cloud Services team at <a href="https://new.trystoryboard.com" target="_blank" rel="noreferrer">Storyboard</a>. My primary focus there is on building <a href="https://aws.amazon.com/serverless/" target="_blank" rel="noreferrer">serverless</a> applications, and I build software that touches every part of the company.
+	I'm <a href="https://ryan-token-cv-prod.s3.us-east-2.amazonaws.com/Ryan+Token+CV.pdf" target="_blank" rel="noreferrer">currently</a> the lead engineer on the iOS team at <a href="https://storyboard.com" target="_blank" rel="noreferrer">Storyboard</a>. My primary focuses there are building <a href = "https://apps.apple.com/us/app/chat-by-storyboard/id1662743814" target="_blank">Chat by Storyboard</a>, our real-time, AI-powered, voice messaging app, and on creating highly scalable <a href="https://aws.amazon.com/serverless/" target="_blank" rel="noreferrer">serverless</a> back ends that power every part of the platform.
 </p>
 
 <p class="text-gray-600 dark:text-gray-400 mb-6">
-	In my free time, I build native iOS apps (<a href="https://apps.apple.com/us/app/hot-local-food/id1621818779" target="_blank" rel="noreferrer">Hot Local Food</a>, <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer">Outrank</a>, and <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" rel="noreferrer">CatchUp</a>) and co-host <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">The Golden Hurricast</a>, a weekly podcast covering athletics at The University of Tulsa.
+	In my free time, I build native iOS apps (<a href="https://apps.apple.com/us/app/hot-local-food/id1621818779" target="_blank" rel="noreferrer">Hot Local Food</a>, <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer">Outrank</a>, and <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" rel="noreferrer">CatchUp</a>) and co-host <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">The Golden Hurricast</a>, a weekly podcast covering athletics at <a href = "https://utulsa.edu" target = "_blank">The University of Tulsa</a>.
 </p>
 
 <h1 class="text-xl font-bold mb-6">Latest blog posts</h1>
