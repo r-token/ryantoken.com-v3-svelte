@@ -63,9 +63,7 @@ Thank you for your interest in Outrank. If you have a feature request or feedbac
 
 I'll end the main post here, but there are extra details on the app and my experience building it further down for anyone interested.
 
-<a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;" />
-
-<br />
+<a href="https://apps.apple.com/us/app/outrank/id1588983785?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 125px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1635206400" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
 
 ---
 
@@ -119,4 +117,4 @@ That covers all of the big pieces I wanted to get to about this app. I have legi
 
 Thank you for reading. If you have questions, comments, feedback, feature requests, or anything else about the app, please <a href="mailto:outrankapp@gmail.com" target="_blank" rel="noreferrer">email me</a>.
 
-<a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;" />
+<a href="https://apps.apple.com/us/app/outrank/id1588983785?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 125px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1635206400" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>

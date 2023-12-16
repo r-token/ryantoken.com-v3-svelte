@@ -50,11 +50,8 @@ Technical notes and privacy:
 * I do use iCloud to sync your saved Lists and swipes data between iOS devices
 * The free version of the app uses <a href="https://developers.google.com/admob/ios/data-disclosure" target="_blank" rel="noreferrer">Google AdMob</a>, which collects some very basic data - you can pay to remove the ads
 
-<br />
 
-<a href="https://apps.apple.com/us/app/hot-local-food/id1621818779" target="_blank" rel="noreferrer" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;" />
-
-<br /> <br /> <br />
+<a href="https://apps.apple.com/us/app/hot-local-food/id1621818779?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 125px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1674691200" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
 
 ## Personal Notes
 
@@ -68,6 +65,4 @@ Three years, two app icons, one pandemic, and multiple starts and stops later - 
 
 We'd love it if you tried it out. If you do, and you have feedback - positive or negative - we'd be honored to hear from you. Please <a href="mailto:hotlocalfood@gmail.com?subject=Blog Post Feedback - Hot Local Food" target="_blank" rel="noreferrer">email us</a>.
 
-<br />
-
-<a href="https://apps.apple.com/us/app/hot-local-food/id1621818779" target="_blank" rel="noreferrer" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;width:270px;height:80px;background-size:contain;" />
+<a href="https://apps.apple.com/us/app/hot-local-food/id1621818779?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 125px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1674691200" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
