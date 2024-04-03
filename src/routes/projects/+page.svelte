@@ -15,6 +15,7 @@
 	import eagleCrestHome from '$lib/assets/site-images/eaglecrest-home.png'
 	import dttvWebsite from '$lib/assets/site-images/dttv-website.png'
 	import catchupIcon from '$lib/assets/site-images/catchup/catchup-icon.png'
+	import catchupScreenshot from '$lib/assets/site-images/catchup/catchup-home.jpeg'
 </script>
 
 <svelte:head>
@@ -175,13 +176,17 @@
 
 	<p class="italic mb-4">*Featured on Brett Terpstra's <a href="https://systematicpod.com/ep/218" target="_blank" rel="noreferrer">Systematic</a> Podcast as one of his 'Top 3' picks (around 46:21)</p>
 
-	<p class="mb-4">My first public-facing iOS app! First released in May of 2018, I completely rewrote it in May of 2020 using <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>, <a href="https://developer.apple.com/documentation/coredata" target="_blank" rel="noreferrer">Core Data</a>, and several other improvements.</p>
-
+	<p class="mb-4">My first public-facing iOS app! First released in May 2018, I completely rewrote it in May of 2020 using <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a> and <a href="https://developer.apple.com/documentation/coredata" target="_blank" rel="noreferrer">Core Data</a>. Then shipped a large update in 2024 with <a href="https://developer.apple.com/documentation/swiftdata" target="_blank" rel="noreferrer">SwiftData</a> and <a href="/blog/catchup-v3" target="_blank" rel="noreferrer">several new features</a>. It also runs well on iPadOS and macOS and syncs data between them.</p>
+	
 	<p class="mb-4">CatchUp helps you stay in touch with the people who matter most. You can set reminders for the contacts you choose, and get notified when it's time to CatchUp with them again.</p>
+	
+	<div class="flex items-stretch mb-4">
+		<ResizableImage src={catchupScreenshot} altText="CatchUp screenshot" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
+	</div>
 
-	<p class="mb-4">CatchUp is free with no ads, but has a tip jar if you want to buy me a coffee ☕</p>
+	<p class="mb-4">CatchUp is free with no ads, but has an in-app tip jar if you want to buy me a coffee ☕</p>
 
-	<p class="mb-8">Read my blog post about modernizing CatchUp <a href="/blog/catching-up" target="_blank" rel="noreferrer">here</a>.</p>
+	<p class="mb-8">Read my blog post about modernizing CatchUp with SwiftUI <a href="/blog/catching-up" target="_blank" rel="noreferrer">here</a> or my latest post about releasing version 3.0 <a href="/blog/catchup-v3" target="_blank" rel="noreferrer">here</a>.</p>
 
 	<a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1526515200" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
 	

@@ -32,7 +32,7 @@
 </p>
 
 <p class="text-gray-600 dark:text-gray-400 mb-4">
-	I'm <a href="https://ryan-token-cv-prod.s3.us-east-2.amazonaws.com/Ryan+Token+CV.pdf" target="_blank" rel="noreferrer">currently</a> the lead engineer on the iOS team at <a href="https://storyboard.com" target="_blank" rel="noreferrer">Storyboard</a>. My primary focuses there are building <a href = "https://apps.apple.com/us/app/chat-by-storyboard/id1662743814" target="_blank">Chat by Storyboard</a>, our real-time, AI-powered, voice messaging app, and on creating highly scalable <a href="https://aws.amazon.com/serverless/" target="_blank" rel="noreferrer">serverless</a> back ends that power every part of the platform.
+	I'm <a href="https://ryan-token-cv-prod.s3.us-east-2.amazonaws.com/Ryan+Token+CV.pdf" target="_blank" rel="noreferrer">currently</a> a senior software engineer at <a href="https://storyboard.com" target="_blank" rel="noreferrer">Storyboard</a>. My primary focus there is building <a href = "https://apps.apple.com/us/app/chat-by-storyboard/id1662743814" target="_blank">Chat by Storyboard</a>, our hands-free voice messaging app for drivers. I also help create highly scalable <a href="https://aws.amazon.com/serverless/" target="_blank" rel="noreferrer">serverless</a> back ends that power every part of the platform.
 </p>
 
 <p class="text-gray-600 dark:text-gray-400 mb-6">
