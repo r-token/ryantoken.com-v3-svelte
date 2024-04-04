@@ -34,7 +34,7 @@ First, there's a new auto-updating grid of your next CatchUps. I've found this h
 
 <ResizableIcon src="/blog-images/catchup-v3/next-catchups.jpeg" altText="A screenshot of the Next CatchUps grid" />
 
-I've also revamped the contact detail screen's design and removed the “Notification Preference” pop-up sheet entirely. Setting your notification preference for a contact now lives entirely within the contact detail screen. There's no "Save" step anymore either. The app auto-saves your notification preference every time you change it.
+I've also revamped the contact detail screen's design and removed the “Notification Preference” pop-up sheet entirely. Setting your notification preference for a contact now lives fully within the contact detail screen. There's no "Save" step anymore either. The app auto-saves your notification preference every time you change it.
 
 That new contact detail screen looks like this:
 
