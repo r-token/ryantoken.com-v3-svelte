@@ -6,6 +6,8 @@
 		switch ((data.tag).toLowerCase()) {
 			case 'swiftui':
 				return 'SwiftUI'
+			case 'swiftdata':
+				return 'SwiftData'
 			case 'ios':
 				return 'iOS'
 			case 'webrtc':
