@@ -1,6 +1,6 @@
 ---
-title: Dynamic Ephemeral Storage
-description: Serverless Compute with Dynamic Ephemeral Storage.
+title: Dynamic Lambda Storage
+description: Serverless compute with dynamic ephemeral storage.
 date: 2022-06-10
 imagePath: /blog-images/dynamic-ephemeral-storage/cover.png
 imageAlt: A custom diagram showcasing dynamic ephemeral storage with lambda

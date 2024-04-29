@@ -19,8 +19,8 @@
 
 			<div class="px-8 pt-4 relative">
 				<p class="block text-xl leading-tight font-medium text-black dark:text-slate-50">{ title }</p>
-				<p class="mt-2 text-slate-500 dark:text-slate-300">{ description }</p>
-				<p class="mt-2 text-slate-500 dark:text-slate-300 pb-12">{ formattedDate() }</p>
+				<p class="mt-2 text-base text-slate-500 dark:text-slate-300">{ description }</p>
+				<p class="mt-2 text-base text-slate-500 dark:text-slate-300 pb-12">{ formattedDate() }</p>
 				<div class="absolute bottom-1">
 					{#each tags as tag (tag)}
 						<div class="inline-block mr-4 uppercase tracking-wide text-sm text-indigo-500 dark:text-sky-300 font-semibold">

@@ -1,6 +1,6 @@
 ---
 title: Learning WebRTC
-description: Explaining WebRTC concepts while reinforcing my own understanding.
+description: Explaining WebRTC to myself and others.
 date: 2021-03-07
 imagePath: /blog-images/learning-webrtc/cover.png
 imageAlt: The WebRTC logo

@@ -1,6 +1,6 @@
 ---
 title: Rebuilding My Website
-description: Why I decided to rebuild ryantoken.com with Swift
+description: Why I decided to rebuild ryantoken.com with Swift.
 date: 2020-03-22
 imagePath: /blog-images/rebuilding-my-website/cover.png
 imageAlt: Publish's icon

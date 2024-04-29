@@ -1,6 +1,6 @@
 ---
 title: CatchUp v3
-description: Revisiting my first iOS app with a refreshed design and new features.
+description: Revisiting my first iOS app with new features and a fresh UI.
 date: 2024-04-03
 imagePath: /blog-images/catchup-v3/catchup-icon.png
 imageAlt: CatchUp v3

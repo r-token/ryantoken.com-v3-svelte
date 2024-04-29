@@ -1,6 +1,6 @@
 ---
 title: Catching Up
-description: Modernizing CatchUp, my first iOS app, with SwiftUI and cleaner code.
+description: Modernizing CatchUp with SwiftUI and cleaner code.
 date: 2020-05-08
 imagePath: /blog-images/catching-up/catchup-icon.png
 imageAlt: CatchUp's app icon
