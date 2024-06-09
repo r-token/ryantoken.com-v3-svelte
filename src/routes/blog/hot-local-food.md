@@ -17,7 +17,7 @@ tags:
 
 Think Tinder, but for food, and it already likes you back. Say hello to **Hot Local Food**. Free, hot, and available on iOS 15 and newer.
 
-<ResizableIcon src="/blog-images/hot-local-food/hlf-icon-rounded.png" altText="Outrank's app icon" url="https://apps.apple.com/us/app/hot-local-food/id1621818779" />
+<ResizableIcon src="/blog-images/hot-local-food/hlf-icon-rounded.png" altText="Hot Local Food's app icon" url="https://apps.apple.com/us/app/hot-local-food/id1621818779" />
 
 ***Find love, then eat it***
 
