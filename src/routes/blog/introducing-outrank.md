@@ -57,7 +57,7 @@ Other features include:
 
 I built Outrank because I needed it. I host a college football podcast and wanted a quick way to find where my favorite teams stacked up, but couldn't find a service that provided it without a lot of pain in the process.
 
-The app is free with no ads. It makes me no money by default. If you enjoy Outrank, I'd love it if you left a tip or subscribed in the app, or supported my work on <a href="https://patreon.com/ryantoken" target="_blank" rel="noreferrer">Patreon</a> or <a href="https://buymeacoffee.com/ryantoken" target="_blank" rel="noreferrer">Buy Me a Coffee</a>.
+The app is free with no ads. It makes me no money by default. If you enjoy Outrank, I'd love it if you left a tip or subscribed in the app, or supported my work on <a href="https://patreon.com/thegoldenhurricast" target="_blank" rel="noreferrer">Patreon</a> or <a href="https://buymeacoffee.com/ryantoken" target="_blank" rel="noreferrer">Buy Me a Coffee</a>.
 
 Thank you for your interest in Outrank. If you have a feature request or feedback, please get in touch on <a href="https://twitter.com/OutrankApp" target="_blank" rel="noreferrer">Twitter</a> or <a href="mailto:outrankapp@gmail.com" target="_blank" rel="noreferrer">send me an email</a>.
 
