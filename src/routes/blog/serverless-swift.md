@@ -15,7 +15,7 @@ tags:
 	import bmcLogo from '$lib/assets/site-images/bmc-button.png'
 </script>
 
-It's [Swift on server](https://www.swift.org/documentation/server/), minus the server. Deployed on AWS via [Swift Cloud](https://github.com/swift-cloud/swift-cloud).
+It's [Swift on Server](https://www.swift.org/documentation/server/), minus the server. Deployed on AWS via [Swift Cloud](https://github.com/swift-cloud/swift-cloud).
 
 <ResizableIcon src="/blog-images/serverless-swift/serverless-swift.png" altText="Serverless Swift icon" />
 
@@ -27,7 +27,7 @@ You can view the full source code for this project on GitHub: https://github.com
 
 ## Background
 
-They say the only constant in life is change, and that has certainly been the case for my career in software development. I got started in front-end web development, grew to pick up traditional back-end development, fell in love with [serverless](https://aws.amazon.com/serverless/) back-end development, and then turned my favorite pastime into my full-time job with building native Swift apps for iOS.
+They say the only constant in life is change, and that has certainly been the case for my career in software development. I got started in front-end web development, grew to pick up traditional back-end development, fell in love with [serverless](https://aws.amazon.com/serverless/) back-end development, and then turned my favorite pastime into my full-time job building native Swift apps for iOS.
 
 For the last several years, I've locked in on the two areas I'm most passionate about and enjoy the most: serverless back-end development and native iOS development with Swift.
 
@@ -40,10 +40,10 @@ So many reasons that I could talk about for days. I love building serverless sys
 Additionally:
 1. It's in the name - you never have to deal with servers
 2. It's cheap, especially for small projects like this one. More on cost later
-3. It automatically scales up and down - ideally to zero
+3. It automatically scales up and down. Ideally to zero
 4. It's simple to configure basic services
 5. You can write the services in [any language](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-custom.html)
-6. The various [Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_code) platforms make hooking up the primitives seamless
+6. [Infrastructure as Code](https://en.wikipedia.org/wiki/Infrastructure_as_code) platforms make hooking up the primitives seamless
 
 ## Why Swift?
 
@@ -65,13 +65,13 @@ I used Xcode to build it, but any editor that supports the [SourceKit-LSP](https
 
 ### Infrastructure
 
-The engine that makes this project go is [Swift Cloud](https://github.com/swift-cloud/swift-cloud). It's the infrastructure as code tool I use to deploy my Swift package to AWS with the configuration I define. Specifically, Swift Cloud vends Swift components like `AWS.Function()` that get compiled into [Pulumi](https://www.pulumi.com/) YAML files, which are then deployed via the Pulumi CLI when you run `swift run Infra deploy` to deploy your project. Notably, you don't need to know anything about Pulumi to use Swift Cloud. It's just used internally.
+The engine that makes this project go is [Swift Cloud](https://github.com/swift-cloud/swift-cloud). It's the infrastructure as code tool I use to deploy my Swift package to AWS with the configuration I define. Specifically, Swift Cloud vends Swift components like `AWS.Function()` that get compiled into [Pulumi](https://www.pulumi.com/) YAML files. The Pulumi CLI deploys that configuration to the cloud when you run Swift Cloud's `swift run Infra deploy` command. Notably, you don't need to know anything about Pulumi to use Swift Cloud. It's just used internally.
 
 The project currently consists of six primary pieces of infrastructure, all of which are defined within `Sources/Infra/Project.swift`:
 
 1. A cron job managed by [EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html) that triggers my scheduler function
-2. An [SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html) queue to hold sports-api poller events
-3. A scheduler [Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) function that fires off SQS events every 10 seconds
+2. A scheduler [Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) function that fires off SQS events every 10 seconds
+3. An [SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html) queue to hold those events
 4. A poller Lambda function triggered by SQS that polls the [ncaa-api](https://github.com/henrygd/ncaa-api) for Tulsa football, men's basketball, and women's basketball scores, and the [public-espn-api](https://github.com/pseudo-r/Public-ESPN-API) for Eagles scores. It writes those results to DynamoDB
 5. A DynamoDB table that keeps track of the games found in the previous step
 6. A processor Lambda function triggered by [DynamoDB Streams](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html) that checks the scores for those teams I care about, and if they scored (football only) or won, make my Philips Hue lights go nuts in the team's colors
@@ -87,7 +87,7 @@ I won't go through the code in too much depth. You can look through all of it yo
 
 #### Package.swift
 
-First, you have to create a new Swift package. Since I used Xcode as my editor, I did this by navigating in Xcode to File -> New -> Package, chose macOS as the platform, and chose "Executable" as the package type. You can also do this via the CLI by running `swift package init --name MySwiftPackage --type executable`.
+First, you have to create a new Swift package. Since I used Xcode as my editor, I did this by navigating in Xcode to `File -> New -> Package`, chose `macOS` as the platform, and chose `Executable` as the package type. You can also do this via the CLI by running `swift package init --name MySwiftPackage --type executable`.
 
 Once your package is created, you need at minimum a single `.executableTarget` which will point to the file containing your infrastructure definitions, plus the Swift Cloud dependency.
 
@@ -114,7 +114,7 @@ let package = Package(
 
 I called my target Infra, as that was the default name Swift Cloud suggested, but you can call it whatever you want.
 
-Once you have that set up, you need to create a folder called `Sources`, a folder inside `Sources` named whatever you named your `.executableTarget` above, and then a Swift file named whatever you want - though I used `Project.swift`.
+Once you have that set up, you need to create a folder called `Sources`, a folder inside `Sources` named whatever you named your `.executableTarget` above, and then a Swift file named whatever you want - I used `Project.swift`.
 
 #### Project.swift
 
@@ -150,17 +150,17 @@ let scoresTable = AWS.DynamoDB(
 
 Permissions are automatically created and managed via methods on those resources, like `pollerCron.invoke(sportsApiScheduler)`, `sportsApiScheduler.link(sportsApiPollerQueue)`, `sportsApiPollerQueue.subscribe(sportsApiPoller)`, and `scoresTable.subscribe(scoreProcessor)`.
 
-You can also create custom permissions yourself via the `Link` struct provided by Swift Cloud, which takes in an a standard array of [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) permissions and resources in order to give extra access where needed.
+You can also create custom permissions yourself via the `Link` struct provided by Swift Cloud, which takes in a standard array of [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) permissions and resources to give extra access where needed.
 
-More details on all of those in [Project.swift in the GitHub repo](https://github.com/r-token/sports-home-automation-swift/blob/main/Sources/Infra/Project.swift).
+More details on all of those in [Project.swift](https://github.com/r-token/sports-home-automation-swift/blob/main/Sources/Infra/Project.swift) in the GitHub repo.
 
 #### Targets
 
 Each Lambda function I have gets its own `.executableTarget` in `Package.swift`, an associated folder inside `Sources`, and an executable Swift file within that folder called `main.swift`. You provide the dependencies those functions need inside `Package.swift`, then import them inside the Swift file itself.
 
-Note: the executable Swift file must be called `main.swift` in order to execute top-level calls like `try await runtime.run()`.
+Note: the executable Swift file must be called `main.swift` to execute top-level calls like `try await runtime.run()`.
 
-For example, my `ScoreProcessor` Lambda function is provided as an executable target that depends on some of my own code and four third-party dependencies. The executable target for it looks like this:
+For example, my `ScoreProcessor` Lambda function is provided as an executable target that depends on some of my code and four third-party dependencies. The executable target for it looks like this:
 
 ```swift
 .executableTarget(
@@ -176,13 +176,13 @@ For example, my `ScoreProcessor` Lambda function is provided as an executable ta
 )
 ```
 
-The "Models" and "SSMUtils" dependencies are code I wrote. The four others that begin with `.product(name:)` are third-party dependencies that must be defined in your `dependencies` array within `Package.swift`.
+The "Models" and "SSMUtils" dependencies are each code I wrote. The four others that begin with `.product(name:)` are third-party dependencies that must be defined in your top-level `dependencies` array within `Package.swift`.
 
 #### AWSLambdaRuntime, AsyncHTTPClient, and SwiftNIO
 
 Let's look at some actual Swift code that runs on Lambda. Finally!
 
-Each of the `main.swift` files has server-side Swift code we could discuss, but `ScoreProcessor.swift` is an especially useful one to look at as it touches a lot of key Swift on server concepts including event parsing, API PUT requests, interacting with other AWS services, and more.
+Each of the `main.swift` files have server-side Swift code we could discuss, but `ScoreProcessor.swift` is an especially useful one to look at as it touches a lot of key Swift on server concepts including event parsing, API PUT requests, interacting with other AWS services, and more.
 
 At a high level, this function is triggered when new data is written to my `Scores` table in DynamoDB. It parses the DynamoDB event into my own `GameInfo` Swift struct, which I can then act on in a type-safe way.
 
@@ -212,13 +212,17 @@ let runtime = LambdaRuntime { (event: DynamoDBEvent, context: LambdaContext) asy
 try await runtime.run()
 ```
 
-Let's talk about the five key interactions that happen within that abstracted code: the Lambda runtime, event parsing, API PUT requests, Swift Concurrency, and interacting with other AWS services.
+Let's talk about the five key interactions that happen within that abstracted code: the Swift AWS Lambda runtime, event parsing, API PUT requests, Swift Concurrency, and interacting with other AWS services.
 
-First, the **AWS Lambda Runtime**.
+First, the **Swift AWS Lambda Runtime**.
 
+The [Swift AWS Lambda Runtime](https://github.com/swift-server/swift-aws-lambda-runtime) is defined as "an implementation of the [AWS Lambda Runtime API](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-custom.html) and uses an embedded asynchronous HTTP Client based on [SwiftNIO](http://github.com/apple/swift-nio) that is fine-tuned for performance in the AWS Runtime context."
 
+The runtime runs a Lambda function's handler method when the function is invoked. It starts with `let runtime = LambdaRuntime { }`, and all of your code is included in those brackets. This is how you configure reacting to certain [Lambda events](https://github.com/swift-server/swift-aws-lambda-events) and access information from Lambda's context object like the function ARN, the log group, the function's memory limit, and more.
 
-Next, **event parsing**.
+Lambda executes your code inside its run loop when you call `try await runtime.run()`. You can see all of this with more context in the code block above.
+
+Now that we have code we can execute, let's discuss **event parsing**.
 
 This happens within the `parseDynamoEventIntoGameItem(event:context:)` function.
 
@@ -241,13 +245,13 @@ guard case .string(let gameId) = newImage["gameId"],
 
 Swift's pattern matching here makes event parsing pretty straightforward.
 
-Numbers are sent across the network to/from DynamoDB as strings, so we still have to convert the number values to `Int`s via `Int(myTeamScore)`, for example, but once you have those it's easy to take those values and store them in your own Swift struct or similar - which is what I do with my `GameItem` and `GameInfo` structs.
+Numbers are sent across the network to/from DynamoDB as strings, so we still have to convert the number values to `Int` via `Int(myTeamScore)`, for example, but once you have those it's easy to take the values and store them in your own Swift struct or similar - which is what I do with my `GameItem` and `GameInfo` structs.
 
 Next, **API PUT requests**.
 
 Once I have my `GameItem` and `GameInfo` structs, I know whether my team scored, if the game is over, and whether my team won. Given that information, I need to make my Philips Hue light bulbs flash different colors. To do that from a cloud environment, you need to use Philips Hue's [Remote API](https://developers.meethue.com/develop/hue-api/remote-api-quick-start-guide/), which is somewhat involved. I found [this guide](https://gotoguy.blog/2020/05/21/remote-authentication-and-controlling-philips-hue-api-using-postman/) very helpful. I left a comment on it fixing one bit which was outdated.
 
-Because [URLSession](https://developer.apple.com/documentation/foundation/urlsession) relies on Apple platforms, we have to use  something else to make the API requests from runtimes that run on Linux like Lambda. The preferred mechanism is [async-http-client](https://github.com/swift-server/async-http-client) from [swift-server](https://github.com/swift-server). It's built on top of [SwiftNIO](https://github.com/apple/swift-nio), Apple's asynchronous network application framework.
+Because [URLSession](https://developer.apple.com/documentation/foundation/urlsession) relies on Apple platforms, we have to use  something else to make the API requests from runtimes that run on Linux like Lambda. The preferred mechanism is [async-http-client](https://github.com/swift-server/async-http-client) from [swift-server](https://github.com/swift-server). It's built on top of SwiftNIO, Apple's asynchronous network application framework.
 
 To make a PUT request with `async-http-client`, you need to create the request with the `HTTPClientRequest` struct, define the HTTP method, add any necessary headers, add the request body, and execute the request with `await HTTPClient.shared.execute(request)`.
 
@@ -274,7 +278,7 @@ do {
 }
 ```
 
-When adding the request body, you'll notice that I create something called a `ByteBuffer`. That's a struct from SwiftNIO defined as something that "stores contiguously allocated raw bytes. It is a random and sequential accessible sequence of zero or more bytes (octets)". Whew. Let's break that down briefly.
+When adding the request body, you'll notice that I created something called a `ByteBuffer`. That's a struct from SwiftNIO defined as something that "stores contiguously allocated raw bytes. It is a random and sequential accessible sequence of zero or more bytes (octets)". Whew. Let's break that down briefly.
 
 The `jsonData` we serialize our `hueBody` into is of type `Data`, which is raw binary data. We need to write that binary data to a buffer before we can attach it to our request body. That's what `ByteBuffer` does for us here. It takes our binary data and writes it to a buffer which we can then use as the request body and send over the network.
 
@@ -282,7 +286,7 @@ Hue's API only allows for controlling one light at a time, and this is where **S
 
 I used TaskGroup for this. The `async let` syntax is simpler for sure, but I find TaskGroup's behavior more predictable. That's just personal preference.
 
-Finally, the eagle-eyed among you may have noticed there was a `hueUsername` and a `hueAccessToken` used in the API request code above. Those are parameters stored securely within AWS's [Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html). What does it look like to get those out of Parameter Store at runtime? This is a good example of **interacting with other AWS services**.
+Finally, the eagle-eyed among you may have noticed there was a `hueUsername` and a `hueAccessToken` used in the API request code above. Those are parameters stored securely within AWS's [Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html). What does it look like to get those out of the Parameter Store at runtime? This is a good example of **interacting with other AWS services**.
 
 To get my Hue API access token out of the param store, I wrote a utility function called `getSSMParameterValue`.
 
@@ -312,11 +316,11 @@ func getSSMParameterValue(parameterName: String, context: LambdaContext) async t
 
 I can then call that function for the parameter I need as follows: `let hueAccessToken = try await getSSMParameterValue(parameterName: "hue-access-token", context: context)`
 
-Once I have my Hue access token and Hue Remote API username, I can interact with the Hue Remote API however I'd like and have it control my lights here at home.
+Once I have my Hue access token and Hue Remote API username, I can interact with the Hue Remote API however I'd like and have it control my lights here at home. At that point, we're off and running.
 
 ### Cost
 
-I've had this system running 24/7 since the end of January. Every ten seconds, it polls two APIs (the ncaa-api and the public-espn-api) to check for my favorite teams scores. If it finds scores for my teams, it writes those scores to DynamoDB, which triggers my `ScoreProcessor` function to flash my lights accordingly.
+I've had this system running 24/7 since the end of January. Every ten seconds, it polls two APIs to check score updates for my favorite teams. If it finds scores for my teams, it writes those scores to DynamoDB, which triggers my `ScoreProcessor` function to flash my lights accordingly.
 
 The core system requires an EventBridge cron job that schedules SQS messages, an SQS queue that triggers my poller lambda function every 10 seconds, a DynamoDB table to hold the scores the poller function retrieves, and a processor function that runs if scores change.
 
@@ -328,7 +332,7 @@ The beauty of serverless!
 
 ### Performance
 
-To evaluate performance, let's look at both my API poller function that runs every 10 seconds and my score processor that is triggered much less often - only if there is a change to one of my favorite teams' scores. Both of these functions call other APIs, so their run time is dependent on the response times of those APIs as well.
+To evaluate performance, let's look at both my API poller function which runs every 10 seconds, and my score processor which is triggered much less often - it only runs if there is a change to one of my favorite teams' scores. Both of these functions call other APIs, so their total run time is dependent on the response times of those APIs as well.
 
 I don't have any broader monitoring set up for this project, but [CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html) **does** provide cold start times via the "Report" section of each invocation, so we'll default to looking at the three most recent log streams of each function and average out the durations and cold start times of each.
 
@@ -350,7 +354,7 @@ And look at the sub-200 ms cold start time! This is in a Lambda function that im
 
 **Score processor function**:
 
-1. Duration 14496.34 ms (it triggered the lights), cold start 192.10 ms
+1. Duration 14496.34 ms (lights were triggered), cold start 192.10 ms
 2. Duration 28.98 ms (no light trigger), cold start 204.72 ms
 3. Duration 36.15 ms (no light trigger), cold start 208.71 ms
 
@@ -358,11 +362,11 @@ Average run duration: 4853.82 ms
 
 Average cold start time: 201.84 ms
 
-The average run duration here is massively skewed by the first log here, which did trigger the flow that makes my lights go crazy. When that happens, my lights change colors 13 times with half-second delays after each change, and because Hue only supports changing one light per API request I have to make 4 API requests in parallel for each of those 13 color change requests so it can change all four of the lamps in the room I care about. Waiting for all of that to complete is what causes that long run time.
+The average run duration here is massively skewed by the first invocation, which triggered the flow that makes my lights go crazy. When that happens, my lights change colors 13 times with half-second delays after each change. Because Hue only supports changing one light per API request I have to make 4 API requests in parallel for each of those 13 color change requests so it can change all four of the lamps in the room I care about. Waiting for all of that to complete is what causes that long run time.
 
-Similar story on the cold start times here. Just above 200 ms on average for an unzipped executable that comes in at 154.5 MB due to five more large third-party dependencies, Apple's Foundation library, and some more of my own code.
+Similar story on the cold start times here. Just above 200 ms on average for an unzipped executable that comes in at 154.5 MB due to five more large third-party dependencies, Apple's Foundation library, and some more of my code.
 
-Let me reiterate that those cold starts only even come into play every now and then. Most invocations don't have **any** cold start period, as Lambda reuses already-warmed containers very often. The speeds reported here are the worst-case speeds when a fresh Lambda container needs to be spun up, the code loaded into memory, etc.
+Let me reiterate that those cold starts hardly ever come into play. Most invocations don't have **any** cold start period, as Lambda reuses already-warmed containers very often. The speeds reported here are the worst-case speeds when a fresh Lambda container needs to be spun up, the code loaded into memory, etc.
 
 I'm quite happy with 200 ms cold starts in these cases. And I haven't done any work at all to try and slim things down. This is just from the raw code I'm deploying to Lambda from Swift Cloud with no real consideration for optimization or efficiency. Not bad.
 
@@ -376,9 +380,9 @@ If you've gotten something out of this post, please give the repo a star!
 
 ## Shout Out to Andrew from Swift Cloud
 
-I want to give a huge shout out to [Andrew Barba](https://github.com/AndrewBarba). He created and maintains [Swift Cloud](https://github.com/swift-cloud/swift-cloud), and provided a ton of help in the [Swift Cloud Slack](https://join.slack.com/t/swift-cloud-app/shared_invite/zt-30fd6v3xv-kjuiPHowF8Oio2M9nA1cVQ) while I was working on this project.
+I want to give a huge shout-out to [Andrew Barba](https://github.com/AndrewBarba). He created and maintains [Swift Cloud](https://github.com/swift-cloud/swift-cloud), and provided a ton of help in the [Swift Cloud Slack](https://join.slack.com/t/swift-cloud-app/shared_invite/zt-30fd6v3xv-kjuiPHowF8Oio2M9nA1cVQ) while I was working on this project.
 
-I've used other IaC tools like the [Serverless Framework](https://www.serverless.com) and [SST](https://sst.dev). They are great, but they either don't support custom runtimes like the [swift-aws-lambda-runtime](https://github.com/swift-server/swift-aws-lambda-runtime) at all, or require the use of [Lambda Layers](https://aws.amazon.com/blogs/aws/new-for-aws-lambda-use-any-programming-language-and-share-common-components/) in order to use them. Swift Cloud supports it natively with no hassle.
+I've used other IaC tools like the [Serverless Framework](https://www.serverless.com) and [SST](https://sst.dev). They are great, but they either don't support custom runtimes like the [swift-aws-lambda-runtime](https://github.com/swift-server/swift-aws-lambda-runtime) at all, or require the use of [Lambda Layers](https://aws.amazon.com/blogs/aws/new-for-aws-lambda-use-any-programming-language-and-share-common-components/) to use them. Swift Cloud supports it natively with no hassle.
 
 It's a fantastic tool, and Andrew was quick to respond to feedback and gave help when I needed it. If you're interested in running Swift on AWS, I'd start with Swift Cloud.
 
