@@ -28,8 +28,7 @@
     { href: '/blog', label: 'Blog' },
     { href: '/about', label: 'About' },
     { href: '/projects', label: 'Projects' },
-    { href: '/meta', label: 'Meta' },
-    { href: '/experimentation', label: 'Experimentation' },
+    { href: '/meta', label: 'Meta' }
   ]
   
   const myProjects = [
@@ -133,8 +132,6 @@
                     <CoffeeIcon size="20" class="text-red-500 dark:text-red-400" />
                   {:else if navItem.label === 'Meta'}
                     <LayersIcon size="20" class="text-yellow-500 dark:text-yellow-400" />
-                  {:else if navItem.label === 'Experimentation'}
-                    <AlertTriangleIcon size="20" class="text-green-500 dark:text-green-400" />
                   {/if}
                 </div>
               
@@ -249,8 +246,6 @@
                   <CoffeeIcon size="20" class="text-red-500 dark:text-red-400" />
                 {:else if navItem.label === 'Meta'}
                   <LayersIcon size="20" class="text-yellow-500 dark:text-yellow-400" />
-                {:else if navItem.label === 'Experimentation'}
-                  <AlertTriangleIcon size="20" class="text-green-500 dark:text-green-400" />
                 {/if}
               </div>
             
