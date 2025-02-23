@@ -16,6 +16,7 @@
 	import dttvWebsite from '$lib/assets/site-images/dttv-website.png'
 	import catchupIcon from '$lib/assets/site-images/catchup/catchup-icon.png'
 	import catchupScreenshot from '$lib/assets/site-images/catchup/catchup-home.jpeg'
+	import serverlessSwiftIcon from '$lib/assets/site-images/serverless-swift.png'
 </script>
 
 <svelte:head>
@@ -51,6 +52,18 @@
 			<img src={bmcLogo} alt="Buy Me a Coffee button" loading="lazy" decoding="async" class="rounded-3xl" />
 		</a>
 	</div>
+	
+	<Header text="Serverless Swift"/>
+	
+	<div class="flex items-stretch mb-4">
+		<ResizableImage src={serverlessSwiftIcon} altText="Serverless Swift icon" url="/blog/serverless-swift"/>
+	</div>
+	
+	<p class="mb-4">I built a serverless back-end system on AWS written entirely in Swift that remotely controls the Philips Hue bulbs in my house whenever my favorite sports teams score or win. It runs on AWS services including Lambda, DynamoDB, SQS, and EventBridge.</p>
+	
+	<p class="mb-4">You can read my blog post about it <a href="/blog/serverless-swift">here</a>, and you can view the full source code for this project on GitHub: <a href ="https://github.com/r-token/sports-home-automation-swift" target="_blank" rel="noreferrer">https://github.com/r-token/sports-home-automation-swift</a></p>
+	
+	<br />
 	
 	<hr class="mb-8" />
 	
