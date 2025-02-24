@@ -56,7 +56,7 @@
   </p>
 
   <p class="mb-4">
-    My favorite programming languages are <a href="https://developer.apple.com/swift/" target="_blank" rel="noreferrer">Swift</a> and <a href="https://www.javascript.com" target="_blank" rel="noreferrer">JavaScript</a>, I tend to run my web projects on <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">AWS</a> or <a href="https://vercel.com" target="_blank" rel="noreferrer">Vercel</a> (or <a href="https://www.netlify.com" target="_blank" rel="noreferrer">Netlify</a>), and I'm always looking to learn something new.
+    My favorite programming languages are <a href="https://developer.apple.com/swift/" target="_blank" rel="noreferrer">Swift</a> and <a href="https://www.javascript.com" target="_blank" rel="noreferrer">JavaScript</a>, I tend to run my projects on <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">AWS</a> or <a href="https://vercel.com" target="_blank" rel="noreferrer">Vercel</a> (or <a href="https://www.netlify.com" target="_blank" rel="noreferrer">Netlify</a>), and I'm always looking to learn something new.
   </p>
 
   <p  class="mb-4">
@@ -69,6 +69,7 @@
 
   <ul class="list-disc ml-6 mb-2">
     <li><a href="https://twitter.com/_ryantoken" target="_blank" rel="noreferrer">Twitter</a></li>
+    <li><a href="https://bsky.app/profile/ryantoken.com" target="_blank" rel="noreferrer">Bluesky</a></li>
     <li><a href="https://indieweb.social/@ryantoken" target="_blank" rel="noreferrer">Mastodon</a></li>
     <li><a href="https://github.com/r-token" target="_blank" rel="noreferrer">GitHub</a></li>
     <li><a href="https://linkedin.com/in/ryantoken" target="_blank" rel="noreferrer">LinkedIn</a></li>

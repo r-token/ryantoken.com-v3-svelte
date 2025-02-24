@@ -18,6 +18,7 @@
   import hurricastIcon from '$lib/assets/site-images/hurricast/hurricast-icon.jpg'
   
   import FaTwitterSquare from 'svelte-icons/fa/FaTwitterSquare.svelte'
+  import GiButterfly from 'svelte-icons/gi/GiButterfly.svelte'
   import FaMastodon from 'svelte-icons/fa/FaMastodon.svelte'
   import FaGithubSquare from 'svelte-icons/fa/FaGithubSquare.svelte'
   import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte'
@@ -39,7 +40,8 @@
   ]
   
   const externalNavigationLinks = [
-    { href: 'https://twitter.com/_ryantoken', label: 'Twitter' },
+    { href: 'https://x.com/_ryantoken', label: 'Twitter' },
+    { href: 'https://bsky.app/profile/ryantoken.com', label: 'Bluesky' },
     { href: 'https://indieweb.social/@ryantoken', label: 'Mastodon' },
     { href: 'https://github.com/r-token', label: 'GitHub' },
     { href: 'https://linkedin.com/in/ryantoken', label: 'LinkedIn' },
@@ -189,6 +191,10 @@
                   <div class="text-sky-400 w-5">
                     <FaTwitterSquare />
                   </div>
+                {:else if navItem.label === 'Bluesky'}
+                  <div class="text-blue-500 w-5">
+                    <GiButterfly />
+                  </div>
                 {:else if navItem.label === 'Mastodon'}
                   <div class="text-blue-500 w-5">
                     <FaMastodon />
@@ -302,6 +308,10 @@
               {#if navItem.label === 'Twitter'}
                 <div class="text-sky-400 w-5">
                   <FaTwitterSquare />
+                </div>
+              {:else if navItem.label === 'Bluesky'}
+                <div class="text-blue-500 w-5">
+                  <GiButterfly />
                 </div>
               {:else if navItem.label === 'Mastodon'}
                 <div class="text-blue-500 w-5">
