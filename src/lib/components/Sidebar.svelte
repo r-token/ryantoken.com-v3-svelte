@@ -7,7 +7,6 @@
     UserIcon,
     CoffeeIcon,
     LayersIcon,
-    AlertTriangleIcon,
     MailIcon,
     ArrowUpRightIcon
   } from 'svelte-feather-icons'
@@ -17,11 +16,13 @@
   import catchupIcon from '$lib/assets/site-images/catchup/catchup-64.png'
   import hurricastIcon from '$lib/assets/site-images/hurricast/hurricast-icon.jpg'
   
-  import FaTwitterSquare from 'svelte-icons/fa/FaTwitterSquare.svelte'
-  import GiButterfly from 'svelte-icons/gi/GiButterfly.svelte'
-  import FaMastodon from 'svelte-icons/fa/FaMastodon.svelte'
-  import FaGithubSquare from 'svelte-icons/fa/FaGithubSquare.svelte'
-  import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte'
+  import Fa from 'svelte-fa'
+  import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
+  import { faBluesky } from '@fortawesome/free-brands-svg-icons';
+  import { faMastodon } from '@fortawesome/free-brands-svg-icons';
+  import { faGithub } from '@fortawesome/free-brands-svg-icons';
+  import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+  
 
   export let open, currentPage
 
@@ -40,7 +41,7 @@
   ]
   
   const externalNavigationLinks = [
-    { href: 'https://x.com/_ryantoken', label: 'Twitter' },
+    { href: 'https://x.com/_ryantoken', label: 'X' },
     { href: 'https://bsky.app/profile/ryantoken.com', label: 'Bluesky' },
     { href: 'https://indieweb.social/@ryantoken', label: 'Mastodon' },
     { href: 'https://github.com/r-token', label: 'GitHub' },
@@ -187,28 +188,28 @@
           <a href={navItem.href} target="_blank" rel="noreferrer" on:click={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
             <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
               <div class="mr-3 mt-0.5">
-                {#if navItem.label === 'Twitter'}
-                  <div class="text-sky-400 w-5">
-                    <FaTwitterSquare />
+                {#if navItem.label === 'X'}
+                  <div class="text-black w-5">
+                    <Fa icon={faXTwitter} size="20" />
                   </div>
                 {:else if navItem.label === 'Bluesky'}
                   <div class="text-blue-500 w-5">
-                    <GiButterfly />
+                    <Fa icon={faBluesky} size="20" />
                   </div>
                 {:else if navItem.label === 'Mastodon'}
                   <div class="text-blue-500 w-5">
-                    <FaMastodon />
+                    <Fa icon={faMastodon} size="20" />
                   </div>
                 {:else if navItem.label === 'GitHub'}
                   <div class="text-black dark:text-white w-5">
-                    <FaGithubSquare />
+                    <Fa icon={faGithub} size="20" />
                   </div>
                 {:else if navItem.label === 'LinkedIn'}
                   <div class="text-sky-700 dark:text-sky-600 w-5">
-                    <FaLinkedin />
+                    <Fa icon={faLinkedin} size="20" />
                   </div>
                 {:else if navItem.label === 'Email'}
-                  <MailIcon size="20" class="text-gray-600 dark:text-gray-200"/> 
+                  <MailIcon size="16" class="text-gray-600 dark:text-gray-200"/> 
                 {/if}
               </div>  
               
@@ -305,28 +306,28 @@
         <a href={navItem.href} target="_blank" rel="noreferrer" on:click={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
           <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
             <div class="mr-3 mt-0.5">
-              {#if navItem.label === 'Twitter'}
-                <div class="text-sky-400 w-5">
-                  <FaTwitterSquare />
+              {#if navItem.label === 'X'}
+                <div class="text-black w-5">
+                  <Fa icon={faXTwitter} size="20" />
                 </div>
               {:else if navItem.label === 'Bluesky'}
                 <div class="text-blue-500 w-5">
-                  <GiButterfly />
+                  <Fa icon={faBluesky} size="20" />
                 </div>
               {:else if navItem.label === 'Mastodon'}
-                <div class="text-blue-500 w-5">
-                  <FaMastodon />
+                <div class="text-indigo-500 w-5">
+                  <Fa icon={faMastodon} size="20" />
                 </div>
               {:else if navItem.label === 'GitHub'}
                 <div class="text-black dark:text-white w-5">
-                  <FaGithubSquare />
+                  <Fa icon={faGithub} size="20" />
                 </div>
               {:else if navItem.label === 'LinkedIn'}
                 <div class="text-sky-700 dark:text-sky-600 w-5">
-                  <FaLinkedin />
+                  <Fa icon={faLinkedin} size="20" />
                 </div>
               {:else if navItem.label === 'Email'}
-                <MailIcon size="20" class="text-gray-600 dark:text-gray-200"/> 
+                <MailIcon size="16" class="text-gray-600 dark:text-gray-200"/> 
               {/if}
             </div>  
             
