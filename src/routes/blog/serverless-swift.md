@@ -162,7 +162,14 @@ let scoresTable = AWS.DynamoDB(
 )
 ```
 
-Permissions are automatically created and managed for you when you link two resources together via methods on the resources themselves, like `pollerCron.invoke(sportsApiScheduler)`, `sportsApiScheduler.link(sportsApiPollerQueue)`, `sportsApiPollerQueue.subscribe(sportsApiPoller)`, and `scoresTable.subscribe(scoreProcessor)`.
+Permissions are automatically created and managed for you when you link two resources together via methods on the resources themselves, like this:
+
+```swift
+ pollerCron.invoke(sportsApiScheduler)
+ sportsApiScheduler.link(sportsApiPollerQueue)
+ sportsApiPollerQueue.subscribe(sportsApiPoller)
+ scoresTable.subscribe(scoreProcessor)
+```
 
 You can also create custom permissions yourself via the `Link` struct provided by Swift Cloud, which takes in a standard array of [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) permissions and resources to give extra access where needed.
 
@@ -247,7 +254,7 @@ Lambda executes your code inside its run loop when you call `try await runtime.r
 
 Now that we have code Lambda can execute, let's discuss **event parsing**.
 
-This happens within the `parseDynamoEventIntoGameItem(event:context:)` function.
+This happens within the `parseDynamoEventIntoGameItem()` function.
 
 We can use Swift's `guard case` pattern matching to safely extract values from the DynamoDB records (`newImage` and `oldImage`) like this:
 
