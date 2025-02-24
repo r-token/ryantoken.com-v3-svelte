@@ -20,11 +20,13 @@ It's [Swift on Server](https://www.swift.org/documentation/server/), minus the s
 
 <ResizableIcon src="/blog-images/serverless-swift/serverless-swift.png" altText="Serverless Swift icon" />
 
+I've long been interested in running Swift on the back end, but it wasn't until a combination of a fun project idea and a spark from Swift Cloud that I was inspired to dig in and try it out. But why do it this way? How does it work? And how well does it run in terms of cost and performance? We'll break all of that down.
+
 ## TL;DR
 
-I built a serverless back-end system entirely in Swift that remotely flashes the Philips Hue bulbs in my house whenever my favorite sports teams score or win. It runs on AWS services including Lambda, DynamoDB, SQS, and EventBridge, and costs less than $0.20/month.
+I built an event-driven serverless back end entirely in Swift that remotely flashes the Philips Hue bulbs in my house whenever my favorite sports teams score or win. It runs on AWS services including Lambda, DynamoDB, SQS, and EventBridge, and costs less than $0.20/month.
 
-You can view the full source code for this project on GitHub: https://github.com/r-token/sports-home-automation-swift
+You can view the full source code for this project on [GitHub](https://github.com/r-token/sports-home-automation-swift).
 
 ## Background
 
@@ -32,11 +34,13 @@ They say the only constant in life is change, and that has certainly been the ca
 
 For the last several years, I've locked in on the two areas I'm most passionate about and enjoy the most: serverless back-end development and native iOS development with Swift.
 
-I've written independently about both [Swift](/blog/tags/swift) and [serverless](/blog/tags/serverless) before, but this is the first time I've gotten to combine the two. Unsurprisingly, this is also the most excited I've been about a blog post in quite a while.
+I've written independently about both [serverless](/blog/tags/serverless) and [Swift](/blog/tags/swift) before, but this is the first time I've gotten to combine the two. It's been a ton of fun working on the project and writing this post.
 
 ## Why Serverless?
 
-So many reasons that I could talk about for days. I love building serverless systems. Once you understand the primitives, serverless offers the best combination of speed, cost, fun, and scale that I know of. It's not a cure-all, but it's great for projects like this.
+The first thing that comes to mind when you think Swift on Server is probably [Vapor](https://vapor.codes), or maybe [Hummingbird](https://hummingbird.codes). I am interested in both, and have used Vapor in the past, but I leaned on serverless for this project for reasons that I could talk about for days.
+
+To keep it brief, I simply enjoy building serverless systems. Once you understand the primitives, serverless offers the best combination of speed, cost, fun, and scale that I know of. It's not a cure-all, but it's great for projects like this.
 
 Additionally:
 1. It's in the name - you never have to deal with servers
@@ -62,13 +66,16 @@ There are other, more pragmatic, reasons as well:
 
 As mentioned above, it's a serverless system written in Swift that controls Philips Hue bulbs in my house whenever my favorite sports teams (Tulsa football & basketball, Eagles football) score or win. It runs on AWS Lambda, DynamoDB, SQS, and EventBridge.
 
+### Tools
+
 I used [Xcode](https://developer.apple.com/xcode/) to build it, but any editor that supports the [SourceKit-LSP](https://github.com/swiftlang/sourcekit-lsp) will work - including VS Code, Neovim, Emacs, Nova, and others.
 
+The deployment engine that makes this project go is [Swift Cloud](https://github.com/swift-cloud/swift-cloud). It's the infrastructure as code tool I use to deploy my Swift package to AWS with the configuration I define. Specifically, Swift Cloud vends Swift components like `AWS.Function()` that get compiled into [Pulumi](https://www.pulumi.com/) YAML files. The Pulumi CLI deploys that configuration to the cloud when you run Swift Cloud's `swift run Infra deploy` command. Notably, you don't need to know anything about Pulumi to use Swift Cloud. It's just used internally.
+
+I've used other IaC tools like the [Serverless Framework](https://www.serverless.com) and [SST](https://sst.dev). They are great, but they either don't support custom runtimes like the [swift-aws-lambda-runtime](https://github.com/swift-server/swift-aws-lambda-runtime) at all, or require the use of [Lambda Layers](https://aws.amazon.com/blogs/aws/new-for-aws-lambda-use-any-programming-language-and-share-common-components/) to use them. Swift Cloud supports it out of the box with no hassle. It's been great to work with.
+
+
 ### Infrastructure
-
-The engine that makes this project go is [Swift Cloud](https://github.com/swift-cloud/swift-cloud). It's the infrastructure as code tool I use to deploy my Swift package to AWS with the configuration I define. Specifically, Swift Cloud vends Swift components like `AWS.Function()` that get compiled into [Pulumi](https://www.pulumi.com/) YAML files. The Pulumi CLI deploys that configuration to the cloud when you run Swift Cloud's `swift run Infra deploy` command. Notably, you don't need to know anything about Pulumi to use Swift Cloud. It's just used internally.
-
-I've used other IaC tools like the [Serverless Framework](https://www.serverless.com) and [SST](https://sst.dev). They are great, but they either don't support custom runtimes like the [swift-aws-lambda-runtime](https://github.com/swift-server/swift-aws-lambda-runtime) at all, or require the use of [Lambda Layers](https://aws.amazon.com/blogs/aws/new-for-aws-lambda-use-any-programming-language-and-share-common-components/) to use them. Swift Cloud supports it out of the box with no hassle. It's been a great tool to use.
 
 The project currently consists of six primary pieces of infrastructure, all of which are defined within `Sources/Infra/Project.swift`:
 
@@ -185,11 +192,11 @@ For example, my `ScoreProcessor` Lambda function is provided as an executable ta
 
 The "Models" and "SSMUtils" dependencies are each code I wrote. The four others that begin with `.product(name:)` are third-party dependencies that must be defined in your top-level `dependencies` array within `Package.swift`.
 
-### Server-side Swift
+### Swift on Lambda
 
 Enough configuration talk. Let's look at some actual Swift code that runs on Lambda.
 
-Each of the `main.swift` files have server-side Swift code we could discuss, but `ScoreProcessor.swift` is an especially useful file to look at as it touches a lot of key Swift on server concepts including event parsing, API requests, interacting with other AWS services, and more.
+Each of the `main.swift` files have server-side Swift code we could discuss, but `ScoreProcessor.swift` is an especially useful file to look at as it touches a lot of key Swift on Lambda concepts including event parsing, API requests, interacting with other AWS services, and more.
 
 At a high level, this function is triggered when new data is written to my `Scores` table in DynamoDB. It parses the DynamoDB event into my own `GameInfo` Swift struct, which I can then act on in a type-safe way.
 
@@ -219,7 +226,14 @@ let runtime = LambdaRuntime { (event: DynamoDBEvent, context: LambdaContext) asy
 try await runtime.run()
 ```
 
-Let's talk about the five key interactions that happen within that abstracted code: using the Swift AWS Lambda runtime, event parsing, API PUT requests, Swift Concurrency, and interacting with other AWS services.
+Let's talk about the five key interactions that happen within that abstracted code:
+1. Using the Swift AWS Lambda runtime
+2. Event parsing
+3. API PUT requests
+4. Swift Concurrency
+5. Interacting with other AWS services
+
+<br />
 
 First, using the **Swift AWS Lambda Runtime**.
 
@@ -228,6 +242,8 @@ The [Swift AWS Lambda Runtime](https://github.com/swift-server/swift-aws-lambda-
 The runtime runs a Lambda function's handler method when the function is invoked. It starts with `let runtime = LambdaRuntime { }`, and all of your code is included in those brackets. This is how you configure reacting to certain [Lambda events](https://github.com/swift-server/swift-aws-lambda-events) and access information from Lambda's context object like the function ARN, the log group it will write logs to, the function's memory limit, and more.
 
 Lambda executes your code inside its run loop when you call `try await runtime.run()`. Reminder: you can see all of this with more context in the code block above.
+
+<br />
 
 Now that we have code Lambda can execute, let's discuss **event parsing**.
 
@@ -253,6 +269,8 @@ guard case .string(let gameId) = newImage["gameId"],
 Swift's pattern matching here makes event parsing pretty straightforward.
 
 Numbers are sent across the network to/from DynamoDB as strings, so we still have to convert the number values to `Int` via `Int(myTeamScore)`, but once you have those it's easy to take the values and store them in your own Swift struct or similar - which is what I do with my `GameItem` and `GameInfo` structs.
+
+<br />
 
 Next, **API PUT requests**.
 
@@ -289,9 +307,13 @@ When adding the request body, you'll notice that I created something called a `B
 
 The `jsonData` we serialize our `hueBody` into is of type `Data`, which is raw binary data. We need to write that binary data to a buffer before we can attach it to our request body. That's what `ByteBuffer` does for us here. It takes our binary data and writes it to a buffer which we can then use as the request body and send over the network.
 
+<br />
+
 Hue's API unfortunately only allows for controlling one light at a time, and this is where **Swift Concurrency** comes in. Using [TaskGroup](https://developer.apple.com/documentation/swift/taskgroup) or [async let](https://www.hackingwithswift.com/quick-start/concurrency/how-to-call-an-async-function-using-async-let), we can easily and safely fire off multiple API requests in parallel (one for each light we need to control) and wait for them all to complete before returning from our Lambda.
 
 While the `async let` syntax is simpler for sure, I used TaskGroup for this. I find TaskGroup's behavior more predictable. That's just personal preference.
+
+<br />
 
 Finally, the eagle-eyed among you may have noticed there was a `hueUsername` and a `hueAccessToken` used in the API request code above. Those are parameters stored securely within AWS's [Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html). What does it look like to get those out of the Parameter Store at runtime? This is a good example of **interacting with other AWS services**.
 
@@ -331,7 +353,7 @@ At this point, we've covered most of the core concepts you need to wrap your hea
 
 ### Cost
 
-I've had this system running 24/7 since the end of January. Every ten seconds, it polls two APIs to check score updates for my favorite teams. If it finds scores for my teams, it writes those scores to DynamoDB, which triggers my `ScoreProcessor` function to flash my lights accordingly.
+I've had this system running 24/7 since the end of January. Every ten seconds, it polls two different APIs to check score updates for my favorite teams. If it finds scores for my teams, it writes those scores to DynamoDB, which triggers my `ScoreProcessor` function to flash my lights accordingly.
 
 The core system requires an EventBridge cron job that schedules SQS messages, an SQS queue that triggers my poller function every 10 seconds, a DynamoDB table to hold the scores the poller function retrieves, and a processor function that runs if scores change.
 
@@ -349,7 +371,7 @@ To evaluate performance, let's look at both my API poller function which runs ev
 
 I don't have any broader monitoring set up for this project, but [CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html) **does** provide cold start times via the "Report" section of each invocation. We'll default to looking at the three most recent log streams for each function and average out both the total durations and cold start times of each.
 
-Each log stream contains one cold start (its first invocation), and then each subsequent invocation inside the stream is from an already-warm container - so there are no cold starts after the first invocation in every log stream. Therefore, we'll look at the duration and cold starts of just the first invocation of each log stream - which theoretically should have the **worst** performance of any of the invocations in each stream.
+Each log stream contains one cold start (its first invocation), and then each subsequent invocation inside the stream is from an already-warm container - so there are no cold starts after the first invocation in every log stream. Therefore, we'll look at the duration and cold starts of just the first invocation of each log stream, which theoretically should have the **worst** performance of any of the invocations in the stream.
 
 **API poller function**:
 
