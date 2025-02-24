@@ -23,7 +23,6 @@
   import { faGithub } from '@fortawesome/free-brands-svg-icons';
   import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
   
-
   export let open, currentPage
 
   const mainNavigation = [

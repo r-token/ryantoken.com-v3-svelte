@@ -83,7 +83,7 @@ The project currently consists of six primary pieces of infrastructure, all of w
 2. A scheduler [Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) function that fires off SQS events every 10 seconds
 3. An [SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html) queue to hold those events
 4. A poller Lambda function triggered by SQS that polls the [ncaa-api](https://github.com/henrygd/ncaa-api) for Tulsa football, men's basketball, and women's basketball scores, and the [public-espn-api](https://github.com/pseudo-r/Public-ESPN-API) for Eagles scores. It writes those results to DynamoDB
-5. A DynamoDB table that keeps track of the games found in the previous step
+5. A [DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html) table that keeps track of the games found in the previous step
 6. A processor Lambda function triggered by [DynamoDB Streams](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html) that checks the scores for those teams I care about, and if they scored (football only) or won, make my Philips Hue lights go nuts in that team's colors
 
 The basic data flow looks like this:
@@ -413,7 +413,7 @@ Here's the raw URL: https://github.com/r-token/sports-home-automation-swift
 
 If you've gotten something out of this post, please give the repo a star!
 
-## Shout Out to Andrew from Swift Cloud
+## Shout-Out to Andrew from Swift Cloud
 
 I want to take a moment and give a huge shout-out to [Andrew Barba](https://github.com/AndrewBarba). He created and maintains [Swift Cloud](https://github.com/swift-cloud/swift-cloud), and provided a ton of help in the [Swift Cloud Slack](https://join.slack.com/t/swift-cloud-app/shared_invite/zt-30fd6v3xv-kjuiPHowF8Oio2M9nA1cVQ) while I was working on this project.
 
