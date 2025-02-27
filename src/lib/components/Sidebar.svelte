@@ -188,7 +188,7 @@
             <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
               <div class="mr-3 mt-0.5">
                 {#if navItem.label === 'X'}
-                  <div class="text-black w-5">
+                  <div class="text-black dark:text-white w-5">
                     <Fa icon={faXTwitter} size="20" />
                   </div>
                 {:else if navItem.label === 'Bluesky'}
@@ -196,7 +196,7 @@
                     <Fa icon={faBluesky} size="20" />
                   </div>
                 {:else if navItem.label === 'Mastodon'}
-                  <div class="text-blue-500 w-5">
+                  <div class="text-indigo-500 dark:text-indigo-400 w-5">
                     <Fa icon={faMastodon} size="20" />
                   </div>
                 {:else if navItem.label === 'GitHub'}
@@ -306,7 +306,7 @@
           <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
             <div class="mr-3 mt-0.5">
               {#if navItem.label === 'X'}
-                <div class="text-black w-5">
+                <div class="text-black dark:text-white w-5">
                   <Fa icon={faXTwitter} size="20" />
                 </div>
               {:else if navItem.label === 'Bluesky'}
@@ -314,7 +314,7 @@
                   <Fa icon={faBluesky} size="20" />
                 </div>
               {:else if navItem.label === 'Mastodon'}
-                <div class="text-indigo-500 w-5">
+                <div class="text-indigo-500 dark:text-indigo-400 w-5">
                   <Fa icon={faMastodon} size="20" />
                 </div>
               {:else if navItem.label === 'GitHub'}
