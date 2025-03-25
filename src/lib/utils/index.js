@@ -2,7 +2,7 @@ import { marked } from 'marked';
 import matter from 'gray-matter';
 
 export const fetchMarkdownPosts = async () => {
-  const allPostFiles = import.meta.glob('/src/routes/blog/*.md', { as: 'raw' })
+  const allPostFiles = import.meta.glob('/src/routes/blog/*.md', { query: '?raw', import: 'default' })
   const iterablePostFiles = Object.entries(allPostFiles)
   
   const allPosts = await Promise.all(

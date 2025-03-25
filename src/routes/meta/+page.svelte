@@ -1,6 +1,7 @@
 <script>
 	import LargeHeader from '$lib/components/LargeHeader.svelte'
 	import Subheader from '$lib/components/Subheader.svelte'
+	import StandardParagraph from '$lib/components/StandardParagraph.svelte'
 	
 	const currentYear = new Date().getFullYear()
 </script>
@@ -32,33 +33,33 @@
 
 <hr class="mb-6" />
 
-<p class="mb-4">
+<StandardParagraph>
 	This is a <a href="https://jamstack.org" target="_blank" rel="noreferrer">Jamstack</a> website created with <a href="https://svelte.dev/" target="_blank" rel="noreferrer">Svelte</a> and <a href="https://tailwindcss.com" target="_blank" rel="noreferrer">Tailwind</a>. It's all hosted on <a href="https://vercel.com/" target="_blank" rel="noreferrer">Vercel</a>.
-</p>
+</StandardParagraph>
 
-<p class="mb-4">
+<StandardParagraph>
 	The blog is generated with <a href="https://mdsvex.com/" target="_blank" rel="noreferrer">mdsvex</a> and <a href="https://daringfireball.net/projects/markdown/syntax#overview" target="_blank" rel="noreferrer">Markdown</a>.
-</p>
+</StandardParagraph>
 
-<p class="mb-4">
+<StandardParagraph>
 	The serverless functions and API endpoints are configured with the <a href="https://www.serverless.com/framework" target="_blank" rel="noreferrer">Serverless Framework</a>.
-</p>
+</StandardParagraph>
 
-<p class="mb-4">
+<StandardParagraph>
 	My code editor of choice is <a href="https://nova.app" target="_blank" rel="noreferrer">Nova</a>.
-</p>
+</StandardParagraph>
 
-<p class="mb-4">
+<StandardParagraph>
 	The source code and README for this site are on <a href="https://github.com/r-token/ryantoken.com-v3-svelte" target="_blank" rel="noreferrer">GitHub</a>.
-</p>
+</StandardParagraph>
 
-<p class="mb-8">
+<StandardParagraph>
 	Previous versions of the site were built with <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">Bootstrap</a>, <a href="https://github.com/johnsundell/publish" target="_blank" rel="noreferrer">Swift</a>, <a href="https://www.netlify.com/" target="_blank" rel="noreferrer">Netlify</a>, and others.
-</p>
+</StandardParagraph>
 
-<p class="italic text-gray-500 dark:text-gray-400">
+<StandardParagraph extraClasses="italic">
 	Check out the <a href="/feed.rss">RSS feed</a>
-</p>
+</StandardParagraph>
 
 <p class="mb-4 italic text-gray-500 dark:text-gray-400">
 	Ryan Token {currentYear}

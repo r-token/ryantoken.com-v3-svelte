@@ -1,6 +1,5 @@
 <script>
 	import '../app.css'
-	import '../globals.css'
 	import { page } from '$app/stores'
 	import { dev } from '$app/environment'
 	import { inject } from '@vercel/analytics'

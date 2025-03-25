@@ -42,7 +42,7 @@
 	
 	<hr class="mb-6" />
 	
-	<article class="prose max-w-none prose-img:rounded-md prose-headings:font-semibold prose-p:text-gray-800 dark:prose-p:text-gray-300 prose-a:text-indigo-500 dark:prose-a:text-sky-300 dark:prose-invert">
+	<article class="prose max-w-none prose-img:rounded-md prose-headings:font-semibold prose-p:text-gray-800 dark:prose-p:text-gray-300 prose-a:text-indigo-500 prose-a:no-underline dark:prose-a:text-sky-300 dark:prose-invert">
 		<data.content />
 	</article>
 	
