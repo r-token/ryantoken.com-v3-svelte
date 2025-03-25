@@ -29,7 +29,7 @@
 <LargeHeader text="Blog"/>
 	
 <h2 class="italic mb-6 text-gray-500 dark:text-gray-400">
-	All blog posts. Check out the <a href="/feed.rss">RSS feed</a>.
+	All blog posts. Subscribe to my <a class="text-indigo-500 dark:text-sky-300" href="/feed.rss">RSS feed</a>.
 </h2>
 
 <ul class="grid gap-6 grid-cols-1 xl:grid-cols-2">

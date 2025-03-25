@@ -38,15 +38,11 @@
 </StandardParagraph>
 
 <StandardParagraph>
-	The blog is generated with <a href="https://mdsvex.com/" target="_blank" rel="noreferrer">mdsvex</a> and <a href="https://daringfireball.net/projects/markdown/syntax#overview" target="_blank" rel="noreferrer">Markdown</a>.
+	The blog is generated with <a href="https://daringfireball.net/projects/markdown/syntax#overview" target="_blank" rel="noreferrer">Markdown</a> and <a href="https://mdsvex.com/" target="_blank" rel="noreferrer">mdsvex</a>.
 </StandardParagraph>
 
 <StandardParagraph>
-	The serverless functions and API endpoints are configured with the <a href="https://www.serverless.com/framework" target="_blank" rel="noreferrer">Serverless Framework</a>.
-</StandardParagraph>
-
-<StandardParagraph>
-	My code editor of choice is <a href="https://nova.app" target="_blank" rel="noreferrer">Nova</a>.
+	My code editors of choice are <a href="https://developer.apple.com/xcode/" target="_blank" rel="noreferrer">Xcode</a> and <a href="https://nova.app" target="_blank" rel="noreferrer">Nova</a>.
 </StandardParagraph>
 
 <StandardParagraph>
@@ -58,7 +54,7 @@
 </StandardParagraph>
 
 <StandardParagraph extraClasses="italic">
-	Check out the <a href="/feed.rss">RSS feed</a>
+	Subscribe to my <a href="/feed.rss">RSS feed</a>
 </StandardParagraph>
 
 <p class="mb-4 italic text-gray-500 dark:text-gray-400">

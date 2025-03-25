@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   
   // Props for additional class customization if needed
-  let { extraClasses } = $props()
+  let { children, extraClasses } = $props()
   
   // Default styling for the paragraph
   const paragraphClasses = "mb-4 text-gray-800 dark:text-gray-300";
@@ -25,6 +25,6 @@
 </script>
 
 <p class={combinedClasses} bind:this={paragraphElement}>
-  <!-- Use slot to include content from parent -->
-  <slot />
+  <!-- Use render children to include content from parent -->
+  {@render children()}
 </p>

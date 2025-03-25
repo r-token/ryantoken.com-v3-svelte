@@ -19,7 +19,13 @@
 </script>
 
 <div class="mx-auto max-w-xs sm:max-w-xs md:max-w-full lg:max-w-full xl:max-w-full rounded-3xl border border-gray-200 dark:border-slate-700 shadow-xl bg-slate-50 dark:bg-slate-700 overflow-hidden mb-6">
-	<div class="cursor-pointer" onclick={() => goto(slug)}>
+	<div 
+		class="cursor-pointer" 
+		role="button"
+		tabindex="0"
+		onclick={() => goto(slug)}
+		onkeydown={() => {}}
+	>
 		<div class="md:flex">
 			<div class="md:shrink-0 max-w-xs max-h-xs">
 				<img class="w-full md:h-full md:w-48" src={image} alt={imageAlt} loading="lazy" decoding="async" />

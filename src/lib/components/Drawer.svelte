@@ -31,7 +31,7 @@
   }
 
   let mounted = false
-  // scrolllock for content underneath
+  // scrollLock for content underneath
   function scrollLock(isOpen) {
     if (mounted) {
       const body = document.querySelector("body")
@@ -58,15 +58,18 @@
       class="w-screen h-full bg-gray-500 cursor-pointer duration-500 transition-opacity overflow-hidden {isOpen
         ? 'opacity-50'
         : 'opacity-0'}"
+      role="button"
+      tabindex="0"
+      aria-label="Close drawer"
       onclick={handleClickAway}
       onkeyup={handleClickAway}
-></div>
+    ></div>
     <div
       class="absolute {placement} top-0 shadow-xl overflow-y-auto bg-white transition-all duration-300 h-full {maxScreenSize} {isOpen
         ? 'w-screen'
         : 'w-0'}"
     >
-      {@render children?.()}
+      {@render children()}
     </div>
   </div>
 </aside>
