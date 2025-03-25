@@ -45,7 +45,7 @@
 	<LargeHeader text="Projects" />
 
 	<h1 class="italic mb-6 text-gray-500 dark:text-gray-400">
-		What I'm currently working on in my spare time. You can support my work on <a href="https://patreon.com/thegoldenhurricast" target="_blank" rel="noreferrer">Patreon</a> or <a href="https://www.buymeacoffee.com/ryantoken" target="_self">Buy Me a Coffee</a>.
+		What I'm currently working on in my spare time. You can support my work on <a class="text-indigo-500 dark:text-sky-300" href="https://patreon.com/thegoldenhurricast" target="_blank" rel="noreferrer">Patreon</a> or <a class="text-indigo-500 dark:text-sky-300" href="https://www.buymeacoffee.com/ryantoken" target="_blank" rel="noreferrer">Buy Me a Coffee</a>.
 	</h1>
 
 	<div class="flex items-stretch mb-8">

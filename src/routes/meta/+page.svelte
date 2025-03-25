@@ -53,9 +53,9 @@
 	Previous versions of the site were built with <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">Bootstrap</a>, <a href="https://github.com/johnsundell/publish" target="_blank" rel="noreferrer">Swift</a>, <a href="https://www.netlify.com/" target="_blank" rel="noreferrer">Netlify</a>, and others.
 </StandardParagraph>
 
-<StandardParagraph extraClasses="italic">
-	Subscribe to my <a href="/feed.rss">RSS feed</a>
-</StandardParagraph>
+<p class="mb-4 italic text-gray-500 dark:text-gray-400">
+	Subscribe to my <a class="text-indigo-500 dark:text-sky-300" href="/feed.rss">RSS feed</a>
+</p>
 
 <p class="mb-4 italic text-gray-500 dark:text-gray-400">
 	Ryan Token {currentYear}
