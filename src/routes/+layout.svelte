@@ -2,12 +2,16 @@
 	import '../app.css'
 	import { page } from '$app/stores'
 	import { dev } from '$app/environment'
-	import { inject } from '@vercel/analytics'
+	import { injectAnalytics } from '@vercel/analytics/sveltekit'
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit'
+	import { fade } from 'svelte/transition'
 	import Sidebar from '$lib/components/Sidebar.svelte'
 	import Topbar from '$lib/components/Topbar.svelte'
-	import { fade } from 'svelte/transition'
 	
-	inject({ mode: dev ? 'development' : 'production' });
+	// inject Vercel analytics & speed insights
+	injectAnalytics({ mode: dev ? 'development' : 'production' })
+	injectSpeedInsights()
+	
 	let { data, children } = $props();
 
 	let sidebarOpened = $state(false)
