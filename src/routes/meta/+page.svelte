@@ -42,7 +42,7 @@
 </StandardParagraph>
 
 <StandardParagraph>
-	My code editors of choice are <a href="https://developer.apple.com/xcode/" target="_blank" rel="noreferrer">Xcode</a> and <a href="https://nova.app" target="_blank" rel="noreferrer">Nova</a>.
+	My code editors of choice are <a href="https://nova.app" target="_blank" rel="noreferrer">Nova</a> and <a href="https://developer.apple.com/xcode/" target="_blank" rel="noreferrer">Xcode</a>.
 </StandardParagraph>
 
 <StandardParagraph>
