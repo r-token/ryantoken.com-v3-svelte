@@ -14,13 +14,13 @@
   let paragraphElement;
   
   onMount(() => {
-	// Find all links in the paragraph and apply the styles
-	if (paragraphElement) {
-	  const links = paragraphElement.querySelectorAll('a');
-	  links.forEach(link => {
-		link.classList.add('text-indigo-500', 'dark:text-sky-300');
-	  });
-	}
+    // Find all links in the paragraph and apply the styles
+    if (paragraphElement) {
+      const links = paragraphElement.querySelectorAll('a');
+      links.forEach(link => {
+        link.classList.add('text-indigo-500', 'dark:text-sky-300');
+      });
+    }
   });
 </script>
 
