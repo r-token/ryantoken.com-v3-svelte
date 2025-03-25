@@ -1,15 +1,29 @@
 <!-- from https://github.com/martykuentzel/svelte-tailwind-drawer -->
 
 <script>
+  import { run } from 'svelte/legacy';
+
   import { createEventDispatcher } from 'svelte'
   import { onMount } from 'svelte'
 
   const dispatch = createEventDispatcher()
-  export let isOpen = false
-  // by default Drawer opens from left
-  export let placement = "left-0"
-  // max size of content section
-  export let maxScreenSize = "max-w-[224px]"
+  
+  
+  /**
+   * @typedef {Object} Props
+   * @property {boolean} [isOpen]
+   * @property {string} [placement] - by default Drawer opens from left
+   * @property {string} [maxScreenSize] - max size of content section
+   * @property {import('svelte').Snippet} [children]
+   */
+
+  /** @type {Props} */
+  let {
+    isOpen = $bindable(false),
+    placement = "left-0",
+    maxScreenSize = "max-w-[224px]",
+    children
+  } = $props();
 
   const handleClickAway = () => {
     dispatch("clickAway")
@@ -24,7 +38,9 @@
       body.style.overflow = isOpen ? "hidden" : "auto"
     }
   }
-  $: scrollLock(isOpen)
+  run(() => {
+    scrollLock(isOpen)
+  });
 
   onMount(() => {
     mounted = true
@@ -42,15 +58,15 @@
       class="w-screen h-full bg-gray-500 cursor-pointer duration-500 transition-opacity overflow-hidden {isOpen
         ? 'opacity-50'
         : 'opacity-0'}"
-      on:click={handleClickAway}
-      on:keyup={handleClickAway}
-    />
+      onclick={handleClickAway}
+      onkeyup={handleClickAway}
+></div>
     <div
       class="absolute {placement} top-0 shadow-xl overflow-y-auto bg-white transition-all duration-300 h-full {maxScreenSize} {isOpen
         ? 'w-screen'
         : 'w-0'}"
     >
-      <slot />
+      {@render children?.()}
     </div>
   </div>
 </aside>

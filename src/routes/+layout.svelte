@@ -1,5 +1,6 @@
 <script>
 	import '../app.css'
+	import '../globals.css'
 	import { page } from '$app/stores'
 	import { dev } from '$app/environment'
 	import { inject } from '@vercel/analytics'
@@ -8,10 +9,10 @@
 	import { fade } from 'svelte/transition'
 	
 	inject({ mode: dev ? 'development' : 'production' });
-	export let data
+	let { data, children } = $props();
 
-	let sidebarOpened = false
-	let currentPage = $page.url.pathname
+	let sidebarOpened = $state(false)
+	let currentPage = $state($page.url.pathname)
 </script>
 
 <div class="flex min-h-screen dark:bg-slate-800">
@@ -20,7 +21,7 @@
 		<Topbar bind:open={sidebarOpened} bind:currentPage={currentPage}/>
 		{#key data.currentRoute}
 			<main in:fade|global={{ duration: 200, delay: 150 }} out:fade|global={{ duration: 150 }} class="p-6 dark:text-gray-300">
-				<slot />
+				{@render children()}
 			</main>
 		{/key}
 	</div>

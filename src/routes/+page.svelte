@@ -1,7 +1,7 @@
 <script>
 	import LargeHeader from '$lib/components/LargeHeader.svelte'
 	import BlogPreview from '$lib/components/BlogPreview.svelte'
-	export let data
+	let { data } = $props();
 </script>
 
 <svelte:head>
@@ -27,15 +27,15 @@
 
 <LargeHeader text="Hi, I'm Ryan" />
 	
-<p class="text-gray-600 dark:text-gray-400 mb-4">
+<p class="text-gray-600 dark:text-gray-400 text-lg mb-4">
 	I'm a <a href="https://github.com/r-token" target="_blank" rel="noreferrer">software engineer</a>, <a href="https://thegoldenhurricast.com/podcast">podcaster</a>, <a href="/blog">writer</a>, <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">college sports fan</a>, and general techie.
 </p>
 
-<p class="text-gray-600 dark:text-gray-400 mb-4">
+<p class="text-gray-600 dark:text-gray-400 text-lg mb-4">
 	I'm <a href="https://ryan-token-cv-prod.s3.us-east-2.amazonaws.com/Ryan+Token+CV.pdf" target="_blank" rel="noreferrer">currently</a> a senior software engineer at <a href="https://storyboard.com" target="_blank" rel="noreferrer">Storyboard</a>. My primary focus there is building <a href = "https://apps.apple.com/us/app/chat-by-storyboard/id1662743814" target="_blank">Chat by Storyboard</a>, our hands-free, eyes-free voice messaging app for drivers. I also help create highly scalable <a href="https://aws.amazon.com/serverless/" target="_blank" rel="noreferrer">serverless</a> back ends that power every part of the platform.
 </p>
 
-<p class="text-gray-600 dark:text-gray-400 mb-6">
+<p class="text-gray-600 dark:text-gray-400 text-lg mb-6">
 	In my free time, I build native iOS apps (<a href="https://apps.apple.com/us/app/hot-local-food/id1621818779" target="_blank" rel="noreferrer">Hot Local Food</a>, <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer">Outrank</a>, and <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" rel="noreferrer">CatchUp</a>) and co-host <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">The Golden Hurricast</a>, a weekly podcast covering athletics at <a href = "https://utulsa.edu" target = "_blank">The University of Tulsa</a>.
 </p>
 
@@ -53,6 +53,6 @@
 
 <h1 class="text-xl font-bold mb-6 mt-8">Latest podcast episodes</h1>
 
-<iframe title="Apple Podcasts web player for The Golden Hurricast" src="https://embed.podcasts.apple.com/us/podcast/the-golden-hurricast/id1435008302?itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; overflow: hidden; border-radius: 10px; background: transparent;" />
+<iframe title="Apple Podcasts web player for The Golden Hurricast" src="https://embed.podcasts.apple.com/us/podcast/the-golden-hurricast/id1435008302?itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
 
 <a rel="me" href="https://indieweb.social/@ryantoken"></a>

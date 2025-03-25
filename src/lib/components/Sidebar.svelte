@@ -23,7 +23,7 @@
   import { faGithub } from '@fortawesome/free-brands-svg-icons';
   import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
   
-  export let open, currentPage
+  let { open = $bindable(), currentPage = $bindable() } = $props();
 
   const mainNavigation = [
     { href: '/blog', label: 'Blog' },
@@ -56,7 +56,7 @@
     open = !open
   }
 
-  $: isCurrentPage = (page) => {
+  let isCurrentPage = $derived((page) => {
     const slashPage = '/' + page
     const pageLowercased = slashPage.toLowerCase()
 
@@ -65,7 +65,7 @@
     } else {
       return false
     }
-  }
+  })
 
   const updateSelectedPage = (page) => {
     if (page === '/') {
@@ -82,14 +82,14 @@
     toggleSidebar()
   }
   
-  let innerHeight = 0
-  $: isSmallPhone = () => {
+  let innerHeight = $state(0)
+  let isSmallPhone = $derived(() => {
     if (innerHeight <= 750) {
       return true
     } else {
       return false
     }
-  }
+  })
 </script>
 
 <svelte:window bind:innerHeight />
@@ -99,7 +99,7 @@
   <Drawer isOpen={open} on:clickAway={() => open=false}>
     <div class="flex pb-6 flex-col overflow-y-auto lg:hidden relative h-full w-56 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-100 dark:border-slate-700">
       <button 
-        on:click={toggleSidebar}
+        onclick={toggleSidebar}
         class="flex relative top-2 left-3 items-center justify-center w-10 h-10 text-gray-600 dark:text-gray-300 rounded-full focus:outline-none"
         type="button"
         value="Close Sidebar"
@@ -111,7 +111,7 @@
         {/if}
       </button>
       <div class="text-2xl font-bold flex items-center px-6 py-5 pb-0.5">
-        <a href="/" on:click={() => updateSelectedPageAndToggleSidebar('/')}>
+        <a href="/" onclick={() => updateSelectedPageAndToggleSidebar('/')}>
           <LargeHeader text="Ryan Token" />
         </a>
       </div>
@@ -122,7 +122,7 @@
   
       {#each mainNavigation as navItem, index (index)}
         <div class="mb-0">
-          <a href={navItem.href} on:click={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+          <a href={navItem.href} onclick={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
             <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
               <div class="flex">
                 <div class="mr-3 mt-0.5">
@@ -152,7 +152,7 @@
   
       {#each myProjects as navItem (navItem.label)}
         <div class="mb-0">
-          <a href={navItem.href} target="_blank" rel="noreferrer" on:click={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+          <a href={navItem.href} target="_blank" rel="noreferrer" onclick={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
             <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
               <div class="mr-3 mt-0.5">
                 {#if navItem.label === 'HLF'}
@@ -184,7 +184,7 @@
       
       {#each externalNavigationLinks as navItem (navItem.label)}
         <div class="mb-0">
-          <a href={navItem.href} target="_blank" rel="noreferrer" on:click={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+          <a href={navItem.href} target="_blank" rel="noreferrer" onclick={() => updateSelectedPageAndToggleSidebar(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
             <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
               <div class="mr-3 mt-0.5">
                 {#if navItem.label === 'X'}
@@ -229,7 +229,7 @@
   <!-- DESKTOP SIDEBAR -->
   <div class="hidden transition-all delay-150 lg:block flex-col overflow-y-auto h-full w-56 pt-1 bg-slate-100 dark:bg-slate-700 border-r border-slate-200 dark:border-slate-600">
     <div class="text-2xl font-bold flex items-center px-6 py-5 pb-0.5">
-      <a href="/" on:click={() => updateSelectedPage('/')}>
+      <a href="/" onclick={() => updateSelectedPage('/')}>
         <LargeHeader text="Ryan Token" />
       </a>
     </div>
@@ -240,7 +240,7 @@
 
     {#each mainNavigation as navItem, index (index)}
       <div class="mb-0">
-        <a href={navItem.href} on:click={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+        <a href={navItem.href} onclick={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
           <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
             <div class="flex">
               <div class="mr-3 mt-0.5">
@@ -270,7 +270,7 @@
 
     {#each myProjects as navItem (navItem.label)}
       <div class="mb-0">
-        <a href={navItem.href} target="_blank" rel="noreferrer" on:click={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+        <a href={navItem.href} target="_blank" rel="noreferrer" onclick={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
           <div class="flex hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
             <div class="mr-3 mt-0.5">
               {#if navItem.label === 'HLF'}
@@ -302,7 +302,7 @@
     
     {#each externalNavigationLinks as navItem (navItem.label)}
       <div class="mb-0">
-        <a href={navItem.href} target="_blank" rel="noreferrer" on:click={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
+        <a href={navItem.href} target="_blank" rel="noreferrer" onclick={() => updateSelectedPage(navItem.label)} class="flex items-center px-4 py-1 text-gray-500 dark:text-gray-300">
           <div class="hover:bg-slate-300 hover:dark:bg-slate-600 hover:dark:text-gray-300 {isCurrentPage(navItem.label) ? selectedBackground : normalBackground}">
             <div class="mr-3 mt-0.5">
               {#if navItem.label === 'X'}

@@ -1,5 +1,5 @@
 <script>
-	export let src, altText, url
+	let { src, altText, url } = $props();
 </script>
 
 <a href={url} target="_blank" rel="noreferrer">

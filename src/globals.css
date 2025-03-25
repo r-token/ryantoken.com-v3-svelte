@@ -1,0 +1,26 @@
+h1:not([class*="text-"]), 
+h2:not([class*="text-"]), 
+h3:not([class*="text-"]), 
+h4:not([class*="text-"]), 
+h5:not([class*="text-"]), 
+h6:not([class*="text-"]) {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+p:not([class*="text-"]) {
+  font-size: 18px !important;
+  color: rgb(31, 41, 55) !important; /* text-gray-800 */
+}
+
+.dark p:not([class*="text-"]) {
+  color: rgb(209, 213, 219) !important; /* dark:text-gray-300 */
+}
+
+a:not([class*="text-"]) {
+  text-decoration: none !important;
+  color: rgb(99, 102, 241) !important; /* text-indigo-500 */
+}
+
+.dark a:not([class*="text-"]) {
+  color: rgb(125, 211, 252) !important; /* dark:text-sky-300 */
+}

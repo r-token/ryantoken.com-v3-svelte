@@ -4,7 +4,7 @@
 	import Subheader from '$lib/components/Subheader.svelte'
 	import Header from '$lib/components/Header.svelte'
 	
-	let sentence = ''
+	let sentence = $state('')
 	
 	const refreshSentence = async () => {
 		const response = await fetch(`${import.meta.env.VITE_PUBLIC_CUSTOM_BASE_PATH}/sentence-generator`)
@@ -49,7 +49,7 @@
 	
 	<Header text="Serverless Function:"/>
 		
-	<button class="mb-6 rounded-full p-3 bg-indigo-500 dark:bg-sky-500 dark:from-fuchsia-500 dark:to-red-500 text-white" on:click={refreshSentence}>Generate a new random sentence</button>
+	<button class="mb-6 rounded-full p-3 bg-indigo-500 dark:bg-sky-500 dark:from-fuchsia-500 dark:to-red-500 text-white" onclick={refreshSentence}>Generate a new random sentence</button>
 	
 	<p class="mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-red-500 dark:from-sky-500 dark:to-green-500">
 		{ sentence }

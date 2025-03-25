@@ -33,7 +33,7 @@
 <hr class="mb-6" />
 
 <p class="mb-4">
-	This is a <a href="https://jamstack.org" target="_blank" rel="noreferrer">Jamstack</a> website created with <a href="https://svelte.dev/" target="_blank" rel="noreferrer">Svelte</a>, <a href="https://kit.svelte.dev/" target="_blank" rel="noreferrer">SvelteKit</a>, and <a href="https://tailwindcss.com" target="_blank" rel="noreferrer">Tailwind</a>. It's all hosted on <a href="https://vercel.com/" target="_blank" rel="noreferrer">Vercel</a>.
+	This is a <a href="https://jamstack.org" target="_blank" rel="noreferrer">Jamstack</a> website created with <a href="https://svelte.dev/" target="_blank" rel="noreferrer">Svelte</a> and <a href="https://tailwindcss.com" target="_blank" rel="noreferrer">Tailwind</a>. It's all hosted on <a href="https://vercel.com/" target="_blank" rel="noreferrer">Vercel</a>.
 </p>
 
 <p class="mb-4">
@@ -53,7 +53,7 @@
 </p>
 
 <p class="mb-8">
-	Previous versions of the site were built with <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">Bootstrap</a>, <a href="https://github.com/johnsundell/publish" target="_blank" rel="noreferrer">Swift</a>, <a href="https://www.netlify.com/" target="_blank" rel="noreferrer">Netlify</a>, and others. I'm <a href="/blog/nuxt-3-vs-sveltekit">simultaneously</a> maintaining a <a href="https://ryantoken-v3.vercel.app/" target="_blank" rel="noreferrer">Nuxt 3 version</a> of this website.
+	Previous versions of the site were built with <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">Bootstrap</a>, <a href="https://github.com/johnsundell/publish" target="_blank" rel="noreferrer">Swift</a>, <a href="https://www.netlify.com/" target="_blank" rel="noreferrer">Netlify</a>, and others.
 </p>
 
 <p class="italic text-gray-500 dark:text-gray-400">

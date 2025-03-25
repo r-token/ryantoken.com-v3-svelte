@@ -1,6 +1,6 @@
 <script>
 	import LargeHeader from '$lib/components/LargeHeader.svelte'
-	export let data
+	let { data } = $props();
 </script>
 
 <svelte:head>

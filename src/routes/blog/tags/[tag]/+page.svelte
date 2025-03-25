@@ -1,6 +1,6 @@
 <script>
 	import BlogPreview from '$lib/components/BlogPreview.svelte'
-	export let data
+	let { data } = $props();
 	
 	const getFormattedTag = () => {
 		switch ((data.tag).toLowerCase()) {
