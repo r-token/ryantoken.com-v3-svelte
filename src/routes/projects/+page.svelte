@@ -44,9 +44,9 @@
 <div>
 	<LargeHeader text="Projects" />
 
-	<h1 class="italic mb-6 text-gray-500 dark:text-gray-400">
+	<h3 class="italic mb-6 text-gray-500 dark:text-gray-400">
 		What I'm currently working on in my spare time. You can support my work on <a class="text-indigo-500 dark:text-sky-300" href="https://patreon.com/thegoldenhurricast" target="_blank" rel="noreferrer">Patreon</a> or <a class="text-indigo-500 dark:text-sky-300" href="https://www.buymeacoffee.com/ryantoken" target="_blank" rel="noreferrer">Buy Me a Coffee</a>.
-	</h1>
+	</h3>
 
 	<div class="flex items-stretch mb-8">
 		<a href="https://www.buymeacoffee.com/ryantoken" class="w-2/3 xl:w-1/3 lg:w-1/3 max-w-xs" target="_blank" rel="noreferrer">

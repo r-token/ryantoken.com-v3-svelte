@@ -38,9 +38,23 @@
 				<div class="absolute bottom-1">
 					{#each tags as tag (tag)}
 						<div class="inline-block mr-4 uppercase tracking-wide text-sm text-indigo-500 dark:text-sky-300 font-semibold">
-							<a href="/blog/tags/{tag}">
-								{ tag }
-							</a>
+							<span 
+								class="cursor-pointer"
+								role="link"
+								tabindex="0"
+								onclick={(e) => {
+									e.stopPropagation()
+									goto(`/blog/tags/${tag}`)}
+								}
+								onkeydown={(e) => {
+								  if (e.key === 'Enter' || e.key === ' ') {
+									e.stopPropagation()
+									goto(`/blog/tags/${tag}`);
+								  }
+								}}
+							>
+								{tag}
+							</span>
 						</div>
 					{/each}
 				</div>

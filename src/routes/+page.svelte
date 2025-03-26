@@ -41,7 +41,7 @@
 	In my free time, I build native iOS apps (<a href="https://apps.apple.com/us/app/hot-local-food/id1621818779" target="_blank" rel="noreferrer">Hot Local Food</a>, <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer">Outrank</a>, and <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" rel="noreferrer">CatchUp</a>) and co-host <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">The Golden Hurricast</a>, a weekly podcast covering athletics at <a href = "https://utulsa.edu" target = "_blank">The University of Tulsa</a>.
 </StandardParagraph>
 
-<h1 class="text-xl font-bold mb-6">Latest blog posts</h1>
+<h2 class="text-xl font-bold mb-6">Latest blog posts</h2>
 
 <ul class="grid gap-6 grid-cols-1 xl:grid-cols-2 mb-2">
 	{#each data.recentPosts as post}
@@ -53,8 +53,8 @@
 
 <a href="/blog" class="uppercase tracking-wide text-sm text-indigo-500 dark:text-sky-300 font-semibold">All Blog Posts</a>
 
-<h1 class="text-xl font-bold mb-6 mt-8">Latest podcast episodes</h1>
+<h2 class="text-xl font-bold mb-6 mt-8">Latest podcast episodes</h2>
 
-<iframe title="Apple Podcasts web player for The Golden Hurricast" src="https://embed.podcasts.apple.com/us/podcast/the-golden-hurricast/id1435008302?itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
+<iframe title="Apple Podcasts web player for The Golden Hurricast" src="https://embed.podcasts.apple.com/us/podcast/the-golden-hurricast/id1435008302?itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="450" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
 
 <a aria-label="Mastodon URL for verification" rel="me" href="https://indieweb.social/@ryantoken"></a>

@@ -39,8 +39,8 @@
 	<meta name="twitter:image" content="https://www.ryantoken.com/android-chrome-512x512.png" />
 </svelte:head>
 
-<h1 class="text-2xl font-bold mb-0 text-indigo-500 dark:text-slate-200">Blog posts tagged with:</h1>
-<h1 class="text-2xl font-bold mb-6 text-fuchsia-500 dark:text-sky-300">{getFormattedTag()}</h1>
+<h2 class="text-2xl font-bold mb-0 text-indigo-500 dark:text-slate-200">Blog posts tagged with:</h2>
+<h2 class="text-2xl font-bold mb-6 text-fuchsia-500 dark:text-sky-300">{getFormattedTag()}</h2>
 
 {#if data.posts.length}
 <ul class="mb-10">
