@@ -14,9 +14,11 @@ tags:
 	import ResizableIcon from '$lib/components/ResizableIcon.svelte'
 </script>
 
-<a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" rel="noreferrer">
-	<ResizableIcon src="/blog-images/catchup-v3/catchup-icon.png" altText="CatchUp App Icon" />
-</a>
+<ResizableIcon 
+	src="/blog-images/catchup-v3/catchup-icon.png"
+	altText="CatchUp App Icon"
+	url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"
+/>
 
 I first launched <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" rel="noreferrer">CatchUp - Keep in Touch</a> for iOS in May 2018. It was the first app I'd ever released and it was, from a code perspective, objectively pretty bad.
 
