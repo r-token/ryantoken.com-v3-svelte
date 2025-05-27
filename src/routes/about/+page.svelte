@@ -57,7 +57,7 @@
   </StandardParagraph>
 
   <StandardParagraph>
-    My favorite programming language is <a href="https://developer.apple.com/swift/" target="_blank" rel="noreferrer">Swift</a>, I tend to run my projects on <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">AWS</a>, and I'm always looking to learn something new.
+    My favorite programming language is <a href="https://www.swift.org" target="_blank" rel="noreferrer">Swift</a>, I tend to run my projects on <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">AWS</a>, and I'm always looking to learn something new.
   </StandardParagraph>
 
   <StandardParagraph>

@@ -23,7 +23,7 @@ For reference, here's what my website looked like before:
 
 <ResizableImage src="/blog-images/nuxt-3-vs-sveltekit/publish-website.png" altText="v2 of ryantoken.com - built with Swift and Publish" />
 
-I built that version of the site with <a href="https://www.apple.com/swift/" target="_blank" rel="noreferrer">Swift</a> and <a href="https://github.com/johnsundell/publish" target="_blank" rel="noreferrer">Publish</a> - a static site generator for Swift. While a great tool, I needed something more flexible that better aligned with how I feel about web development today. Thus, the rewrite project began.
+I built that version of the site with <a href="https://www.swift.org" target="_blank" rel="noreferrer">Swift</a> and <a href="https://github.com/johnsundell/publish" target="_blank" rel="noreferrer">Publish</a> - a static site generator for Swift. While a great tool, I needed something more flexible that better aligned with how I feel about web development today. Thus, the rewrite project began.
 
 ## The Debate
 
