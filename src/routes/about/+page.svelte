@@ -53,11 +53,11 @@
   </div>
 
   <StandardParagraph>
-    I'm currently into native iOS development, serverless web development, podcasting, and blogging.
+    I'm currently into native Apple platform development (iOS and macOS), serverless web development, podcasting, and blogging.
   </StandardParagraph>
 
   <StandardParagraph>
-    My favorite programming languages are <a href="https://developer.apple.com/swift/" target="_blank" rel="noreferrer">Swift</a> and <a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer">TypeScript</a>, I tend to run my projects on <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">AWS</a>, and I'm always looking to learn something new.
+    My favorite programming language is <a href="https://developer.apple.com/swift/" target="_blank" rel="noreferrer">Swift</a>, I tend to run my projects on <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">AWS</a>, and I'm always looking to learn something new.
   </StandardParagraph>
 
   <StandardParagraph>
