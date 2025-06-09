@@ -31,7 +31,7 @@
 				<img class="w-full md:h-full md:w-48" src={image} alt={imageAlt} loading="lazy" decoding="async" />
 			</div>
 
-			<div class="px-8 pt-4 relative">
+			<div class="px-6 pt-4 relative">
 				<p class="block text-xl leading-tight font-medium text-black dark:text-slate-50">{ title }</p>
 				<p class="mt-2 text-base text-slate-500 dark:text-slate-300">{ description }</p>
 				<p class="mt-2 text-base text-slate-500 dark:text-slate-300 pb-12">{ formattedDate() }</p>
