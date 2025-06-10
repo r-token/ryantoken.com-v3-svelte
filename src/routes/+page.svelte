@@ -30,7 +30,7 @@
 <LargeHeader text="Hi, I'm Ryan" />
 	
 <StandardParagraph extraClasses="text-lg">
-	I'm a <a href="https://github.com/r-token" target="_blank" rel="noreferrer">software engineer</a>, <a href="https://thegoldenhurricast.com/podcast">podcaster</a>, <a href="/blog">writer</a>, <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">college sports fan</a>, and general techie.
+	I'm a <a href="https://github.com/r-token" target="_blank" rel="noreferrer">software engineer</a>, <a href="https://thegoldenhurricast.com/podcast" target="_blank" rel="noreferrer">podcaster</a>, <a href="/blog">writer</a>, <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">college sports fan</a>, and general techie.
 </StandardParagraph>
 
 <StandardParagraph extraClasses="text-lg">
