@@ -66,6 +66,61 @@
 	
 	<br />
 	
+	<hr class="mb-8"/>
+	
+	<Header text="CatchUp - Keep in Touch"/>
+	
+	<div class="flex items-stretch mb-4">
+		<ResizableImage src={catchupIcon} altText="CatchUp's app icon" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
+	</div>
+	
+	<p class="italic mb-4">*Featured on Brett Terpstra's <a href="https://systematicpod.com/ep/218" target="_blank" rel="noreferrer">Systematic</a> Podcast as one of his 'Top 3' picks (around 46:21)</p>
+	
+	<StandardParagraph>My first public-facing iOS app! First released in May 2018. I completely rewrote it in May of 2020 using <a href="https://developer.apple.com/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a> and <a href="https://developer.apple.com/documentation/coredata" target="_blank" rel="noreferrer">Core Data</a>, then shipped a large update in 2024 with <a href="https://developer.apple.com/documentation/swiftdata" target="_blank" rel="noreferrer">SwiftData</a> and <a href="/blog/catchup-v3" target="_blank" rel="noreferrer">several new features</a>. It also runs well on iPadOS and macOS and syncs data between them.</StandardParagraph>
+	
+	<StandardParagraph>CatchUp helps you stay in touch with the people who matter most. You can set reminders for the contacts you choose, and get notified when it's time to CatchUp with them again.</StandardParagraph>
+	
+	<div class="flex items-stretch mb-4">
+		<ResizableImage src={catchupScreenshot} altText="CatchUp screenshot" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
+	</div>
+	
+	<StandardParagraph>CatchUp is free with no ads, but has an in-app tip jar if you want to buy me a coffee ☕</StandardParagraph>
+	
+	<StandardParagraph extraClasses="mb-4">Read my blog post about modernizing CatchUp with SwiftUI <a href="/blog/catching-up" target="_blank" rel="noreferrer">here</a> or my latest post about releasing version 3.0 <a href="/blog/catchup-v3" target="_blank" rel="noreferrer">here</a>.</StandardParagraph>
+	
+	<a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1526515200" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
+	
+	<br /> <br /> <br />
+	
+	<hr class="mb-8" />
+	
+	<Header text="Outrank"/>
+	
+	<div class="flex items-stretch mb-4">
+		<ResizableImage src={outrankIcon} altText="Outrank's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+	</div>
+	
+	<StandardParagraph>Outrank is an app to help you check how your favorite FBS college football teams stack up against the rest.</StandardParagraph>
+	
+	<StandardParagraph>Available on iOS, iPadOS, and macOS (on Apple Silicon Macs), it tracks forty-seven different stats for all 131 Division One FBS teams and lets you dissect and compare them however you'd like. You can even compare two teams side-by-side to preview an intriguing matchup.</StandardParagraph>
+	
+	<div class="flex items-stretch mb-4 max-w-5xl">
+		<ResizableImage src={outrankRankings} altText="Outrank's rankings screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+		<ResizableImage src={outrankDetail} altText="Outrank's details screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+		<ResizableImage src={outrankCompare} altText="Outrank's comparison screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+		<ResizableImage src={outrankSettings} altText="Outrank's settings screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
+	</div>
+	
+	<StandardParagraph>Outrank is built with 100% <a href="https://developer.apple.com/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>.</StandardParagraph>
+	
+	<StandardParagraph>On the back-end, it leverages <a href="https://developer.apple.com/icloud/cloudkit/" target="_blank" rel="noreferrer">CloudKit</a> as well as various AWS services including <a href="https://aws.amazon.com/dynamodb/" target="_blank" rel="noreferrer">DynamoDB</a>,  <a href="https://aws.amazon.com/api-gateway/" target="_blank" rel="noreferrer">API Gateway</a>, and  <a href="https://aws.amazon.com/lambda/" target="_blank" rel="noreferrer">Lambda</a>.</StandardParagraph>
+	
+	<p class="mb-8">You can follow <a href="https://twitter.com/OutrankApp" target="_blank" rel="noreferrer">Outrank on Twitter</a>, and you can read my blog post about building Outrank <a href="https://www.ryantoken.com/blog/introducing-outrank/" target="_blank" rel="noreferrer">here</a>.</p>
+	
+	<a href="https://apps.apple.com/us/app/outrank/id1588983785?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1635206400" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
+	
+	<br /> <br /> <br />
+	
 	<hr class="mb-8" />
 	
 	<Header text="Hot Local Food"/>
@@ -95,66 +150,11 @@
 	
 	<StandardParagraph>For vegans, carnivores, and everyone in between, Hot Local Food is the best place to find what you love, so you can eat it.</StandardParagraph>
 	
-	<StandardParagraph>Hot Local Food is built with 100% <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>, and it uses <a href="https://developer.apple.com/icloud/cloudkit/" target="_blank" rel="noreferrer">CloudKit</a> as a back end to enable syncing between iOS devices.</StandardParagraph>
+	<StandardParagraph>Hot Local Food is built with 100% <a href="https://developer.apple.com/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>, and it uses <a href="https://developer.apple.com/icloud/cloudkit/" target="_blank" rel="noreferrer">CloudKit</a> as a back end to enable syncing between iOS devices.</StandardParagraph>
 	
 	<p class="mb-8">You can follow <a href="https://twitter.com/HotLocalFood" target="_blank" rel="noreferrer">Hot Local Food on Twitter</a>, check out its <a href="https://www.hotlocalfood.app" target="_blank" rel="noreferrer">marketing website</a>, or read my <a href="/blog/hot-local-food/" rel="noreferrer">blog post</a> about building it.</p>
 	
 	<a href="https://apps.apple.com/us/app/hot-local-food/id1621818779?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1674691200" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
-	
-	<br /> <br /> <br />
-
-	<hr class="mb-8" />
-
-	<Header text="Outrank"/>
-
-	<div class="flex items-stretch mb-4">
-		<ResizableImage src={outrankIcon} altText="Outrank's app icon" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
-	</div>
-
-	<StandardParagraph>Outrank is an app to help you check how your favorite FBS college football teams stack up against the rest.</StandardParagraph>
-
-	<StandardParagraph>Available on iOS, iPadOS, and macOS (on Apple Silicon Macs), it tracks forty-seven different stats for all 131 Division One FBS teams and lets you dissect and compare them however you'd like. You can even compare two teams side-by-side to preview an intriguing matchup.</StandardParagraph>
-
-	<div class="flex items-stretch mb-4 max-w-5xl">
-		<ResizableImage src={outrankRankings} altText="Outrank's rankings screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
-		<ResizableImage src={outrankDetail} altText="Outrank's details screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
-		<ResizableImage src={outrankCompare} altText="Outrank's comparison screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
-		<ResizableImage src={outrankSettings} altText="Outrank's settings screen" url="https://apps.apple.com/us/app/outrank/id1588983785"/>
-	</div>
-
-	<StandardParagraph>Outrank is built with 100% <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>.</StandardParagraph>
-
-	<StandardParagraph>On the back-end, it leverages <a href="https://developer.apple.com/icloud/cloudkit/" target="_blank" rel="noreferrer">CloudKit</a> as well as various AWS services including <a href="https://aws.amazon.com/dynamodb/" target="_blank" rel="noreferrer">DynamoDB</a>,  <a href="https://aws.amazon.com/api-gateway/" target="_blank" rel="noreferrer">API Gateway</a>, and  <a href="https://aws.amazon.com/lambda/" target="_blank" rel="noreferrer">Lambda</a>.</StandardParagraph>
-
-	<p class="mb-8">You can follow <a href="https://twitter.com/OutrankApp" target="_blank" rel="noreferrer">Outrank on Twitter</a>, and you can read my blog post about building Outrank <a href="https://www.ryantoken.com/blog/introducing-outrank/" target="_blank" rel="noreferrer">here</a>.</p>
-
-	<a href="https://apps.apple.com/us/app/outrank/id1588983785?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1635206400" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
-	
-	<br /> <br /> <br />
-	
-	<hr class="mb-8"/>
-	
-	<Header text="CatchUp - Keep in Touch"/>
-	
-	<div class="flex items-stretch mb-4">
-		<ResizableImage src={catchupIcon} altText="CatchUp's app icon" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
-	</div>
-	
-	<p class="italic mb-4">*Featured on Brett Terpstra's <a href="https://systematicpod.com/ep/218" target="_blank" rel="noreferrer">Systematic</a> Podcast as one of his 'Top 3' picks (around 46:21)</p>
-	
-	<StandardParagraph>My first public-facing iOS app! First released in May 2018. I completely rewrote it in May of 2020 using <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a> and <a href="https://developer.apple.com/documentation/coredata" target="_blank" rel="noreferrer">Core Data</a>, then shipped a large update in 2024 with <a href="https://developer.apple.com/documentation/swiftdata" target="_blank" rel="noreferrer">SwiftData</a> and <a href="/blog/catchup-v3" target="_blank" rel="noreferrer">several new features</a>. It also runs well on iPadOS and macOS and syncs data between them.</StandardParagraph>
-	
-	<StandardParagraph>CatchUp helps you stay in touch with the people who matter most. You can set reminders for the contacts you choose, and get notified when it's time to CatchUp with them again.</StandardParagraph>
-	
-	<div class="flex items-stretch mb-4">
-		<ResizableImage src={catchupScreenshot} altText="CatchUp screenshot" url="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550"/>
-	</div>
-	
-	<StandardParagraph>CatchUp is free with no ads, but has an in-app tip jar if you want to buy me a coffee ☕</StandardParagraph>
-	
-	<StandardParagraph extraClasses="mb-4">Read my blog post about modernizing CatchUp with SwiftUI <a href="/blog/catching-up" target="_blank" rel="noreferrer">here</a> or my latest post about releasing version 3.0 <a href="/blog/catchup-v3" target="_blank" rel="noreferrer">here</a>.</StandardParagraph>
-	
-	<a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1526515200" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
 	
 	<br /> <br /> <br />
 

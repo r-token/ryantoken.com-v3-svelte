@@ -65,7 +65,7 @@ This probably would have taken less time than the option I ended up choosing, bu
 
 Why not just blow away the whole project and start over?
 
-A headlining announcement from WWDC 2019 was the debut of <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>. SwiftUI is a brand new framework from Apple that allows you to build user interfaces declaratively. Previously, all of iOS development was done imperatively using <a href="https://developer.apple.com/documentation/uikit" target="_blank" rel="noreferrer">UIKit</a>. I watched the announcement happen live, and was instantly excited and drawn to it. I had initially considered rewriting parts of CatchUp with SwiftUI, but not the entire app.
+A headlining announcement from WWDC 2019 was the debut of <a href="https://developer.apple.com/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>. SwiftUI is a brand new framework from Apple that allows you to build user interfaces declaratively. Previously, all of iOS development was done imperatively using <a href="https://developer.apple.com/documentation/uikit" target="_blank" rel="noreferrer">UIKit</a>. I watched the announcement happen live, and was instantly excited and drawn to it. I had initially considered rewriting parts of CatchUp with SwiftUI, but not the entire app.
 
 ---
 

@@ -34,11 +34,11 @@
 </StandardParagraph>
 
 <StandardParagraph extraClasses="text-lg">
-	I'm <a href="https://ryan-token-cv-prod.s3.us-east-2.amazonaws.com/Ryan+Token+CV.pdf" target="_blank" rel="noreferrer">currently</a> a senior software engineer at <a href="https://storyboard.com" target="_blank" rel="noreferrer">Storyboard</a>. My primary focus there is building <a href = "https://apps.apple.com/us/app/chat-by-storyboard/id1662743814" target="_blank">Chat by Storyboard</a>, our hands-free, eyes-free voice messaging app for drivers. I also help create highly scalable <a href="https://aws.amazon.com/serverless/" target="_blank" rel="noreferrer">serverless</a> back ends that power every part of the platform.
+	I'm <a href="https://ryan-token-cv-prod.s3.us-east-2.amazonaws.com/Ryan+Token+CV.pdf" target="_blank" rel="noreferrer">currently</a> a senior software engineer at <a href="https://www.daysheets.com" target="_blank" rel="noreferrer">Daysheets</a>, where I build across Apple platforms with <a href="https://www.swift.org" target="_blank" rel="noreferrer">Swift</a> and <a href="https://developer.apple.com/swiftui/" target="_blank" rel="noreferrer">SwiftUI</a>.
 </StandardParagraph>
 
 <StandardParagraph extraClasses="text-lg mb-6">
-	In my free time, I build native iOS apps (<a href="https://apps.apple.com/us/app/hot-local-food/id1621818779" target="_blank" rel="noreferrer">Hot Local Food</a>, <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer">Outrank</a>, and <a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" rel="noreferrer">CatchUp</a>) and co-host <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">The Golden Hurricast</a>, a weekly podcast covering athletics at <a href = "https://utulsa.edu" target = "_blank">The University of Tulsa</a>.
+	In my free time, I do more of that (<a href="https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550" target="_blank" rel="noreferrer">CatchUp</a>, <a href="https://apps.apple.com/us/app/outrank/id1588983785" target="_blank" rel="noreferrer">Outrank</a>, <a href="https://apps.apple.com/us/app/hot-local-food/id1621818779" target="_blank" rel="noreferrer">Hot Local Food</a>), write plenty of <a href="https://aws.amazon.com/serverless/" target="_blank" rel="noreferrer">serverless</a> backend code, co-host <a href="https://thegoldenhurricast.com" target="_blank" rel="noreferrer">The Golden Hurricast</a>, play a lot of basketball, and hike with my wife and dog.
 </StandardParagraph>
 
 <h2 class="text-xl font-bold mb-6">Latest blog posts</h2>
