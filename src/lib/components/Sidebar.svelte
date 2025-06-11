@@ -33,9 +33,9 @@
   ]
   
   const myProjects = [
-    { href: 'https://apps.apple.com/us/app/hot-local-food/id1621818779', label: 'HLF' },
-    { href: 'https://apps.apple.com/us/app/outrank/id1588983785', label: 'Outrank' },
     { href: 'https://apps.apple.com/us/app/catchup-keep-in-touch/id1358023550', label: 'CatchUp' },
+    { href: 'https://apps.apple.com/us/app/outrank/id1588983785', label: 'Outrank' },
+    { href: 'https://apps.apple.com/us/app/hot-local-food/id1621818779', label: 'HLF' },
     { href: 'https://podcasts.apple.com/us/podcast/the-golden-hurricast/id1435008302?mt=2', label: 'Hurricast' },
   ]
   
